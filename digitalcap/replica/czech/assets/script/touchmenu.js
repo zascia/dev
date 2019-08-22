@@ -1,0 +1,338 @@
+FX.naplnMenu({
+    "zpravodaj": [
+        ["Domácí", "https://www.idnes.cz/zpravy/domaci"],
+        ["Zahraniční", "https://www.idnes.cz/zpravy/zahranicni"],
+        ["Krimi", "https://www.idnes.cz/zpravy/cerna-kronika"],
+        ["Volby", "//volby.idnes.cz/volby.aspx"],
+        ["Kultura", "https://www.idnes.cz/kultura"],
+        ["Názory", "https://www.idnes.cz/zpravy/domaci/komentare-glosy-nazory.K307000"],
+        ["MediaHub", "https://www.idnes.cz/zpravy/mediahub"],
+        ["Rozstřel", "https://tv.idnes.cz/rozstrel"],
+        ["30 let svobody", "https://www.idnes.cz/zpravy/30-let-svobody"],
+        ["Speciály", "https://www.idnes.cz/zpravy/domaci/Ispecialni-prilohy-idnes-cz"],
+        ["Očima čtenářů", "https://www.idnes.cz/zpravy/ocima-ctenaru"]
+    ],
+    "volby-ep2019": [
+        ["Výsledky ČR", "https://volby.idnes.cz/eurovolby-2019.aspx"],
+        ["Výsledky EU", "https://www.idnes.cz/volby?t=vysledky-eu-mapa"],
+        ["Zpravodajství", "https://www.idnes.cz/volby?t=zpravodajstvi"],
+        ["Volební kalkulačka", "https://www.idnes.cz/volby/evropsky-parlament/2019/volebni-kalkulacka"],
+        ["Inventura hlasování", "https://www.idnes.cz/volby/evropsky-parlament/2019/inventura-hlasovani"],
+        ["Kandidátky", "https://volby.idnes.cz/eurovolby-2019.aspx?t=kandidatky"],
+        ["Města – grafy", "//www.idnes.cz/volby/historie"],
+        ["Archiv", "https://volby.idnes.cz/archiv.aspx"]
+    ],
+    "volby-2018": [
+        ["Volby 2018", "https://volby.idnes.cz/volby-2018.aspx"],
+        ["Online", "https://zpravy.idnes.cz/volby-do-senatu-druhe-kolo-dcs-/online.aspx?online=1007055"],
+        ["Komunální volby 2018", "//volby.idnes.cz/komunalni-volby-2018.aspx"],
+        ["Senát – 1. kolo", "//volby.idnes.cz/senat-2018.aspx?k=1"],
+        ["Senát – 2. kolo", "//volby.idnes.cz/senat-2018.aspx?k=2"],
+        ["Manuál pro voliče", "https://www.idnes.cz/zpravy/domaci/volby-2018-komunalni-volby-senat-podzim-2018.A180719_114006_domaci_jpl"],
+        ["Města – grafy", "//www.idnes.cz/volby/historie"],
+        ["Archiv voleb", "//volby.idnes.cz/archiv.aspx"]
+    ],
+    "prezidentske-volby-2018": [
+        ["Výsledky 1. kola", "https://volby.idnes.cz/prezidentske-volby-2018.aspx?t=vysledky-prvni-kolo"],
+        ["Výsledky 2. kola", "https://volby.idnes.cz/prezidentske-volby-2018.aspx?k=vysledky-druhe-kolo"],
+        ["Okrsky", "https://volby.idnes.cz/prezidentske-volby-2018.aspx?k=vysledky-druhe-kolo\u0026t=okrsky-mapa"],
+        ["On-line", "https://www.idnes.cz/zpravy/domaci/prezidentske-volby.B1006767"],
+        ["Statistiky", "https://volby.idnes.cz/prezidentske-volby-2018.aspx?k=vysledky-druhe-kolo\u0026t=statistiky-a-zajimavosti"],
+        ["Zpravodajství", "https://volby.idnes.cz/prezidentske-volby-2018.aspx?t=zpravodajstvi"],
+        ["Simulátor", "https://volby.idnes.cz/Rozhodnete-volby.aspx"],
+        ["Kalkulačka", "https://volby.idnes.cz/volebni-kalkulacka-prezident-2018-2k.aspx"],
+        ["Archiv voleb", "https://volby.idnes.cz/archiv.aspx"]
+    ],
+    "kraje": [
+        ["Praha a střední Čechy", "https://www.idnes.cz/praha"],
+        ["Brno", "https://www.idnes.cz/brno"],
+        ["České Budějovice", "https://www.idnes.cz/ceske-budejovice"],
+        ["Hradec Králové", "https://www.idnes.cz/hradec-kralove"],
+        ["Jihlava", "https://www.idnes.cz/jihlava"],
+        ["Karlovy Vary", "https://www.idnes.cz/karlovy-vary"],
+        ["Liberec", "https://www.idnes.cz/liberec"],
+        ["Olomouc", "https://www.idnes.cz/olomouc"],
+        ["Ostrava", "https://www.idnes.cz/ostrava"],
+        ["Pardubice", "https://www.idnes.cz/pardubice"],
+        ["Plzeň", "https://www.idnes.cz/plzen"],
+        ["Ústí nad Labem", "https://www.idnes.cz/usti"],
+        ["Zlín", "https://www.idnes.cz/zlin"]
+    ],
+    "sport": [
+        ["Výsledky", "https://sport.idnes.cz/sportovni-vysledky.aspx"],
+        ["Fotbal", "https://www.idnes.cz/fotbal"],
+        ["Hokej", "https://www.idnes.cz/hokej"],
+        ["MS v hokeji", "https://www.idnes.cz/hokej/ms-2019"],
+        ["Tenis", "https://www.idnes.cz/sport/tenis"],
+        ["Biatlon", "https://www.idnes.cz/sport/biatlon"],
+        ["Lyže", "https://www.idnes.cz/sport/lyzovani-snowboarding"],
+        ["Moto", "https://www.idnes.cz/sport/motorsport"],
+        ["Basketbal", "https://www.idnes.cz/sport/basket"],
+        ["Volejbal", "https://www.idnes.cz/sport/volejbal"],
+        ["Cyklistika", "https://www.idnes.cz/sport/cyklistika"],
+        ["Florbal", "https://www.idnes.cz/sport/florbal"],
+        ["Atletika", "https://www.idnes.cz/sport/atletika"],
+        ["Házená", "https://www.idnes.cz/sport/hazena"],
+        ["Další", "https://www.idnes.cz/sport/ostatni"]
+    ],
+    "kultura": [
+        ["Zprávy", "https://www.idnes.cz/zpravy"],
+        ["Film a TV", "https://www.idnes.cz/kultura/film-televize"],
+        ["Hra o trůny", "https://www.idnes.cz/wiki/kultura/hra-o-truny.K458588"],
+        ["Hudba", "https://www.idnes.cz/kultura/hudba"],
+        ["Divadlo", "https://www.idnes.cz/kultura/divadlo"],
+        ["Literatura", "https://www.idnes.cz/kultura/literatura"],
+        ["Za scénou", "https://www.idnes.cz/kultura/archiv/kulturni-magazin-za-scenou.K39064"],
+        ["Vstupenky", "https://vstupenky.idnes.cz/"],
+        ["TV program", "http://tvprogram.idnes.cz"],
+        ["Colours of Ostrava", "https://www.idnes.cz/kultura/hudba/colours-of-ostrava.K457290"]
+    ],
+    "ekonomikah": [
+        ["Domácí", "https://www.idnes.cz/ekonomika/domaci"],
+        ["Podniky", "https://www.idnes.cz/ekonomika/podniky"],
+        ["Zahraniční", "https://www.idnes.cz/ekonomika/zahranicni"],
+        ["Doprava", "https://www.idnes.cz/ekonomika/doprava"],
+        ["EET", "https://www.idnes.cz/wiki/ekonomika/elektronicka-evidence-trzeb-eet.K456209"],
+        ["Spotřebitel", "https://www.idnes.cz/ekonomika/test-a-spotrebitel"],
+        ["Test DNES", "https://www.idnes.cz/ekonomika/test-a-spotrebitel/redakcni-test-mf-dnes.K47001"],
+        ["Dilbert", "https://www.idnes.cz/ekonomika/dilbert"]
+    ],
+    "fincentrum": [
+        ["Práce a podnikání", "https://www.idnes.cz/finance/prace-a-podnikani"],
+        ["Pojištění", "https://www.idnes.cz/finance/pojisteni"],
+        ["Investice", "https://www.idnes.cz/finance/investovani"],
+        ["Banky a spoření", "https://www.idnes.cz/finance/banky-a-sporeni"],
+        ["Daně", "https://www.idnes.cz/finance/dane"],
+        ["Penze", "https://www.idnes.cz/finance/penze"],
+        ["Rádce", "https://www.idnes.cz/finance/financni-radce"]
+    ],
+    "reality": [
+        ["Architektura", "https://www.idnes.cz/bydleni/architektura"],
+        ["Stavba", "https://www.idnes.cz/bydleni/stavba"],
+        ["Návštěvy", "https://www.idnes.cz/bydleni/na-navsteve"],
+        ["Kuchyně", "https://www.idnes.cz/bydleni/kuchyne"],
+        ["Spotřebiče", "https://www.idnes.cz/bydleni/spotrebice"],
+        ["Koupelna", "https://www.idnes.cz/bydleni/koupelna"],
+        ["Panelák", "https://www.idnes.cz/bydleni/panelak"],
+        ["Energie", "https://www.idnes.cz/bydleni/energie"],
+        ["Rekonstrukce", "https://www.idnes.cz/bydleni/rekonstrukce"]
+    ],
+    "iglobe": [
+        ["Po Česku", "https://www.idnes.cz/cestovani/po-cesku"],
+        ["Svět", "https://www.idnes.cz/cestovani/kolem-sveta"],
+        ["Výlety", "https://www.idnes.cz/cestovani/tipy-na-vylet"],
+        ["Pro vodáky", "https://www.idnes.cz/cestovani/archiv/pro-vodaky.K37116"],
+        ["Za jídlem", "https://www.idnes.cz/cestovani/archiv/cesty-za-jidlem-po-svete.K37091"],
+        ["Kolo", "https://www.idnes.cz/cestovani/na-kole"],
+        ["Od čtenářů", "https://www.idnes.cz/cestovani/rady-na-cestu"]
+    ],
+    "autokat": [
+        ["Zprávy", "https://www.idnes.cz/auto/zpravodajstvi"],
+        ["Magazín", "https://www.idnes.cz/auto/magazin"],
+        ["Autoservis", "https://www.idnes.cz/auto/autoservis"],
+        ["Autohistorie", "https://www.idnes.cz/auto/historie"],
+        ["Motorky", "https://www.idnes.cz/auto/motorky"],
+        ["Dieselgate", "https://www.idnes.cz/ekonomika/domaci/emisni-skandal-volkswagenu.K38056"],
+        ["Alkulačka", "https://www.idnes.cz/auto/alkulacka"],
+        ["Ženeva 2019", "https://www.idnes.cz/auto/zpravodajstvi/autosalon-zeneva-2019.K52074"]
+    ],
+    "hobby": [
+        ["Domov", "https://www.idnes.cz/hobby/domov"],
+        ["Zahrada", "https://www.idnes.cz/hobby/zahrada"],
+        ["Dílna", "https://www.idnes.cz/hobby/dilna"],
+        ["Mazlíčci", "https://www.idnes.cz/hobby/mazlicci"],
+        ["Grilování", "https://hobby.idnes.cz/grilovani.aspx"],
+        ["Rybaření", "https://www.idnes.cz/hobby/rybareni"],
+        ["Houby", "https://www.idnes.cz/hobby/houby"],
+        ["Gorily", "https://www.idnes.cz/hobby/gorily-v-zoo"]
+    ],
+    "mobil": [
+        ["Operátoři", "https://www.idnes.cz/mobil/mobilni-operatori"],
+        ["Tech \u0026 Trendy", "https://www.idnes.cz/mobil/tech-trendy"],
+        ["Navigace", "https://www.idnes.cz/mobil/navigace"],
+        ["Aplikace", "https://www.idnes.cz/mobil/aplikace"],
+        ["Recenze", "https://www.idnes.cz/technet/technika/test-recenze.K922000"],
+        ["MWC 2019", "https://www.idnes.cz/mobil/archiv/mwc-barcelona-2019.K74099"]
+    ],
+    "technet": [
+        ["Technika", "https://www.idnes.cz/technet/technika"],
+        ["Věda", "https://www.idnes.cz/technet/veda"],
+        ["Vesmír", "https://www.idnes.cz/technet/vesmir"],
+        ["Vojenství", "https://www.idnes.cz/technet/vojenstvi"],
+        ["Internet", "https://www.idnes.cz/technet/internet"],
+        ["Audio foto video", "https://www.idnes.cz/technet/audio-foto-video"],
+        ["Hardware", "https://www.idnes.cz/technet/pc-mac"],
+        ["Software", "https://www.idnes.cz/technet/software"],
+        ["MWC 2019", "https://www.idnes.cz/mobil/archiv/mwc-barcelona-2019.K74099"]
+    ],
+    "ona": [
+        ["Lidé", "https://www.idnes.cz/onadnes/lide"],
+        ["Móda", "https://www.idnes.cz/onadnes/moda"],
+        ["Krása", "https://www.idnes.cz/onadnes/krasa"],
+        ["Děti", "https://www.idnes.cz/onadnes/deti"],
+        ["Vztahy", "https://www.idnes.cz/onadnes/vztahy-sex"],
+        ["Fit", "https://www.idnes.cz/onadnes/dieta"],
+        ["Zdraví", "https://www.idnes.cz/onadnes/zdravi"],
+        ["Recepty", "https://www.idnes.cz/recepty"],
+        ["Kalkulačky", "https://ona.idnes.cz/kalkulacky.aspx"],
+        ["Horoskopy", "https://www.idnes.cz/onadnes/horoskopy"],
+        ["Nákupy Ona Dnes", "https://www.idnes.cz/onadnes/nakupy"]
+    ],
+    "xman": [
+        ["Styl", "https://www.idnes.cz/xman/styl"],
+        ["Adrenalin", "https://www.idnes.cz/xman/adrenalin"],
+        ["Sex", "https://www.idnes.cz/xman/sex"],
+        ["Fotky", "https://www.idnes.cz/xman/holky"],
+        ["Rozhovory", "https://www.idnes.cz/xman/rozhovory"],
+        ["Profily", "https://www.idnes.cz/xman/profily"],
+        ["Smlsaloviny", "https://www.idnes.cz/xman/archiv/smlsaloviny.K118048"]
+    ],
+    "cas": [
+        ["Společnost", "https://www.idnes.cz/revue/spolecnost"],
+        ["Zajímavosti", "https://www.idnes.cz/revue/zajimavosti"],
+        ["Módní policie", "https://www.idnes.cz/revue/modni-policie"],
+        ["Vztahy a sex", "https://www.idnes.cz/revue/vztahy-a-sex"],
+        ["Modelky", "https://www.idnes.cz/revue/modelky"],
+        ["Socky", "https://www.idnes.cz/revue/spolecnost/socky.K45036"],
+        ["Vtipy", "https://www.idnes.cz/revue/vtipy?iddiskuse=vtipy-diskuse"]
+    ],
+    "blog_touch": [
+        ["Politika", "https://blog.idnes.cz/blog.aspx?s=1"],
+        ["Ekonomika", "https://blog.idnes.cz/blog.aspx?s=2"],
+        ["Srpen 1968", "https://blog.idnes.cz/srpen-1968.aspx?s=114863"],
+        ["Kultura", "https://blog.idnes.cz/blog.aspx?s=8"],
+        ["Společnost", "https://blog.idnes.cz/blog.aspx?s=3"],
+        ["Sport", "https://blog.idnes.cz/blog.aspx?s=4"],
+        ["Média", "https://blog.idnes.cz/blog.aspx?s=6"],
+        ["Cestování", "https://blog.idnes.cz/blog.aspx?s=7"],
+        ["Věda", "https://blog.idnes.cz/blog.aspx?s=9"],
+        ["Fotoblogy", "https://blog.idnes.cz/blog.aspx?s=11"],
+        ["Hyde park", "https://blog.idnes.cz/blog.aspx?s=5"],
+        ["Ostatní", "https://blog.idnes.cz/blog.aspx?s=13"]
+    ],
+    "bonusweb": [
+        ["Recenze", "https://www.idnes.cz/hry/recenze"],
+        ["Krátké zprávy", "https://www.idnes.cz/hry/kratke-zpravy"],
+        ["Novinky", "https://www.idnes.cz/hry/novinky"],
+        ["Magazín", "https://www.idnes.cz/hry/magazin"],
+        ["Preview", "https://www.idnes.cz/hry/preview"],
+        ["Jízdní řád", "https://bonusweb.idnes.cz/JizdniRad.aspx"],
+        ["Hra roku", "https://bonusweb.idnes.cz/hra-roku.aspx"]
+    ],
+    "touch_pocasi": [
+        ["Přehled", "https://pocasi.idnes.cz/"],
+        ["Meteomapy", "https://pocasi.idnes.cz/?t=img_s"],
+        ["Hory ČR", "https://pocasi.idnes.cz/?t=snow"],
+        ["Slunce / Měsíc", "https://pocasi.idnes.cz/?t=sun"]
+    ],
+    "mobilnihry": [
+        ["Strategie", "https://www.idnes.cz/hry/mobilni-hry?z=strategie"],
+        ["RPG", "https://www.idnes.cz/hry/mobilni-hry?z=rpg"],
+        ["Akční", "https://www.idnes.cz/hry/mobilni-hry?z=akcni"],
+        ["On-line", "https://www.idnes.cz/hry/mobilni-hry?z=online"],
+        ["Logické", "https://www.idnes.cz/hry/mobilni-hry?z=logicke"],
+        ["Adventury", "https://www.idnes.cz/hry/mobilni-hry?z=adventury"],
+        ["Simulátory", "https://www.idnes.cz/hry/mobilni-hry?z=simulatory"],
+        ["Sportovní", "https://www.idnes.cz/hry/mobilni-hry?z=sportovni"]
+    ],
+    "rungo": [
+        ["RunTech", "https://rungo.idnes.cz/runtech.aspx"],
+        ["Outfit", "https://rungo.idnes.cz/outfit-cqv-/behani.aspx?klic=534069"],
+        ["Zdraví", "https://rungo.idnes.cz/zdravi-cqo-/behani.aspx?klic=534009"],
+        ["Chůze", "https://rungo.idnes.cz/chuze-caz-/behani.aspx?klic=534002"],
+        ["Termínovka", "https://rungo.idnes.cz/terminovka.aspx"],
+        ["Rozhovory", "https://rungo.idnes.cz/osobnosti-cvs-/behani.aspx?klic=534007"],
+        ["RUNGO Závody", "https://rungo.idnes.cz/rungo-zavody.aspx"],
+        ["Poradna", "https://rungo.idnes.cz/bezecka-poradna-0ij-/poradna.aspx?p=A151106_300_poradna_jas"],
+        ["Soutěže", "https://rungo.idnes.cz/soutez-cli-/behani.aspx?klic=534040"]
+    ],
+    "oh2016t": [
+        ["Atletika", "https://www.idnes.cz/oh/atletika"],
+        ["Cyklistika", "https://www.idnes.cz/oh/cyklistika"],
+        ["Fotbal", "https://www.idnes.cz/oh/fotbal"],
+        ["Míčové sporty", "https://www.idnes.cz/oh/micove-sporty"],
+        ["Střelba", "https://www.idnes.cz/oh/strelba"],
+        ["Plavecké sporty", "https://www.idnes.cz/oh/plavecke-sporty"],
+        ["Tenis", "https://www.idnes.cz/oh/tenis"],
+        ["Vodní sporty", "https://www.idnes.cz/oh/vodni-sporty"],
+        ["Ostatni sporty", "https://www.idnes.cz/oh/ostatni-sporty"],
+        ["Olympismus", "https://www.idnes.cz/oh/olympismus"],
+        ["Další zprávy", "https://www.idnes.cz/oh/rio-2016"]
+    ],
+    "oh2018t": [
+        ["Paralympiáda", "https://www.idnes.cz/oh/paralympijske-hry"],
+        ["Češi", "https://www.idnes.cz/oh/pchjongcchang-2018/cesky-tym-na-zoh-2018.K695001"],
+        ["Program a výsledky", "https://oh.idnes.cz/databanka.aspx?cmd=program\u0026idSampionat=23"],
+        ["Hokej", "https://www.idnes.cz/oh/hokej"],
+        ["Biatlon", "https://www.idnes.cz/oh/biatlon"],
+        ["Snowboarding", "https://www.idnes.cz/oh/snowboarding"],
+        ["Akrobacie", "https://www.idnes.cz/oh/akrobaticke-lyzovani"],
+        ["Alpské lyžování", "https://www.idnes.cz/oh/alpske-lyzovani"],
+        ["Klasické lyžování", "https://www.idnes.cz/oh/klasicke-lyzovani"],
+        ["Krasobruslení", "https://www.idnes.cz/oh/krasobrusleni"],
+        ["Rychlobruslení", "https://www.idnes.cz/oh/rychlobrusleni"],
+        ["Ostatní sporty", "https://www.idnes.cz/oh/ostatni-sporty"],
+        ["Videa", "https://www.idnes.cz/oh/pchjongcchang-2018/videa-ze-zoh-2018.K695002"],
+        ["Další zprávy", "https://www.idnes.cz/oh/pchjongcchang-2018"]
+    ],
+    "sport-olympiada": [
+        ["Olympiáda", "https://www.idnes.cz/oh"],
+        ["Olympismus", "https://www.idnes.cz/oh/olympismus"],
+        ["Korea 2018", "https://www.idnes.cz/oh/pchjongcchang-2018"],
+        ["Paralympiáda", "https://www.idnes.cz/oh/paralympijske-hry"]
+    ],
+    "wiki": [
+        ["Ekonomika", "https://www.idnes.cz/wiki/ekonomika"],
+        ["Showbyznys", "https://www.idnes.cz/wiki/soubyznys"],
+        ["Kultura", "https://www.idnes.cz/wiki/kultura"],
+        ["Věda a technika", "https://www.idnes.cz/wiki/veda-a-technika"],
+        ["Sport", "https://www.idnes.cz/wiki/sport"],
+        ["Lidé v Česku", "https://www.idnes.cz/wiki/lide-v-cesku"],
+        ["Lidé ve světě", "https://www.idnes.cz/wiki/lide-ve-svete"],
+        ["Firmy", "https://www.idnes.cz/wiki/firmy"],
+        ["Politika", "https://www.idnes.cz/wiki/politika"],
+        ["Kraje ČR", "https://www.idnes.cz/wiki/kraje-regiony"],
+        ["Témata", "https://www.idnes.cz/wiki/temata"],
+        ["Občanský zákoník", "https://www.idnes.cz/wiki/obcansky-zakonik"],
+        ["Státy a města", "https://www.idnes.cz/wiki/cestovani"]
+    ],
+    "sg-vedatech": [
+        ["Technet", "https://technet.idnes.cz"],
+        ["Auto", "https://auto.idnes.cz"],
+        ["Mobil", "https://mobil.idnes.cz"],
+        ["Hry", "https://bonusweb.idnes.cz"]
+    ],
+    "sg-spolecnost": [
+        ["Ona", "https://ona.idnes.cz"],
+        ["Kultura", "https://kultura.zpravy.idnes.cz/"],
+        ["Revue", "https://revue.idnes.cz"],
+        ["Xman", "https://xman.idnes.cz"],
+        ["Expres", "http://expres.cz"]
+    ],
+    "sg-zivotni-styl": [
+        ["Hobby", "https://hobby.idnes.cz"],
+        ["Cestování", "https://cestovani.idnes.cz"],
+        ["Finance", "https://finance.idnes.cz"],
+        ["Bydlení", "https://bydleni.idnes.cz"]
+    ],
+    "ticket": [
+        ["Hudba", "?cid=3\u0026kategorie=hudba"],
+        ["Divadlo", "?cid=7\u0026kategorie=divadlo"],
+        ["Show", "?cid=32\u0026kategorie=show"],
+        ["Festivaly", "?cid=34\u0026kategorie=festivaly"],
+        ["Dárky", "?cid=49\u0026kategorie=darky"],
+        ["Do společnosti", "?cid=48\u0026kategorie=do-spolecnocti"],
+        ["Sport", "?cid=2\u0026kategorie=sport"],
+        ["O2 arena", "?cid=102\u0026kategorie=o2-arena"],
+        ["Kino", "?cid=14\u0026kategorie=kino"]
+    ],
+    tvprogram: [
+        ["Dnes večer", "http://tvprogram.idnes.cz/tvprogram.aspx?date=18-6-2019\u0026time=20:00"],
+        ["Zítra", "http://tvprogram.idnes.cz/tvprogram.aspx?date=19-6-2019\u0026time=20:00"],
+        ["Čtvrtek", "http://tvprogram.idnes.cz/tvprogram.aspx?date=20-6-2019\u0026time=20:00"],
+        ["Pátek", "http://tvprogram.idnes.cz/tvprogram.aspx?date=21-6-2019\u0026time=20:00"],
+        ["Přehled", "http://tvprogram.idnes.cz/tvprogram.aspx"],
+        ["Zvolit stanice", "http://tvprogram.idnes.cz/tvprogram.aspx?add=channels"],
+        ["Přihlásit", "http://tvprogram.idnes.cz/tvprogram.aspx?cmd=login"],
+   
+    ]})
