@@ -1,0 +1,5 @@
+.idea/
+*.psd
+*.ai
+node_modules/
+*.mov
