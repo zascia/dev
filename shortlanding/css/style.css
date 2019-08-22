@@ -253,6 +253,12 @@ cite{
     font-weight: bold;
     text-decoration: underline;
 }
+.photo-container {
+    text-align: center;
+}
+.about img {
+    max-width: 80%;
+}
 .useful{
     overflow: hidden;
     margin-top: 2em;
@@ -470,7 +476,8 @@ footer p{
     padding-bottom: 70px;
 }
 .project-w-item img{
-    width: 100%;
+    //width: 100%;
+    height: 360px;
 }
 .project-w-item a{
     display: block;
@@ -571,6 +578,9 @@ footer p{
     font-size: 20px;
     line-height: 22px;
     min-height: 65px;
+}
+.our-team .row {
+    margin-bottom: 5em;
 }
 /* eo team page */
 
