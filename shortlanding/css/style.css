@@ -545,10 +545,32 @@ footer p{
 .christmas-sale-block {
 
 }
+.christmas-sale-block,
+.christmas-sale-block h3,
+.christmas-sale-block p {
+    text-align: center;
+    color: #fff;
+}
+.christmas-sale-block h3,
+.christmas-sale-block p {
+    margin:2em 0;
+}
+.christmas-sale-block h3 {
+    font-weight: normal;
+    font-size: 1.25em;
+}
+.christmas-sale-block .row span {
+    background: rgba(89, 116, 171, .75);
+}
+.christmas-sale-block .row > div{
+    background: url(../img/sale/sale2_640.jpg) center center no-repeat;
+    background-size: cover;
+}
 .christmas-sale-block .btn {
     display: inline-block;
     //background: rgb(142,2,9);
     background: rgb(220,40,43);
+    border: 1px solid #fff;
     color: #fff;
     border-radius: 10px;
     padding: 1em;
