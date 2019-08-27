@@ -11,7 +11,7 @@
 .comments-placeholder .list{
     max-width: 100% !important; 
 }
-.m-b-5 i{
+.widget-group.widget-group-996 i{
     display: block;
     color: #333;
     font-size: 1.6em;
@@ -21,6 +21,9 @@
     margin-top: 5px !important;
     margin-bottom: 5px !important;
 }
+.widget-group.widget-group-996 strong i{
+    font-size: 14px; 
+} 
 center{
     text-align: right;
     font-size: 1.2em;
@@ -31,9 +34,6 @@ center{
 }
 center i{
     font-style: normal !important; 
-}
-.widget-group.widget-group-996 p{
-    font-size: 13px;
 }
 .article-content img {
     width: 100%;
