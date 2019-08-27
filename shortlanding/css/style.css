@@ -476,9 +476,7 @@ footer p{
     padding-bottom: 70px;
 }
 .project-w-item img{
-    //width: 100%;
-    height: auto;
-    max-height: 360px;
+    width: 100%;
 }
 .project-w-item a{
     display: block;
@@ -589,12 +587,35 @@ footer p{
 }
 /* popups */
 
+footer {
+    color: #fff;
+}
+footer h4 {
+    margin-bottom: 1em;
+    color: #427889;
+    margin: .5em 0;
+    font-size: 125%;
+    text-align: left !important;
+}
+footer ul {
+    list-style: none;
+}
+
 /* team page */
 .team-page h4 {
     color: #427889;
     text-align: center;
     margin: .5em 0;
     font-size: 125%;
+}
+.team-page .project-w-item {
+    text-align: center;
+}
+.team-page .project-w-item img{
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 360px;
 }
 .team-page .project-w-item p {
     font-weight: normal;
