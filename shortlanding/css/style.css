@@ -610,12 +610,12 @@ footer ul {
 }
 .team-page .project-w-item {
     text-align: center;
+    overflow: hidden;
 }
 .team-page .project-w-item img{
     width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 360px;
+    height: 350px;
+    max-width: none;
 }
 .team-page .project-w-item p {
     font-weight: normal;
