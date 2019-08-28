@@ -464,6 +464,7 @@ footer p{
 .project-w{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
 }
 .project-w-item{
@@ -611,6 +612,7 @@ footer ul {
 .team-page .project-w-item {
     text-align: center;
     overflow: hidden;
+    margin-bottom: 50px;
 }
 .team-page .project-w-item img{
     width: auto;
@@ -623,20 +625,22 @@ footer ul {
     line-height: 22px;
     min-height: 65px;
     text-decoration: none;
-}
-.our-team .row {
-    margin-bottom: 5em;
+    padding: 10px 20px;
 }
 /* eo team page */
 
 @media all and (max-width: 992px){
 
+    .project {
+        padding: 100px 0;
+    }
     .project-w{
         flex-wrap: wrap;
     }
     .project-w-item{
-        width: 100%;
+        width: 40%;
         margin-top: 30px;
+        margin-bottom: 50px;
     }
     .talk-about-block{
         margin-bottom: 20px;
@@ -695,10 +699,22 @@ footer ul {
         top: 0;
         left: -20px;
     }
+    .project .container {
+        max-width: 90%;
+    }
+    .project-w-item {
+        width: 45%;
+    }
 }
 @media all and (max-width: 555px){
     .fq i{
         display: none;
+    }
+    .project .container {
+        max-width: 75%;
+    }
+    .project-w-item {
+        width: 100%;
     }
 }
 @media all and (max-width: 480px){
