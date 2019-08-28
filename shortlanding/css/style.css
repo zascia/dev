@@ -622,6 +622,7 @@ footer ul {
     font-size: 20px;
     line-height: 22px;
     min-height: 65px;
+    text-decoration: none;
 }
 .our-team .row {
     margin-bottom: 5em;
