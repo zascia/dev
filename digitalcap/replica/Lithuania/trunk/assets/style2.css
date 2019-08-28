@@ -10,7 +10,7 @@
     font-size: 13px !important; 
 }
 .col-middle{
-    width: 925px !important;
+    width: 700px !important;
 }
 .at-share-btn-elements a{
     display: inline-block !important;
@@ -52,7 +52,8 @@ center i{
     width: 850px !important;
 }
 .col-middle{
-    width: 850px !important;
+    width: 700px !important;
+    float: left !important;
 }
 
 @media (max-width: 1250px){
@@ -67,10 +68,10 @@ center i{
         float: left !important;
         padding-left: 10px !important;
     }
-    
     .col-middle{
-        width: 65% !important;
+        width: 55% !important;
         float: left !important;
+        padding-left: 10px !important;
     }  
     .wrapper{
         width: 100% !important;
