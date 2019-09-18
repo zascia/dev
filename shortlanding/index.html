@@ -720,7 +720,7 @@
     // send custom mail function
     function sendCustomMail(e) {
         e.preventDefault();
-        /*$("#loading-modalbox").modal("show");*/
+        $("#loading-modalbox").modal("show");
 
         var errors = '';
 
@@ -740,21 +740,21 @@
                 method: "POST",
                 complete: function(r) {
 
-                    /*$("#loading-modalbox").modal("hide");*/
+                    $("#loading-modalbox").modal("hide");
                     if (r.responseText == 'Y') {
 
                         jQuery('#email').val('');
                         jQuery('#name').val('');
                         jQuery('#msg').val('Hello, ');
 
-                        /*$("#result-modalbox").find("h2").text("Emailen er sendt!\n\n Klik for at lukke vinduet");
-                        $("#result-modalbox").modal("show");*/
+                        $("#result-modalbox").find("h2").text("Thank you!\n\n Our manager will contact you in a short time.");
+                        $("#result-modalbox").modal("show");
                         return true;
 
                     } else {
 
-                        /*$("#result-modalbox").find("h2").text("Emailen blev desværre ikke sendt, prøv igen senere!");
-                        $("#result-modalbox").modal("show");*/
+                        $("#result-modalbox").find("h2").text("Email hadn't been sent due to technical reasons! Please try again.");
+                        $("#result-modalbox").modal("show");
                         return false;
 
                     }
@@ -762,9 +762,9 @@
                 }
             });
         } else {
-            /*$("#loading-modalbox").modal("hide");
-            $("#result-modalbox").find("h2").text("Blev ikke sendt grundet: \n\n" + errors);
-            $("#result-modalbox").modal("show");*/
+            $("#loading-modalbox").modal("hide");
+            $("#result-modalbox").find("h2").text("Email hadn't been sent: \n\n" + errors);
+            $("#result-modalbox").modal("show");
             return false;
 
         }
