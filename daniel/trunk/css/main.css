@@ -1,0 +1,34 @@
+.bg-near-white {
+    display: none;
+}
+
+button#submit-form {
+	display: block;
+}
+
+.full_review { display: none;}
+.li-tabs .open-li {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.li-tabs .open-li > p {
+    padding: 10px;
+}
+.eIhMmJ{
+    display: flex !important;
+}
+#slick-slider-dots{
+    margin-top: -40px;
+    display: flex !important;
+    justify-content: center;
+}
+#slick-slider-dots div{
+    width: auto !important;
+}
+#slick-slider-dots .slick-current li{
+    -webkit-filter: opacity(100%);
+    filter: opacity(100%);
+    position: relative;
+    border-bottom: 3px solid #231f20;
+}
