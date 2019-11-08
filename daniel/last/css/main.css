@@ -1,0 +1,17 @@
+.bg-near-white {
+    display: none;
+}
+
+button#submit-form {
+	display: block;
+}
+
+.full_review { display: none;}
+.li-tabs .open-li {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.li-tabs .open-li > p {
+    padding: 10px;
+}

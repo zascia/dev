@@ -1,0 +1,50 @@
+<listing_services>
+        <service>
+          <service_name>Housekeeping</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Airport transfer</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Car rental</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Fresh groceries</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Childcare</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Chef</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Butler</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Driver</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Restaurant concierge</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Spa services</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Equipment rental</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+        <service>
+          <service_name>Family gear</service_name>
+          <service_img>http://some-imag.link/image_service.png</service_img>
+        </service>
+    </listing_services>
