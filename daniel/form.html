@@ -190,7 +190,8 @@
 <script>
     $(document).ready(function() {
         var $form = $('form#test-form'),
-            url = 'https://script.google.com/macros/s/AKfycbxCjM82A81l3XxSdxLbOQc5w0r0G5Wecjy3N-2Mc3T5v9J-IIA/exec'
+            //url = 'https://script.google.com/macros/s/AKfycbxCjM82A81l3XxSdxLbOQc5w0r0G5Wecjy3N-2Mc3T5v9J-IIA/exec';
+            url = 'https://script.google.com/macros/s/AKfycbynf8ioNXu2IeETg3dToMfIeFgHI_eKSjYBDdMpyOiBiwOy6nM5/exec';
 
         $('#submit-form').on('click', function(e) {
             e.preventDefault();
@@ -199,8 +200,10 @@
                 method: "GET",
                 dataType: "json",
                 data: $form.serializeObject()
-            }).success(
-                // do something
+            }).success(function(resp){
+                    console.log("resp", JSON.parse(resp));
+                }
+
             );
         })
     });

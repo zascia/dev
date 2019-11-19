@@ -3,7 +3,8 @@
 // Offer form
 $(document).ready(function() {
     var $form = $('form#form-ajax'),
-        url = 'https://script.google.com/macros/s/AKfycbw3pMx-9BxDwLrXXPhqYX1FciyRn65zw42y_m-Wghc6-LxGvw8/exec';
+        //url = 'https://script.google.com/macros/s/AKfycbw3pMx-9BxDwLrXXPhqYX1FciyRn65zw42y_m-Wghc6-LxGvw8/exec';
+        url = 'https://script.google.com/macros/s/AKfycbynf8ioNXu2IeETg3dToMfIeFgHI_eKSjYBDdMpyOiBiwOy6nM5/exec';
 
     function addEventsValidate(inputArray) {
         for (let i = 0; i < inputArray.length - 1; i++) {
@@ -28,7 +29,8 @@ $(document).ready(function() {
             beforeSend: function(){
                 $('.popup-wrapper').css('display', 'flex');
             }
-            }).done(function (data) {     
+            }).done(function (data) {
+                console.log("data", JSON.parse(data));
                 setTimeout(function(){ $('.popup-wrapper').css('display', 'none') }, 1500); 
                 $(':input:visible').first().focus();       
                 $("#form-ajax").prepend("<p style='color:green; font-size: 25px; margin-bottom: 20px'>Succes</p>");
