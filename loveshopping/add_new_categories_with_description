@@ -1,0 +1,17 @@
+def add_category(id, parent_id, name, description, top=False):
+    new_cat = Category(**{'category_id': id, 'parent_id': parent_id})
+    if top:
+        new_cat.top = 1
+    s.add(new_cat)
+    new_cat_desc = CategoryDescription(**{
+        'category_id': id, 'name': name,
+        'meta_title': name, 'description': description})
+    s.add(new_cat_desc)
+    new_cat_store = CategoryToStore(**{'category_id': id})
+    s.add(new_cat_store)
+    new_layout = CategoryToLayout(**{'category_id': id})
+    s.add(new_layout)
+    new_slug = Url_Alias(**{'query': 'category_id={}'.format(id),
+                            'keyword': '{}_{}'.format(
+                                slugify(name, to_lower=True), id)})
+    s.add(new_slug)
