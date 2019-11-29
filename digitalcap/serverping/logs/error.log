@@ -1,0 +1,22 @@
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP Notice:  Undefined variable: errorMsg in /home/h4053/data/www/zascia.in.ua/serverping/index.php on line 36
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP Stack trace:
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP   1. {main}() /home/h4053/data/www/zascia.in.ua/serverping/index.php:0
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP   2. url_test() /home/h4053/data/www/zascia.in.ua/serverping/index.php:58
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP Notice:  Undefined variable: errorMsg in /home/h4053/data/www/zascia.in.ua/serverping/index.php on line 36
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP Stack trace:
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP   1. {main}() /home/h4053/data/www/zascia.in.ua/serverping/index.php:0
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP   2. url_test() /home/h4053/data/www/zascia.in.ua/serverping/index.php:58
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP Notice:  Undefined variable: errorMsg in /home/h4053/data/www/zascia.in.ua/serverping/index.php on line 36
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP Stack trace:
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP   1. {main}() /home/h4053/data/www/zascia.in.ua/serverping/index.php:0
+[28-Nov-2019 14:31:36 Europe/Moscow] PHP   2. url_test() /home/h4053/data/www/zascia.in.ua/serverping/index.php:58
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP Notice:  Undefined variable: live_domain_list_filename in /home/h4053/data/www/zascia.in.ua/serverping/index.php on line 50
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP Stack trace:
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP   1. {main}() /home/h4053/data/www/zascia.in.ua/serverping/index.php:0
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP Warning:  file(): Filename cannot be empty in /home/h4053/data/www/zascia.in.ua/serverping/index.php on line 50
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP Stack trace:
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP   1. {main}() /home/h4053/data/www/zascia.in.ua/serverping/index.php:0
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP   2. file() /home/h4053/data/www/zascia.in.ua/serverping/index.php:50
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP Warning:  Invalid argument supplied for foreach() in /home/h4053/data/www/zascia.in.ua/serverping/index.php on line 53
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP Stack trace:
+[28-Nov-2019 14:36:14 Europe/Moscow] PHP   1. {main}() /home/h4053/data/www/zascia.in.ua/serverping/index.php:0
