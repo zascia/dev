@@ -1,0 +1,22 @@
+# Instructions
+1. Script is installed in `E:\pdf_scrapper\`. To run script use `app.bat`.
+2. `cron.bat` is used for scheduled running in background, it logs its output, not show in console. You can add it as task in system Task Scheduler.
+3. Logs are writing in `/run/app.log` file.
+3. Script is scheduled to be run every 5 mins.
+4. It take csv files from `/input/` directory one by one and stores processed file in `/output/` directory with the same name. When all records from input csv have been processed, it delete the file from `/input/` directory and get the next one.
+5. Script uses free proxies to avoid IP block by https://www.epcregister.com. It takes the list from https://free-proxy-list.net and stores them in /run/proxy/dynamic.txt. When the proxies are exhausted it refreshes the list automatically.
+6. Free proxies are not reliable and work slow. If you would like to provide custom proxies list to speed-up the process, just create the /run/proxy/static.txt file in notepad and input each proxie in new line in the next format:
+<type>/<ip>:<port>, where type should have the next values: `http`, `https`, `socks4`, `socks5`.
+Examples:
+
+socks4/170.244.0.179:4145
+http/139.227.12.51:4145
+socks4/181.143.69.27:4145
+socks5/182.16.179.82:51327
+socks4/190.184.201.154:53251
+https/212.98.138.140:4145
+socks4/82.147.120.30:49823
+...
+
+*** if the proxy already has already been blocked then script removes it from list.. do not forget to check `/run/proxy/static.txt` file.
+7. To avoid running simultaneously, script creates `/run/lock.pid` file when starts and delete it on exit. Just delete this file if the problem with starting script occurs. E.g. if `cron.bat` is already executing by scheduler, you are not able to run `app.bat` and vice versa.
