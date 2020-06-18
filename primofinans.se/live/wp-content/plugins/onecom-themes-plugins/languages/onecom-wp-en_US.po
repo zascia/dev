@@ -1,0 +1,1211 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2019-10-17 17:43+0530\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#: inc/functions.php:126 inc/functions.php:338 modules/notices.php:61
+msgid "Connection timed out"
+msgstr "Connection timed out"
+
+#: inc/functions.php:151
+msgid "Sorry, no compatible themes found for your version of WordPress and PHP."
+msgstr "Sorry, no compatible themes found for your version of WordPress and PHP."
+
+#: inc/functions.php:151 inc/functions.php:377
+msgid "Try again"
+msgstr "Try again"
+
+#: inc/functions.php:197
+msgid "WordPress is being upgraded. Please try again later."
+msgstr "WordPress is being upgraded. Please try again later."
+
+#: inc/functions.php:212
+msgid "Installing theme"
+msgstr "Installing theme"
+
+#: inc/functions.php:232 inc/functions.php:566
+msgid "Something went wrong. Please contact the support at One.com."
+msgstr "Something went wrong. Please contact the support at one.com."
+
+#: inc/functions.php:246 inc/functions.php:583
+msgid "Unable to connect to the file system. Please contact the support at One.com."
+msgstr "Unable to connect to the file system. Please contact the support at one.com."
+
+#: inc/functions.php:261
+msgid "Theme installed successfully"
+msgstr "Theme installed successfully"
+
+#: inc/functions.php:264 inc/functions.php:279 inc/functions.php:606
+#: inc/functions.php:608 templates/network/plugin-listing.php:87
+#: templates/network/plugin-listing.php:89
+#: templates/network/recommended-plugin-listing.php:100
+#: templates/network/theme-listing-loop.php:85
+#: templates/network/theme-listing-loop.php:87 templates/plugin-listing.php:86
+#: templates/plugin-listing.php:88 templates/recommended-plugin-listing.php:99
+#: templates/theme-listing-loop.php:82 templates/theme-listing-loop.php:84
+msgid "Activate"
+msgstr "Activate"
+
+#: inc/functions.php:377
+msgid "Sorry, no compatible plugins found with your version of WordPress and PHP."
+msgstr "Sorry, no compatible plugins found with your version of WordPress and PHP."
+
+#: inc/functions.php:547
+msgid "Installing plugin"
+msgstr "Installing plugin"
+
+#: inc/functions.php:598
+msgid "Plugin installed successfully"
+msgstr "Plugin installed successfully"
+
+#: inc/update.php:167
+msgid "View details"
+msgstr "View details"
+
+#: modules/cookie-banner/inc/functions.php:22
+#: modules/cookie-banner/inc/functions.php:23
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:3
+msgid "Cookie Banner"
+msgstr "Cookie Banner"
+
+# This message will become visible if a user has installed our "One.com Analytics and Online Marketing" plugin, but doesn't yet have a cookie banner.
+# ___________________________________________________
+#: modules/cookie-banner/inc/functions.php:173
+msgid "Since you are using One.com Analytics plugin, we recommend that you enable a cookie banner. This banner tells your visitors about your site storing data about them."
+msgstr "The one.com Analytics and Online Marketing plugin you are using adds tracking cookies to your site. We recommend that you add a cookie banner to inform your visitors about this."
+
+#: modules/cookie-banner/inc/functions.php:178
+msgid "Setup cookie banner"
+msgstr "Set up cookie banner."
+
+#: modules/cookie-banner/inc/functions.php:179
+msgid "Skip setup"
+msgstr "Skip setup"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:16
+msgid "This website uses cookies. By continuing to use this site, you accept our use of cookies."
+msgstr "This website uses cookies. By continuing to use this site, you accept our use of cookies."
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:18
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:85
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:101
+msgid "Learn more"
+msgstr "Learn more"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:20
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:116
+msgid "Accept"
+msgstr ""
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:75
+msgid "Enable cookie banner"
+msgstr "Enable cookie banner"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:77
+msgid "Show a banner on your website to inform visitors about cookies and get their consent."
+msgstr "Show a banner on your website to inform visitors about cookies and get their consent."
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:82
+msgid "Banner text"
+msgstr "Banner style"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:83
+msgid "Add a text asking your users to accept cookies."
+msgstr "Add a text asking your users to accept cookies."
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:85
+msgid "Cookie requirements vary. This default text is for general use but may not meet your particular legal requirements."
+msgstr "Cookie requirements vary. This default text is for general use but may not meet your particular legal requirements."
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:89
+msgid "Cookie policy link (Optional)"
+msgstr "Cookie policy link (Optional)"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:92
+msgid "Add a link to your cookie policy"
+msgstr "Add a link to your cookie policy"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:94
+msgid "Your privacy policy can contain information about which cookies you use, so visitors can read more about what you collect information about."
+msgstr "Your privacy policy can contain information about which cookies you use, so visitors can read more about what you collect information about."
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:95
+msgid "What should be included in my cookie policy?"
+msgstr "What should be included in my cookie policy?"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:100
+msgid "Link text"
+msgstr "Link text"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:105
+msgid "Link URL"
+msgstr "Link URL"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:108
+msgid "You can link to any page on your website or even add an external link."
+msgstr "You can link to any page on your website or even add an external link."
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:115
+msgid "Button text"
+msgstr "Button Text"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:118
+msgid "This is the text that appears on the button that activates cookies."
+msgstr "This is the text that appears on the button that activates cookies."
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:122
+msgid "Banner style"
+msgstr "Banner style"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:124
+msgid "Grey"
+msgstr "Grey"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:125
+msgid "Black"
+msgstr "Black"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:126
+msgid "White"
+msgstr "White"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:140
+msgid "Tip"
+msgstr "Tip"
+
+# Message in WordPress, reminding users to empty the cache when enabling a cookie banner.
+#
+# _________________________________________________________________
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:140
+msgid "Remember to delete cache in case you are using any caching plugin."
+msgstr "If you are using a caching plugin, remember to empty your cache."
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:142
+msgid "Purge Performance Cache"
+msgstr "Purge Performance Cache"
+
+#: modules/cookie-banner/templates/oc_cookie_banner_admin.php:149
+msgid "Save"
+msgstr "Save"
+
+# IMPORTANT!!!!
+#
+# This is the NAME of the feature. Try to keep it short and clean and to the point. If there is no good version in your language, use the English one, or a variant thereof.
+#
+# The Health Monitor checks a WordPress site for vulnerabilities and if its overall performance is good. Issues are reported, with information on how to fix it.
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:14
+#: modules/health-monitor/inc/functions.php:15
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:11
+#: onecom-themes-plugins.php:661
+msgid "Health Monitor"
+msgstr "Health Monitor"
+
+#: modules/health-monitor/inc/functions.php:42
+#: modules/health-monitor/inc/widgets.php:43
+msgid "Scan again"
+msgstr "Scan again"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:63
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:93
+#, php-format
+msgid "You can disable PHP error reporting in the One.com control panel and WordPress debugging in the wp.config.php file. Check these two guides for more details on how to manage these settings: %sHow do I enable error messages for PHP?%s and %sHow do I enable debugging in WordPress?%s"
+msgstr "You can disable PHP error reporting in the one.com control panel and WordPress debugging in the wp.config.php file. Check these two guides for more details on how to manage these settings: %sHow do I enable error messages for PHP?%s and %sHow do I enable debugging in WordPress?%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:70
+msgid "This is configured properly!"
+msgstr "Error reporting and debugging mode are disabled"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:93
+#, php-format
+msgid "You are running an outdated version of PHP. We recommend using the latest version of PHP. %sHow do I update PHP for my WordPress site?%s"
+msgstr "You can update PHP from the one.com control panel, under PHP & Database - MariaDB. Check our guide for more information: %sHow do I update PHP for my WordPress site?%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#: modules/health-monitor/inc/functions.php:100
+msgid "You have the latest PHP version enabled!"
+msgstr "You are using the recommended PHP version"
+
+#
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:128
+#, php-format
+msgid "One or more of your plugins are outdated. Outdated plugins make your site vulnerable to security attacks. %sUpdate your Plugins to the newest version%s"
+msgstr "Update your plugins to the latest version. We recommend that you remove any plugins that you don’t plan on using. Check this guide for more instructions:  %sHow do I update a CMS like WordPress?%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#: modules/health-monitor/inc/functions.php:135
+msgid "All your plugins are updated"
+msgstr "All your plugins are up to date"
+
+#
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:163
+#, php-format
+msgid "One or more of your installed themes are outdated. Using outdated themes can break your site and generate potential security risks. %sUpdate your Themes to the newest version%s"
+msgstr "Update your themes to the latest version. We recommend that you remove any themes that you don’t plan on using. Check this guide for more instructions:  %sHow do I update a CMS like WordPress?%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#: modules/health-monitor/inc/functions.php:170
+msgid "All your themes are updated!"
+msgstr "All your themes are up to date"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:200
+#, php-format
+msgid "Update WordPress to the latest version, especially minor updates are important because they usually include security fixes. Check this guide for more instructions:  %sHow do I update a CMS like WordPress?%s"
+msgstr "Update WordPress to the latest version, especially minor updates are important because they usually include security fixes. Check this guide for more instructions:  %sHow do I update a CMS like WordPress?%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#: modules/health-monitor/inc/functions.php:207
+msgid "Your WordPress version is updated"
+msgstr "You are using the latest WordPress version"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:231
+#, php-format
+msgid "You are using default table prefix. This means that attackers can easily guess your database configuration. %sChange the table prefix for WordPress%s"
+msgstr "You can fix this by changing the table prefix to a custom one of your own choosing. We have created a guide that shows you how to do this: %sChange the table prefix for WordPress%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:238
+msgid "You are not using default table prefix"
+msgstr "You are using a custom table prefix"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:267
+#, php-format
+msgid "Wordpress core updates are disabled. This means that your site cannot be auto updated to latest minor updates of WordPress. %sEnable auto updates%s"
+msgstr "Enable automatic minor core updates again, either by changing a setting in the plugin you use to manage updates or by changing a setting in wp-config. If you would like to know why updates are so important, check this guide: %sWhy you should always update WordPress%s."
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:272
+msgid "Wordpress core updates are enabled"
+msgstr "Automatic core updates are enabled"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:292
+msgid "Connection to Wordpress.org was successful"
+msgstr "The connection to wordpress.org was successful"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:313
+msgid "File editing from WordPress admin is disabled"
+msgstr "File editing from WordPress admin is disabled"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:321
+#, php-format
+msgid "File editing from your WordPress dashboard is allowed, meaning users with a role that has this right can edit all the core files of your site. Someone might accidentally break it, or a hacker might get access to a password. %sDisable file editing in WordPress admin%s"
+msgstr "To fix this you need to add a line to your wp-config.php file which disables file editing options from your dashboard. We have created a guide with step-by-step instructions: %sDisable file editing in WordPress admin%s."
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:352
+#, php-format
+msgid "One or more of your usernames is very common, like for example “admin”. These usernames are easy to guess and could be exploited by hackers. %sChange a WordPress username in PhpMyAdmin%s"
+msgstr "Change the common username to a personal one, based on your name or nickname. Check this guide to find out how to do it: %sChange a WordPress username in PhpMyAdmin%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:359
+msgid "You are not using any common username. "
+msgstr "You are using custom usernames as your login"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:383
+#, php-format
+msgid "Your site isn’t using HTTPS. Visitors on your site might get a warning that your website isn’t secure and it can also have a negative effect on your SEO rating. %sContact support%s"
+msgstr "Please %scontact our chat support%s, so we can check what is wrong and fix it."
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#: modules/health-monitor/inc/functions.php:390
+msgid "Your site has valid SSL certificate!"
+msgstr "Your site has a valid SSL certificate"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:425
+#, php-format
+msgid "File execution is allowed in your uploads folder. This means that an attacker can upload malware and execute it by simply trying to access it from their browser. %sDisable file execution in the WordPress uploads folder%s"
+msgstr "You can disable file execution by adding a bit of code to a .htaccess file and placing it in your uploads folder. Check our guide for step-by-step instructions: %sDisable file execution in the WordPress uploads folder%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:432
+msgid "File execution is blocked in \"Uploads\" folder."
+msgstr "Your uploads folder is protected against malicious file execution"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:484
+#, php-format
+msgid "One or more of your plugins is on the list of plugins we advise against using. Plugins on this list have a negative effect on the performance of your site, or pose a security risk. Deactivate %sDiscouraged WordPress plugins%s"
+msgstr "Remove the discouraged plugins from your WordPress installation. There are thousands of plugins, so it should be easy to find a replacement that has the same functionality. Look here for a complete list of plugins we advise you not to use: %sDiscouraged WordPress plugins%s. "
+
+#: modules/health-monitor/inc/functions.php:491
+#: templates/discouraged-plugin-listing.php:58
+#: templates/network/discouraged-plugin-listing.php:58
+msgid "You are doing great! None of your installed plugins, are on our list of discouraged plugins."
+msgstr "You are doing great! None of your installed plugins, are on our list of discouraged plugins."
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:523
+#, php-format
+msgid "Your file and folder permissions are not set correctly. If they are too strict you get errors on your site, if they are too loose this poses a security risk. %sChange the file permissions via an FTP client%s"
+msgstr "To fix this, you need to use an FTP client to change the permissions of your files to 755, and of your folders to 644. Check our guide for step-by-step instructions:  %sChange the file permissions via an FTP client%s"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:530
+msgid "Correct file permissions."
+msgstr "The file permissions are set correctly"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# This is the part where we explain what needs to be fixed, and link to a guide with more information, or link to our chatsupport (in case the customer cannot solve it without our help).
+#
+# The text in between the place holders will be the link text -> %slinktext%s
+# ________________________________________
+#
+#
+#: modules/health-monitor/inc/functions.php:585
+#: modules/health-monitor/inc/functions.php:593
+msgid "Your site could not connect to wordpress.org, which means background updates may not be working properly. %Contact support%s"
+msgstr "Try to disable all plugins and themes and do a new scan to check if the connection to wordpress.org is restored. If this worked, enable your plugins one-by-one, to find the culprit. If this didn't work, %splease contact our chat support%s."
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when a state is all good. It's a header, so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/inc/functions.php:600
+msgid "Background updates are working properly."
+msgstr "Background updates are enabled and working properly"
+
+# IMPORTANT!!!!
+#
+# This is the NAME of the feature. Try to keep it short and clean and to the point. If there is no good version in your language, use the English one, or a variant thereof. Make sure you are consistent, there are 4 keys that have Health Monitor.
+#
+# The Health Monitor checks a WordPress site for vulnerabilities and if its overall performance is good. Issues are reported, with information on how to fix it.
+#
+#: modules/health-monitor/inc/widgets.php:12
+msgid "One.com Health Monitor"
+msgstr "Health Monitor from one.com"
+
+#: modules/health-monitor/inc/widgets.php:32
+msgid "Scan now"
+msgstr "Scan now"
+
+# Make sure that you use the same term as you used for the name. This text isn't visible yet, but it will show the percentage of health after this. 100% means no issues.
+#
+#: modules/health-monitor/inc/widgets.php:43
+msgid "Health Monitor score is"
+msgstr "The Health Monitor score is"
+
+# This relates to the last time that the Health Monitor scan was done. It will be followed by a date.
+#
+# ______________________________________
+#
+#: modules/health-monitor/inc/widgets.php:43
+msgid "Last checked on"
+msgstr "Last checked on"
+
+# Description of the Health Monitor feature, make sure to use the same term as for the name.
+#
+#
+# ________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:14
+msgid "Health Monitor lets you monitor the essential security checkpoints and fix them if needed."
+msgstr "Health Monitor scans your website for potential security issues and checks the overall state of your site. "
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:25
+msgid "PHP version"
+msgstr "You are not using the recommended PHP version"
+
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:29
+#: onecom-themes-plugins.php:337 onecom-themes-plugins.php:338
+#: onecom-themes-plugins.php:345 onecom-themes-plugins.php:346
+#: onecom-themes-plugins.php:353 onecom-themes-plugins.php:354
+#: onecom-themes-plugins.php:398 onecom-themes-plugins.php:401
+#: onecom-themes-plugins.php:412 onecom-themes-plugins.php:664
+msgid "Plugins"
+msgstr "Plugins"
+
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:33
+#: onecom-themes-plugins.php:329 onecom-themes-plugins.php:330
+#: onecom-themes-plugins.php:387 onecom-themes-plugins.php:390
+#: onecom-themes-plugins.php:663
+msgid "Themes"
+msgstr "Themes"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:37
+msgid "WordPress version"
+msgstr "You aren't using the newest version of WordPress"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:41
+msgid "Connection to Wordpress.org"
+msgstr "The connection to wordpress.org failed"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:45
+msgid "WordPress core updates"
+msgstr "Automatic WordPress core updates are disabled"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:49
+msgid "SSL certificate"
+msgstr "Your site doesn't have a working SSL certificate"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:53
+msgid "File execution in uploads"
+msgstr "File execution in your uploads folder is enabled"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:58
+msgid "WP file directory and files permissions"
+msgstr "Your site has incorrect file and folder permissions"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:63
+msgid "Database security"
+msgstr "Your database is vulnerable for attacks"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:67
+msgid "File editing from admin"
+msgstr "File editing from WordPress admin is allowed"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:71
+msgid "Insecure usernames"
+msgstr "You are using a generic username that is easy to guess"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:75
+msgid "Using discouraged plugins"
+msgstr "You are using one or more plugins that we discourage using"
+
+# This key is part of the Health Monitor in WordPress. There are 14 issues that could be reported. Each issue has a success state, where all is good. And a state when something needs to be fixed, in that case there will also be a description of what's wrong and how to fix it.
+#
+# The message will be shown when something failed, it's header so no full stop.
+# ________________________________________
+#
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:85
+#: modules/health-monitor/templates/oc_sh_health_monitor.php:103
+msgid "Debug mode/Error reporting"
+msgstr "Your site is configured to display errors to visitors"
+
+#: modules/notice-discouraged-plugins.php:90
+#, php-format
+msgid "The plugin <strong>%s</strong>, that you are using, creates a lot of large temporary files causing high load on our servers and possible time-outs on your site.<br/>We strongly advise you to deactivate it. If you keep on using this plugin we may be forced to suspend your site. "
+msgstr "The plugin <strong>%s</strong>, that you are using, creates a lot of large temporary files causing high load on our servers and possible time-outs on your site.<br/>We strongly advise you to deactivate it. If you keep on using this plugin we may be forced to suspend your site. "
+
+#: modules/notice-discouraged-plugins.php:93
+#: templates/discouraged-plugin-listing.php:79
+#: templates/network/discouraged-plugin-listing.php:79
+msgid "Deactivate"
+msgstr "Deactivate"
+
+#: modules/notice-discouraged-plugins.php:101 modules/notices.php:101
+msgid "You are using one or more plugins from the list of plugins we discourage. We recommend that you deactivate them, to ensure the best performance of your website. "
+msgstr "You are using one or more plugins from the list of plugins we discourage. We recommend that you deactivate them, to ensure the best performance of your website. "
+
+#: modules/notice-discouraged-plugins.php:104 modules/notices.php:105
+msgid "View discouraged plugins"
+msgstr "View discouraged plugins"
+
+#: onecom-themes-plugins.php:319 onecom-themes-plugins.php:320
+#: onecom-themes-plugins.php:375 onecom-themes-plugins.php:378
+msgid "One.com"
+msgstr "one.com"
+
+#: onecom-themes-plugins.php:409 onecom-themes-plugins.php:662
+#: staging/Includes/Core/Administrator.php:96
+#: staging/Includes/Core/Administrator.php:97
+#: staging/Includes/Core/Administrator.php:110
+#: staging/Includes/Core/Administrator.php:111
+msgid "Staging"
+msgstr "Staging"
+
+#: onecom-themes-plugins.php:423
+msgid "One.com Control Panel"
+msgstr "one.com Control Panel"
+
+#: onecom-themes-plugins.php:426
+msgid "Go to Control Panel at One.com"
+msgstr "Go to Control Panel at one.com"
+
+#: onecom-themes-plugins.php:440
+msgid "One.com Guides & FAQ"
+msgstr "Guides & FAQ one.com"
+
+#: onecom-themes-plugins.php:443
+msgid "Go to Guides & FAQ at One.com"
+msgstr "Go to Guides & FAQ at one.com"
+
+#: staging/Includes/Core/Jobs/Directories.php:281
+#, php-format
+msgid "Unable to open %s with mode %s"
+msgstr "Unable to open %s with mode %s"
+
+#: staging/Includes/Core/Jobs/Directories.php:300
+#, php-format
+msgid "Unable to write to: %s"
+msgstr "Unable to write to: %s"
+
+#: staging/Includes/Core/Jobs/Directories.php:304
+msgid "Out of disk space."
+msgstr "Out of disk space."
+
+#: staging/Includes/Core/views/ajax/scan.php:2
+msgid "Staging Site Name:"
+msgstr "Staging Site Name:"
+
+#: staging/Includes/Core/views/ajax/scan.php:8
+msgid "<br>Probably not enough free disk space to create a staging site. <br> You can continue but its likely that the copying process will fail."
+msgstr "<br>Probably not enough free disk space to create a staging site. <br> You can continue but its likely that the copying process will fail."
+
+#: staging/Includes/Core/views/ajax/scan.php:18
+msgid "DB Tables"
+msgstr ""
+
+#: staging/Includes/Core/views/ajax/scan.php:21
+msgid "Files"
+msgstr ""
+
+#: staging/Includes/Core/views/ajax/scan.php:35
+msgid "Please Deselect the tables you dont want to copy."
+msgstr "Please Deselect the tables you don’t want to copy."
+
+#: staging/Includes/Core/views/ajax/scan.php:76
+msgid "Uncheck the folders you do not want to copy. Click on them for expanding!"
+msgstr "Uncheck the folders you do not want to copy. Click on them for expanding!"
+
+#: staging/Includes/Core/views/ajax/scan.php:83
+msgid "Extra directories to copy"
+msgstr "Extra directories to copy"
+
+#: staging/Includes/Core/views/ajax/scan.php:91
+msgid "Enter one folder path per line.<br>Folders must start with absolute path: "
+msgstr "Enter one folder path per line.<br>Folders must start with absolute path: "
+
+#: staging/Includes/Core/views/ajax/scan.php:103
+msgid "All files will be copied to: "
+msgstr ""
+
+#: staging/Includes/Core/views/ajax/staging_details.php:13
+msgid "Your staging site"
+msgstr "Your staging site"
+
+#: staging/Includes/Core/views/ajax/staging_details.php:15
+msgid "Staging site broken"
+msgstr "Staging site broken"
+
+#: staging/Includes/Core/views/ajax/staging_details.php:21
+msgid "Staging Frontend:"
+msgstr "Staging Frontend:"
+
+#: staging/Includes/Core/views/ajax/staging_details.php:22
+msgid "Staging Backend:"
+msgstr "Staging Backend:"
+
+#: staging/Includes/Core/views/ajax/staging_details.php:27
+msgid "We have detected that your staging site is broken due to missing database table(s) and/or directory(s)."
+msgstr "We have detected that your staging site is broken due to missing database table(s) and/or directory(s)."
+
+#: staging/Includes/Core/views/ajax/staging_details.php:28
+msgid "Click on \"Rebuild Staging\" to regenerate your staging site."
+msgstr "Click on “Rebuild Staging” to regenerate your staging site."
+
+#: staging/Includes/Core/views/ajax/staging_details.php:43
+msgid "The staging website is a copy of your live website, where you can test new plugins and themes without affecting your live website."
+msgstr "The staging website is a copy of your live website, where you can test new plugins and themes without affecting your live website."
+
+#: staging/Includes/Core/views/ajax/staging_details.php:44
+msgid "Only one staging version can be created for each website. When you rebuild a staging website, any existing staging site will be replaced with a new snapshot of your live website."
+msgstr "Only one staging version can be created for each website. When you rebuild a staging website, any existing staging site will be replaced with a new snapshot of your live website."
+
+#: staging/Includes/Core/views/ajax/staging_details.php:45
+msgid "The login details for the staging backend are the same as for the live website."
+msgstr "The login details for the staging backend are the same as for the live website."
+
+#: staging/Includes/Core/views/ajax/staging_details.php:47
+msgid "Caution: Rebuilding will overwrite all files and the database of your existing staging website."
+msgstr "Caution: Rebuilding will overwrite all files and the database of your existing staging website."
+
+#: staging/Includes/Core/views/ajax/staging_details.php:50
+#: staging/Includes/Core/views/live.php:51
+#: staging/Includes/Core/views/staging.php:32
+msgid "Need help?"
+msgstr "Need help?"
+
+#: staging/Includes/Core/views/ajax/staging_details.php:52
+#: staging/Includes/Core/views/ajax/staging_details.php:53
+#: staging/Includes/Core/views/includes/footer.php:14
+#: staging/Includes/Core/views/includes/footer.php:29
+#: staging/Includes/Core/views/includes/footer.php:44
+#: staging/Includes/Core/views/includes/footer.php:62
+#: staging/Includes/Core/views/staging.php:34
+msgid "Are you sure?"
+msgstr "Are you sure?"
+
+#: staging/Includes/Core/views/ajax/staging_details.php:52
+msgid "Rebuild Staging"
+msgstr "Rebuild Staging"
+
+#: staging/Includes/Core/views/ajax/staging_details.php:53
+msgid "Delete Staging"
+msgstr "Delete Staging"
+
+#: staging/Includes/Core/views/blocked.php:14
+msgid "Staging feature not available."
+msgstr "Staging feature not available."
+
+#: staging/Includes/Core/views/blocked.php:16
+msgid "Staging feature is not yet available for the following type of WordPress websites:"
+msgstr "Staging feature is not yet available for the following type of WordPress websites:"
+
+#: staging/Includes/Core/views/includes/footer.php:16
+msgid "This will overwrite your staging website with a copy of the files and database from your live website. All changes made in your staging website will be lost."
+msgstr "This will overwrite your staging website with a copy of the files and database from your live website. All changes made in your staging website will be lost."
+
+#: staging/Includes/Core/views/includes/footer.php:19
+#: staging/Includes/Core/views/includes/footer.php:34
+#: staging/Includes/Core/views/includes/footer.php:50
+#: staging/Includes/Core/views/includes/footer.php:67
+msgid "OK"
+msgstr "OK"
+
+#: staging/Includes/Core/views/includes/footer.php:20
+#: staging/Includes/Core/views/includes/footer.php:35
+#: staging/Includes/Core/views/includes/footer.php:51
+#: staging/Includes/Core/views/includes/footer.php:68
+msgid "Cancel"
+msgstr "Cancel"
+
+#: staging/Includes/Core/views/includes/footer.php:31
+msgid "This takes a snapshot of your blog and copies it to a \"staging area\" where you can test changes without affecting your live site. There's only one staging area, so every time you click this button the old staging area is lost forever, replaced with a snapshot of your live blog."
+msgstr "This takes a snapshot of your blog and copies it to a “staging area” where you can test changes without affecting your live site. There’s only one staging area, so every time you click this button the old staging area is lost forever, replaced with a snapshot of your live blog."
+
+#: staging/Includes/Core/views/includes/footer.php:46
+msgid "The staging site will be lost."
+msgstr "The staging site will be lost."
+
+#: staging/Includes/Core/views/includes/footer.php:64
+msgid "This will overwrite your live website with a copy of the files and database from your staging website."
+msgstr "This will overwrite your live website with a copy of the files and database from your staging website."
+
+#: staging/Includes/Core/views/includes/header.php:6
+msgid "One Staging"
+msgstr "One Staging"
+
+#: staging/Includes/Core/views/includes/header.php:8
+msgid "This is your Staging site."
+msgstr "This is your Staging site."
+
+#: staging/Includes/Core/views/live.php:7
+msgid "Please wait, while we are copying your live site to the staging site."
+msgstr "Please wait, while we are copying your live site to the staging site."
+
+#: staging/Includes/Core/views/live.php:15
+msgid "Please wait, while we are updating staging site."
+msgstr "Please wait, while we are updating staging site."
+
+#: staging/Includes/Core/views/live.php:21
+msgid "Please wait, while we are deleting staging site."
+msgstr "Please wait, while we are deleting staging site."
+
+#: staging/Includes/Core/views/live.php:47
+msgid "Create a staging version of your site to try out new plugins, themes and customizations"
+msgstr "Create a staging version of your site to try out new plugins, themes and customizations"
+
+#: staging/Includes/Core/views/live.php:48
+msgid "The staging environment allows you to make changes to your site, without it affecting the live version of your website. When you create a staging site, it will be a snapshot of your live website."
+msgstr "The staging environment allows you to make changes to your site, without it affecting the live version of your website. When you create a staging site, it will be a snapshot of your live website."
+
+#: staging/Includes/Core/views/live.php:48
+msgid "You can use it as a playground to test new plugins and themes. Once you are satisfied with the result, you can copy all the changes to your live website with a single click."
+msgstr "You can use it as a playground to test new plugins and themes. Once you are satisfied with the result, you can copy all the changes to your live website with a single click."
+
+#: staging/Includes/Core/views/live.php:49
+msgid "Please note"
+msgstr "Please note"
+
+#: staging/Includes/Core/views/live.php:49
+msgid "Plugins that are URL sensitive may not work as expected on the staging site."
+msgstr "Plugins that are URL sensitive may not work as expected on the staging site."
+
+#: staging/Includes/Core/views/live.php:54
+msgid "Create staging site"
+msgstr "Create staging site"
+
+# This key is a sentence used in the staging (test) functionality of WP. It informs users that they have to wait until their staging site (the content from their test environment) is being copied to their live site.
+#
+#: staging/Includes/Core/views/staging.php:6
+msgid "Please wait, while we are copying staging into live."
+msgstr "Please wait, while we are copying staging into live."
+
+#: staging/Includes/Core/views/staging.php:18
+msgid "Copy staging to your live site"
+msgstr "Copy staging to your live site"
+
+#: staging/Includes/Core/views/staging.php:22
+msgid "This is your staging website, a snapshot of your live website. Here you can test changes without affecting your live website."
+msgstr "This is your staging website, a snapshot of your live website. Here you can test changes without affecting your live website."
+
+#: staging/Includes/Core/views/staging.php:24
+msgid "When you copy from staging to live, the live website will get replaced with a snapshot of this staging website."
+msgstr "When you copy from staging to live, the live website will get replaced with a snapshot of this staging website."
+
+#: staging/Includes/Core/views/staging.php:25
+msgid "Before you continue, please be aware of the following:"
+msgstr "Before you continue, please be aware of the following:"
+
+#: staging/Includes/Core/views/staging.php:28
+msgid "It is not possible to reverse this process."
+msgstr "It is not possible to reverse this process."
+
+#: staging/Includes/Core/views/staging.php:29
+msgid "When you copy from staging to live, all data and files of your live website will be overwritten. This includes recently added posts, pages, media uploads and files."
+msgstr "When you copy from staging to live, all data and files of your live website will be overwritten. This includes recently added posts, pages, media uploads and files."
+
+#: staging/Includes/Core/views/staging.php:30
+msgid "It can take a couple of minutes for the copy to finish, so please do not close or navigate away from this page."
+msgstr "It can take a couple of minutes for the copy to finish, so please do not close or navigate away from this page."
+
+#: staging/Includes/Core/views/staging.php:34
+msgid "Copy staging to live"
+msgstr "Copy staging to live"
+
+#: staging/Includes/Core/views/staging.php:39
+msgid "Live website details not found. Can not copy staging into live!"
+msgstr "Live website details not found. Can not copy staging into live!"
+
+#: staging/one_staging.php:147
+msgid "Status"
+msgstr "Status"
+
+#: staging/one_staging.php:148
+msgid "Response"
+msgstr "Response"
+
+#: staging/one_staging.php:149
+msgid "Copied successfully."
+msgstr "Copied successfully."
+
+#: staging/one_staging.php:150
+msgid "Something went wrong; please try again."
+msgstr "Something went wrong; please try again."
+
+#: staging/one_staging.php:154
+msgid "Preparing..."
+msgstr "Preparing…"
+
+#: staging/one_staging.php:155
+msgid "Start copying..."
+msgstr "Start copying…"
+
+#: staging/one_staging.php:156
+msgid "Copying database..."
+msgstr "Copying database…"
+
+#: staging/one_staging.php:157
+msgid "Preparing directories..."
+msgstr "Preparing directories…"
+
+#: staging/one_staging.php:158
+msgid "Copying files..."
+msgstr "Copying files…"
+
+#: staging/one_staging.php:159
+msgid "Updating database..."
+msgstr "Updating database…"
+
+#: staging/one_staging.php:160
+msgid "Finalising..."
+msgstr "Finalising…"
+
+#: staging/one_staging.php:161
+msgid "Finished!"
+msgstr "Finished!"
+
+#: staging/one_staging.php:162
+msgid "Deleting staging..."
+msgstr "Deleting staging…"
+
+#: templates/discouraged-plugin-listing.php:13
+#: templates/discouraged-plugin-listing.php:25
+#: templates/network/discouraged-plugin-listing.php:13
+#: templates/network/discouraged-plugin-listing.php:25
+#: templates/network/plugin-listing.php:25
+#: templates/network/recommended-plugin-listing.php:25
+#: templates/plugin-listing.php:25 templates/recommended-plugin-listing.php:25
+msgid "Discouraged plugins"
+msgstr "Discouraged plugins"
+
+#: templates/discouraged-plugin-listing.php:23
+#: templates/network/discouraged-plugin-listing.php:23
+#: templates/network/plugin-listing.php:23
+#: templates/network/recommended-plugin-listing.php:23
+#: templates/plugin-listing.php:23 templates/recommended-plugin-listing.php:23
+msgid "One.com plugins"
+msgstr "one.com plugins"
+
+#: templates/discouraged-plugin-listing.php:24
+#: templates/network/discouraged-plugin-listing.php:24
+#: templates/network/plugin-listing.php:24
+#: templates/network/recommended-plugin-listing.php:24
+#: templates/plugin-listing.php:24 templates/recommended-plugin-listing.php:24
+msgid "Recommended plugins"
+msgstr "Recommended plugins"
+
+#: templates/discouraged-plugin-listing.php:60
+#: templates/network/discouraged-plugin-listing.php:60
+msgid "Your WordPress site should work the best possible way. We checked the plugins on your website, and listed those we don't recommended you to use."
+msgstr "Your WordPress site should work the best possible way. We checked the plugins on your website, and listed those we don’t recommended you to use."
+
+#: templates/discouraged-plugin-listing.php:60
+#: templates/network/discouraged-plugin-listing.php:60
+msgid "There are also some suggestions for alternative plugins to use instead."
+msgstr "There are also some suggestions for alternative plugins to use instead."
+
+#: templates/discouraged-plugin-listing.php:63
+#: templates/network/discouraged-plugin-listing.php:63
+msgid "View full list of discouraged plugins"
+msgstr "View full list of discouraged plugins"
+
+#: templates/discouraged-plugin-listing.php:88
+#: templates/network/discouraged-plugin-listing.php:88
+msgid "Suggested alternative"
+msgstr "Suggested alternative"
+
+#: templates/discouraged-plugin-listing.php:88
+#: templates/network/discouraged-plugin-listing.php:88
+msgid "Suggested alternatives"
+msgstr "Suggested alternatives"
+
+#: templates/discouraged-plugin-listing.php:117
+#: templates/network/discouraged-plugin-listing.php:117
+msgid "Yes, deactivate plugin"
+msgstr "Yes, deactivate plugin"
+
+#: templates/discouraged-plugin-listing.php:117
+#: templates/network/discouraged-plugin-listing.php:117
+msgid "Not right now"
+msgstr "Not right now"
+
+#: templates/discouraged-plugin-listing.php:119
+#: templates/network/discouraged-plugin-listing.php:119
+msgid "Are you sure that you want to deactivate this plugin?"
+msgstr "Are you sure that you want to deactivate this plugin?"
+
+#: templates/discouraged-plugin-listing.php:121
+#: templates/network/discouraged-plugin-listing.php:121
+msgid "Deactivating a plugin can break functionality on your website."
+msgstr "Deactivating a plugin can break functionality on your website."
+
+#: templates/network/plugin-listing.php:13 templates/plugin-listing.php:13
+msgid "Plugins that bring the One.com experience and services to WordPress."
+msgstr "Plugins that bring the one.com experience and services to WordPress."
+
+#: templates/network/plugin-listing.php:84
+#: templates/network/recommended-plugin-listing.php:98
+#: templates/network/theme-listing-loop.php:75 templates/plugin-listing.php:83
+#: templates/recommended-plugin-listing.php:97
+#: templates/theme-listing-loop.php:72
+msgid "Active"
+msgstr "Active"
+
+#: templates/network/plugin-listing.php:92
+#: templates/network/recommended-plugin-listing.php:102
+#: templates/plugin-listing.php:91 templates/recommended-plugin-listing.php:101
+msgid "Install now"
+msgstr "Install now"
+
+#: templates/network/recommended-plugin-listing.php:13
+#: templates/recommended-plugin-listing.php:13
+msgid "Presenting some of our favorite WordPress plugins, curated for quality."
+msgstr "Presenting some of our favorite WordPress plugins, curated for quality."
+
+#: templates/network/recommended-plugin-listing.php:110
+#: templates/recommended-plugin-listing.php:109
+msgid "More details"
+msgstr "More details"
+
+#: templates/network/recommended-plugin-listing.php:117
+#: templates/recommended-plugin-listing.php:116
+msgid "By"
+msgstr "By"
+
+#: templates/network/theme-listing-loop.php:57
+#: templates/theme-listing-loop.php:50
+msgid "Preview"
+msgstr "Preview"
+
+#: templates/network/theme-listing-loop.php:90
+#: templates/network/theme-listing.php:100 templates/theme-listing-loop.php:87
+#: templates/theme-listing.php:102
+msgid "Install"
+msgstr "Install"
+
+#: templates/network/theme-listing.php:14 templates/theme-listing.php:14
+msgid "Exclusive themes specially crafted for One.com customers."
+msgstr "Exclusive themes specially crafted for one.com customers."
+
+#: templates/network/theme-listing.php:35
+#: templates/network/theme-listing.php:37
+#: templates/network/theme-listing.php:49 templates/theme-listing.php:31
+#: templates/theme-listing.php:33 templates/theme-listing.php:45
+msgid "All"
+msgstr ""
+
+#: templates/network/theme-listing.php:38
+#: templates/network/theme-listing.php:50 templates/theme-listing.php:34
+#: templates/theme-listing.php:46
+msgid "Blog"
+msgstr "Blog"
+
+#: templates/network/theme-listing.php:39
+#: templates/network/theme-listing.php:51 templates/theme-listing.php:35
+#: templates/theme-listing.php:47
+msgid "Business & Services"
+msgstr ""
+
+#: templates/network/theme-listing.php:40
+#: templates/network/theme-listing.php:52 templates/theme-listing.php:36
+#: templates/theme-listing.php:48
+msgid "Events"
+msgstr "Events"
+
+#: templates/network/theme-listing.php:41
+#: templates/network/theme-listing.php:53 templates/theme-listing.php:37
+#: templates/theme-listing.php:49
+msgid "Family & Recreation"
+msgstr ""
+
+#: templates/network/theme-listing.php:42
+#: templates/network/theme-listing.php:54 templates/theme-listing.php:38
+#: templates/theme-listing.php:50
+msgid "Food & Hospitality"
+msgstr ""
+
+#: templates/network/theme-listing.php:43
+#: templates/network/theme-listing.php:55 templates/theme-listing.php:39
+#: templates/theme-listing.php:51
+msgid "Music & Art"
+msgstr ""
+
+# Name of the plugin and the menu entry in the menu to the left.
+# ____________________________
+# Reference for developers:
+#
+#: templates/network/theme-listing.php:44
+#: templates/network/theme-listing.php:56 templates/theme-listing.php:40
+#: templates/theme-listing.php:52
+msgid "Online Shop"
+msgstr "Online Shop"
+
+#: templates/network/theme-listing.php:45
+#: templates/network/theme-listing.php:57 templates/theme-listing.php:41
+#: templates/theme-listing.php:53
+msgid "Portfolio & CV"
+msgstr ""
+
+#: templates/network/theme-listing.php:96 templates/theme-listing.php:98
+msgid "Back to themes"
+msgstr "Back to themes"
+
+#: templates/network/theme-listing.php:103 templates/theme-listing.php:105
+msgid "Desktop"
+msgstr "Desktop"
+
+#: templates/network/theme-listing.php:104 templates/theme-listing.php:106
+msgid "Mobile"
+msgstr "Mobile"

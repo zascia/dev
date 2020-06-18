@@ -1,0 +1,112 @@
+/*@font-face {*/
+/*  font-family: 'onecom';*/
+/*  src:  url('fonts/onecom.eot?jvauog');*/
+/*  src:  url('fonts/onecom.eot?jvauog#iefix') format('embedded-opentype'),*/
+/*    url('fonts/onecom.ttf?jvauog') format('truetype'),*/
+/*    url('fonts/onecom.woff?jvauog') format('woff'),*/
+/*    url('fonts/onecom.svg?jvauog#onecom') format('svg');*/
+/*  font-weight: normal;*/
+/*  font-style: normal;*/
+/*}*/
+
+[class^="icon-oc-"], [class*=" icon-oc-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  /*font-family: 'onecom' !important;*/
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-oc-one-com-white-32px-fill:before {
+  content: "\e901";
+}
+.icon-oc-one-com:before {
+  content: "\e900";
+}
+
+/* Plugin related */
+.toplevel_page_onecom-wp .wp-menu-image,
+#one-com-icon {
+  /*font-family: 'onecom' !important;*/
+  speak: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*.toplevel_page_onecom-wp > .wp-menu-image:before,*/
+/*.onecom-wp-admin-bar-item > a:before,*/
+/*#one-com-icon:before {*/
+/*  content: "\e900";*/
+/*  font-family: 'onecom' !important;*/
+/*}*/
+.toplevel_page_onecom-wp > .wp-menu-name,
+.onecom-wp-admin-bar-item > a{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.toplevel_page_onecom-wp > .wp-menu-name img{
+  width: 69px;
+  height: auto;
+}
+.onecom-wp-admin-bar-item > a img{
+  height:7px !important;
+}
+.toplevel_page_onecom-wp > .wp-menu-name img,
+.onecom-wp-admin-bar-item > a img{
+  opacity: 0.8;
+}
+
+li.opensub > a.toplevel_page_onecom-wp > .wp-menu-name img,
+.toplevel_page_onecom-wp.wp-has-current-submenu > .wp-menu-name img,
+.onecom-wp-admin-bar-item.hover > a img{
+  opacity: 1;
+}
+.toplevel_page_onecom-wp > .wp-menu-image:before,
+.onecom-wp-admin-bar-item > a:before,
+#one-com-icon:before{
+  content:'';
+  position: static !important;
+  background-color:rgba(240, 245, 250, 0.4);
+  border-radius: 102px;
+  width:18px;
+  height: 18px;
+  padding:0 !important;
+}
+.onecom-wp-admin-bar-item > a:before{
+  width:14px;
+  height: 14px;
+}
+
+.toplevel_page_onecom-wp.wp-has-current-submenu > .wp-menu-image:before,
+.onecom-wp-admin-bar-item.hover > a:before,
+.toplevel_page_onecom-wp.opensub > a > .wp-menu-image:before{
+  background-color:#76b82a;
+}
+
+.onecom-wp-admin-bar-item > a{
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+#one-com-logo-wrapper {
+  font-size: 4em
+}
+#one-com-icon {
+  vertical-align: middle;
+}
