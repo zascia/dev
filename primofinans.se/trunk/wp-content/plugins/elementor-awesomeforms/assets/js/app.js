@@ -52,6 +52,7 @@ function applyDynamicCalculator() {
 /* eo dynamic calculator */
 
 $(document).ready(function() {
+    var domain_val = $('#domain_val').val();
     /* validation on the fly */
     function addEventsValidate(formClass) {
         let inputArray = $(formClass).serializeArray();
@@ -132,6 +133,13 @@ $(document).ready(function() {
             btn = document.querySelector('.button.next.step');
             btn.addEventListener('click', step2Click);
         } else {
+            if ($("#axo-form-small").length) {
+                AxoScript9473.setLanguage("sv");
+                AxoScript9473.setCountry("SE");
+
+                AxoScript9473.init("#axo-form-small");
+            }
+
             restoreCurrentValues();
 
             setTimeout(function() {applyDynamicCalculator();},0);
@@ -196,9 +204,9 @@ $(document).ready(function() {
             url: $form.attr('action'),
             data: $form.serialize()
         }).done(function() {
-            location.href = "step2";
+            location.href = domain_val+"/step2";
         }).fail(function() {
-            location.href = "step2";
+            location.href = domain_val+"/step2";
         });
     }
 
