@@ -13,8 +13,8 @@
 
     function i(t) {
         return e.expr.filters.visible(t) && !e(t).parents().addBack().filter(function () {
-                return "hidden" === e.css(this, "visibility")
-            }).length
+            return "hidden" === e.css(this, "visibility")
+        }).length
     }
 
     e.ui = e.ui || {}, e.extend(e.ui, {
@@ -58,12 +58,12 @@
         }
     }), e.extend(e.expr[":"], {
         data: e.expr.createPseudo ? e.expr.createPseudo(function (t) {
-                return function (i) {
-                    return !!e.data(i, t)
-                }
-            }) : function (t, i, s) {
-                return !!e.data(t, s[3])
-            }, focusable: function (i) {
+            return function (i) {
+                return !!e.data(i, t)
+            }
+        }) : function (t, i, s) {
+            return !!e.data(t, s[3])
+        }, focusable: function (i) {
             return t(i, !isNaN(e.attr(i, "tabindex")))
         }, tabbable: function (i) {
             var s = e.attr(i, "tabindex"), n = isNaN(s);
@@ -84,12 +84,12 @@
         };
         e.fn["inner" + i] = function (t) {
             return void 0 === t ? o["inner" + i].call(this) : this.each(function () {
-                    e(this).css(a, s(this, t) + "px")
-                })
+                e(this).css(a, s(this, t) + "px")
+            })
         }, e.fn["outer" + i] = function (t, n) {
             return "number" != typeof t ? o["outer" + i].call(this, t) : this.each(function () {
-                    e(this).css(a, s(this, t, !0, n) + "px")
-                })
+                e(this).css(a, s(this, t, !0, n) + "px")
+            })
         }
     }), e.fn.addBack || (e.fn.addBack = function (e) {
         return this.add(null == e ? this.prevObject : this.prevObject.filter(e))
@@ -101,11 +101,11 @@
         focus: function (t) {
             return function (i, s) {
                 return "number" == typeof i ? this.each(function () {
-                        var t = this;
-                        setTimeout(function () {
-                            e(t).focus(), s && s.call(t)
-                        }, i)
-                    }) : t.apply(this, arguments)
+                    var t = this;
+                    setTimeout(function () {
+                        e(t).focus(), s && s.call(t)
+                    }, i)
+                }) : t.apply(this, arguments)
             }
         }(e.fn.focus), disableSelection: function () {
             var e = "onselectstart" in document.createElement("div") ? "selectstart" : "mousedown";
@@ -117,30 +117,37 @@
         }(), enableSelection: function () {
             return this.unbind(".ui-disableSelection")
         }, zIndex: function (t) {
-            if (void 0 !== t)return this.css("zIndex", t);
-            if (this.length)for (var i, s, n = e(this[0]); n.length && n[0] !== document;) {
-                if (i = n.css("position"), ("absolute" === i || "relative" === i || "fixed" === i) && (s = parseInt(n.css("zIndex"), 10), !isNaN(s) && 0 !== s))return s;
-                n = n.parent()
-            }
+            if (void 0 !== t)
+                return this.css("zIndex", t);
+            if (this.length)
+                for (var i, s, n = e(this[0]); n.length && n[0] !== document; ) {
+                    if (i = n.css("position"), ("absolute" === i || "relative" === i || "fixed" === i) && (s = parseInt(n.css("zIndex"), 10), !isNaN(s) && 0 !== s))
+                        return s;
+                    n = n.parent()
+                }
             return 0
         }
     }), e.ui.plugin = {
         add: function (t, i, s) {
             var n, a = e.ui[t].prototype;
-            for (n in s)a.plugins[n] = a.plugins[n] || [], a.plugins[n].push([i, s[n]])
+            for (n in s)
+                a.plugins[n] = a.plugins[n] || [], a.plugins[n].push([i, s[n]])
         }, call: function (e, t, i, s) {
             var n, a = e.plugins[t];
-            if (a && (s || e.element[0].parentNode && 11 !== e.element[0].parentNode.nodeType))for (n = 0; a.length > n; n++)e.options[a[n][0]] && a[n][1].apply(e.element, i)
+            if (a && (s || e.element[0].parentNode && 11 !== e.element[0].parentNode.nodeType))
+                for (n = 0; a.length > n; n++)
+                    e.options[a[n][0]] && a[n][1].apply(e.element, i)
         }
     };
     var s = 0, n = Array.prototype.slice;
     e.cleanData = function (t) {
         return function (i) {
             var s, n, a;
-            for (a = 0; null != (n = i[a]); a++)try {
-                s = e._data(n, "events"), s && s.remove && e(n).triggerHandler("remove")
-            } catch (o) {
-            }
+            for (a = 0; null != (n = i[a]); a++)
+                try {
+                    s = e._data(n, "events"), s && s.remove && e(n).triggerHandler("remove")
+                } catch (o) {
+                }
             t(i)
         }
     }(e.cleanData), e.widget = function (t, i, s) {
@@ -155,39 +162,41 @@
             _childConstructors: []
         }), r = new i, r.options = e.widget.extend({}, r.options), e.each(s, function (t, s) {
             return e.isFunction(s) ? (h[t] = function () {
-                    var e = function () {
-                        return i.prototype[t].apply(this, arguments)
-                    }, n = function (e) {
-                        return i.prototype[t].apply(this, e)
-                    };
-                    return function () {
-                        var t, i = this._super, a = this._superApply;
-                        return this._super = e, this._superApply = n, t = s.apply(this, arguments), this._super = i, this._superApply = a, t
-                    }
-                }(), void 0) : (h[t] = s, void 0)
+                var e = function () {
+                    return i.prototype[t].apply(this, arguments)
+                }, n = function (e) {
+                    return i.prototype[t].apply(this, e)
+                };
+                return function () {
+                    var t, i = this._super, a = this._superApply;
+                    return this._super = e, this._superApply = n, t = s.apply(this, arguments), this._super = i, this._superApply = a, t
+                }
+            }(), void 0) : (h[t] = s, void 0)
         }), o.prototype = e.widget.extend(r, {widgetEventPrefix: a ? r.widgetEventPrefix || t : t}, h, {
             constructor: o,
             namespace: l,
             widgetName: t,
             widgetFullName: n
         }), a ? (e.each(a._childConstructors, function (t, i) {
-                var s = i.prototype;
-                e.widget(s.namespace + "." + s.widgetName, o, i._proto)
-            }), delete a._childConstructors) : i._childConstructors.push(o), e.widget.bridge(t, o), o
+            var s = i.prototype;
+            e.widget(s.namespace + "." + s.widgetName, o, i._proto)
+        }), delete a._childConstructors) : i._childConstructors.push(o), e.widget.bridge(t, o), o
     }, e.widget.extend = function (t) {
-        for (var i, s, a = n.call(arguments, 1), o = 0, r = a.length; r > o; o++)for (i in a[o])s = a[o][i], a[o].hasOwnProperty(i) && void 0 !== s && (t[i] = e.isPlainObject(s) ? e.isPlainObject(t[i]) ? e.widget.extend({}, t[i], s) : e.widget.extend({}, s) : s);
+        for (var i, s, a = n.call(arguments, 1), o = 0, r = a.length; r > o; o++)
+            for (i in a[o])
+                s = a[o][i], a[o].hasOwnProperty(i) && void 0 !== s && (t[i] = e.isPlainObject(s) ? e.isPlainObject(t[i]) ? e.widget.extend({}, t[i], s) : e.widget.extend({}, s) : s);
         return t
     }, e.widget.bridge = function (t, i) {
         var s = i.prototype.widgetFullName || t;
         e.fn[t] = function (a) {
             var o = "string" == typeof a, r = n.call(arguments, 1), h = this;
             return o ? this.each(function () {
-                    var i, n = e.data(this, s);
-                    return "instance" === a ? (h = n, !1) : n ? e.isFunction(n[a]) && "_" !== a.charAt(0) ? (i = n[a].apply(n, r), i !== n && void 0 !== i ? (h = i && i.jquery ? h.pushStack(i.get()) : i, !1) : void 0) : e.error("no such method '" + a + "' for " + t + " widget instance") : e.error("cannot call methods on " + t + " prior to initialization; " + "attempted to call method '" + a + "'")
-                }) : (r.length && (a = e.widget.extend.apply(null, [a].concat(r))), this.each(function () {
-                    var t = e.data(this, s);
-                    t ? (t.option(a || {}), t._init && t._init()) : e.data(this, s, new i(a, this))
-                })), h
+                var i, n = e.data(this, s);
+                return "instance" === a ? (h = n, !1) : n ? e.isFunction(n[a]) && "_" !== a.charAt(0) ? (i = n[a].apply(n, r), i !== n && void 0 !== i ? (h = i && i.jquery ? h.pushStack(i.get()) : i, !1) : void 0) : e.error("no such method '" + a + "' for " + t + " widget instance") : e.error("cannot call methods on " + t + " prior to initialization; " + "attempted to call method '" + a + "'")
+            }) : (r.length && (a = e.widget.extend.apply(null, [a].concat(r))), this.each(function () {
+                var t = e.data(this, s);
+                t ? (t.option(a || {}), t._init && t._init()) : e.data(this, s, new i(a, this))
+            })), h
         }
     }, e.Widget = function () {
     }, e.Widget._childConstructors = [], e.Widget.prototype = {
@@ -215,20 +224,26 @@
         },
         option: function (t, i) {
             var s, n, a, o = t;
-            if (0 === arguments.length)return e.widget.extend({}, this.options);
-            if ("string" == typeof t)if (o = {}, s = t.split("."), t = s.shift(), s.length) {
-                for (n = o[t] = e.widget.extend({}, this.options[t]), a = 0; s.length - 1 > a; a++)n[s[a]] = n[s[a]] || {}, n = n[s[a]];
-                if (t = s.pop(), 1 === arguments.length)return void 0 === n[t] ? null : n[t];
-                n[t] = i
-            } else {
-                if (1 === arguments.length)return void 0 === this.options[t] ? null : this.options[t];
-                o[t] = i
-            }
+            if (0 === arguments.length)
+                return e.widget.extend({}, this.options);
+            if ("string" == typeof t)
+                if (o = {}, s = t.split("."), t = s.shift(), s.length) {
+                    for (n = o[t] = e.widget.extend({}, this.options[t]), a = 0; s.length - 1 > a; a++)
+                        n[s[a]] = n[s[a]] || {}, n = n[s[a]];
+                    if (t = s.pop(), 1 === arguments.length)
+                        return void 0 === n[t] ? null : n[t];
+                    n[t] = i
+                } else {
+                    if (1 === arguments.length)
+                        return void 0 === this.options[t] ? null : this.options[t];
+                    o[t] = i
+                }
             return this._setOptions(o), this
         },
         _setOptions: function (e) {
             var t;
-            for (t in e)this._setOption(t, e[t]);
+            for (t in e)
+                this._setOption(t, e[t]);
             return this
         },
         _setOption: function (e, t) {
@@ -283,7 +298,9 @@
         },
         _trigger: function (t, i, s) {
             var n, a, o = this.options[t];
-            if (s = s || {}, i = e.Event(i), i.type = (t === this.widgetEventPrefix ? t : this.widgetEventPrefix + t).toLowerCase(), i.target = this.element[0], a = i.originalEvent)for (n in a)n in i || (i[n] = a[n]);
+            if (s = s || {}, i = e.Event(i), i.type = (t === this.widgetEventPrefix ? t : this.widgetEventPrefix + t).toLowerCase(), i.target = this.element[0], a = i.originalEvent)
+                for (n in a)
+                    n in i || (i[n] = a[n]);
             return this.element.trigger(i, s), !(e.isFunction(o) && o.apply(this.element[0], [i].concat(s)) === !1 || i.isDefaultPrevented())
         }
     }, e.each({show: "fadeIn", hide: "fadeOut"}, function (t, i) {
@@ -291,8 +308,8 @@
             "string" == typeof n && (n = {effect: n});
             var o, r = n ? n === !0 || "number" == typeof n ? i : n.effect || i : t;
             n = n || {}, "number" == typeof n && (n = {duration: n}), o = !e.isEmptyObject(n), n.complete = a, n.delay && s.delay(n.delay), o && e.effects && e.effects.effect[r] ? s[t](n) : r !== t && s[r] ? s[r](n.duration, n.easing, a) : s.queue(function (i) {
-                        e(this)[t](), a && a.call(s[0]), i()
-                    })
+                e(this)[t](), a && a.call(s[0]), i()
+            })
         }
     }), e.widget;
     var a = !1;
@@ -317,18 +334,20 @@
                 this._mouseMoved = !1, this._mouseStarted && this._mouseUp(t), this._mouseDownEvent = t;
                 var i = this, s = 1 === t.which, n = "string" == typeof this.options.cancel && t.target.nodeName ? e(t.target).closest(this.options.cancel).length : !1;
                 return s && !n && this._mouseCapture(t) ? (this.mouseDelayMet = !this.options.delay, this.mouseDelayMet || (this._mouseDelayTimer = setTimeout(function () {
-                        i.mouseDelayMet = !0
-                    }, this.options.delay)), this._mouseDistanceMet(t) && this._mouseDelayMet(t) && (this._mouseStarted = this._mouseStart(t) !== !1, !this._mouseStarted) ? (t.preventDefault(), !0) : (!0 === e.data(t.target, this.widgetName + ".preventClickEvent") && e.removeData(t.target, this.widgetName + ".preventClickEvent"), this._mouseMoveDelegate = function (e) {
-                            return i._mouseMove(e)
-                        }, this._mouseUpDelegate = function (e) {
-                            return i._mouseUp(e)
-                        }, this.document.bind("mousemove." + this.widgetName, this._mouseMoveDelegate).bind("mouseup." + this.widgetName, this._mouseUpDelegate), t.preventDefault(), a = !0, !0)) : !0
+                    i.mouseDelayMet = !0
+                }, this.options.delay)), this._mouseDistanceMet(t) && this._mouseDelayMet(t) && (this._mouseStarted = this._mouseStart(t) !== !1, !this._mouseStarted) ? (t.preventDefault(), !0) : (!0 === e.data(t.target, this.widgetName + ".preventClickEvent") && e.removeData(t.target, this.widgetName + ".preventClickEvent"), this._mouseMoveDelegate = function (e) {
+                    return i._mouseMove(e)
+                }, this._mouseUpDelegate = function (e) {
+                    return i._mouseUp(e)
+                }, this.document.bind("mousemove." + this.widgetName, this._mouseMoveDelegate).bind("mouseup." + this.widgetName, this._mouseUpDelegate), t.preventDefault(), a = !0, !0)) : !0
             }
         },
         _mouseMove: function (t) {
             if (this._mouseMoved) {
-                if (e.ui.ie && (!document.documentMode || 9 > document.documentMode) && !t.button)return this._mouseUp(t);
-                if (!t.which)return this._mouseUp(t)
+                if (e.ui.ie && (!document.documentMode || 9 > document.documentMode) && !t.button)
+                    return this._mouseUp(t);
+                if (!t.which)
+                    return this._mouseUp(t)
             }
             return (t.which || t.button) && (this._mouseMoved = !0), this._mouseStarted ? (this._mouseDrag(t), t.preventDefault()) : (this._mouseDistanceMet(t) && this._mouseDelayMet(t) && (this._mouseStarted = this._mouseStart(this._mouseDownEvent, t) !== !1, this._mouseStarted ? this._mouseDrag(t) : this._mouseUp(t)), !this._mouseStarted)
         },
@@ -362,25 +381,26 @@
         function s(t) {
             var i = t[0];
             return 9 === i.nodeType ? {
-                    width: t.width(),
-                    height: t.height(),
-                    offset: {top: 0, left: 0}
-                } : e.isWindow(i) ? {
-                        width: t.width(),
-                        height: t.height(),
-                        offset: {top: t.scrollTop(), left: t.scrollLeft()}
-                    } : i.preventDefault ? {
-                            width: 0,
-                            height: 0,
-                            offset: {top: i.pageY, left: i.pageX}
-                        } : {width: t.outerWidth(), height: t.outerHeight(), offset: t.offset()}
+                width: t.width(),
+                height: t.height(),
+                offset: {top: 0, left: 0}
+            } : e.isWindow(i) ? {
+                width: t.width(),
+                height: t.height(),
+                offset: {top: t.scrollTop(), left: t.scrollLeft()}
+            } : i.preventDefault ? {
+                width: 0,
+                height: 0,
+                offset: {top: i.pageY, left: i.pageX}
+            } : {width: t.outerWidth(), height: t.outerHeight(), offset: t.offset()}
         }
 
         e.ui = e.ui || {};
         var n, a, o = Math.max, r = Math.abs, h = Math.round, l = /left|center|right/, u = /top|center|bottom/, d = /[\+\-]\d+(\.[\d]+)?%?/, c = /^\w+/, p = /%$/, f = e.fn.position;
         e.position = {
             scrollbarWidth: function () {
-                if (void 0 !== n)return n;
+                if (void 0 !== n)
+                    return n;
                 var t, i, s = e("<div style='display:block;position:absolute;width:50px;height:50px;overflow:hidden;'><div style='height:100px;width:auto;'></div></div>"), a = s.children()[0];
                 return e("body").append(s), t = a.offsetWidth, s.css("overflow", "scroll"), i = a.offsetWidth, t === i && (i = s[0].clientWidth), s.remove(), n = t - i
             }, getScrollInfo: function (t) {
@@ -400,7 +420,8 @@
                 }
             }
         }, e.fn.position = function (n) {
-            if (!n || !n.of)return f.apply(this, arguments);
+            if (!n || !n.of)
+                return f.apply(this, arguments);
             n = e.extend({}, n);
             var p, m, g, v, y, b, _ = e(n.of), x = e.position.getWithinInfo(n.within), w = e.position.getScrollInfo(x), k = (n.collision || "flip").split(" "), T = {};
             return b = s(_), _[0].preventDefault && (n.at = "left top"), m = b.width, g = b.height, v = b.offset, y = e.extend({}, v), e.each(["my", "at"], function () {
@@ -476,7 +497,8 @@
                 margin: 0,
                 background: "none"
             }, r && e.extend(s, {position: "absolute", left: "-1000px", top: "-1000px"});
-            for (o in s)t.style[o] = s[o];
+            for (o in s)
+                t.style[o] = s[o];
             t.appendChild(h), i = r || document.documentElement, i.insertBefore(t, i.firstChild), h.style.cssText = "position: absolute; left: 10.7432222px;", n = e(h).offset().left, a = n > 10 && 11 > n, t.innerHTML = "", i.removeChild(t)
         }()
     }(), e.ui.position, e.widget("ui.accordion", {
@@ -573,19 +595,19 @@
                 "aria-expanded": "false",
                 tabIndex: -1
             }).next().attr({"aria-hidden": "true"}).hide(), this.active.length ? this.active.attr({
-                    "aria-selected": "true",
-                    "aria-expanded": "true",
-                    tabIndex: 0
-                }).next().attr({"aria-hidden": "false"}) : this.headers.eq(0).attr("tabIndex", 0), this._createIcons(), this._setupEvents(i.event), "fill" === s ? (t = n.height(), this.element.siblings(":visible").each(function () {
-                    var i = e(this), s = i.css("position");
-                    "absolute" !== s && "fixed" !== s && (t -= i.outerHeight(!0))
-                }), this.headers.each(function () {
-                    t -= e(this).outerHeight(!0)
-                }), this.headers.next().each(function () {
-                    e(this).height(Math.max(0, t - e(this).innerHeight() + e(this).height()))
-                }).css("overflow", "auto")) : "auto" === s && (t = 0, this.headers.next().each(function () {
-                    t = Math.max(t, e(this).css("height", "").height())
-                }).height(t))
+                "aria-selected": "true",
+                "aria-expanded": "true",
+                tabIndex: 0
+            }).next().attr({"aria-hidden": "false"}) : this.headers.eq(0).attr("tabIndex", 0), this._createIcons(), this._setupEvents(i.event), "fill" === s ? (t = n.height(), this.element.siblings(":visible").each(function () {
+                var i = e(this), s = i.css("position");
+                "absolute" !== s && "fixed" !== s && (t -= i.outerHeight(!0))
+            }), this.headers.each(function () {
+                t -= e(this).outerHeight(!0)
+            }), this.headers.next().each(function () {
+                e(this).height(Math.max(0, t - e(this).innerHeight() + e(this).height()))
+            }).css("overflow", "auto")) : "auto" === s && (t = 0, this.headers.next().each(function () {
+                t = Math.max(t, e(this).css("height", "").height())
+            }).height(t))
         },
         _activate: function (t) {
             var i = this._findActive(t)[0];
@@ -619,11 +641,11 @@
                 "aria-selected": "false",
                 "aria-expanded": "false"
             }), i.length && s.length ? s.prev().attr({
-                    tabIndex: -1,
-                    "aria-expanded": "false"
-                }) : i.length && this.headers.filter(function () {
-                    return 0 === parseInt(e(this).attr("tabIndex"), 10)
-                }).attr("tabIndex", -1), i.attr("aria-hidden", "false").prev().attr({
+                tabIndex: -1,
+                "aria-expanded": "false"
+            }) : i.length && this.headers.filter(function () {
+                return 0 === parseInt(e(this).attr("tabIndex"), 10)
+            }).attr("tabIndex", -1), i.attr("aria-hidden", "false").prev().attr({
                 "aria-selected": "true",
                 "aria-expanded": "true",
                 tabIndex: 0
@@ -634,16 +656,16 @@
                 o._toggleComplete(i)
             };
             return "number" == typeof u && (a = u), "string" == typeof u && (n = u), n = n || u.easing || l.easing, a = a || u.duration || l.duration, t.length ? e.length ? (s = e.show().outerHeight(), t.animate(this.hideProps, {
-                        duration: a,
-                        easing: n,
-                        step: function (e, t) {
-                            t.now = Math.round(e)
-                        }
-                    }), e.hide().animate(this.showProps, {
-                        duration: a, easing: n, complete: d, step: function (e, i) {
-                            i.now = Math.round(e), "height" !== i.prop ? r += i.now : "content" !== o.options.heightStyle && (i.now = Math.round(s - t.outerHeight() - r), r = 0)
-                        }
-                    }), void 0) : t.animate(this.hideProps, a, n, d) : e.animate(this.showProps, a, n, d)
+                duration: a,
+                easing: n,
+                step: function (e, t) {
+                    t.now = Math.round(e)
+                }
+            }), e.hide().animate(this.showProps, {
+                duration: a, easing: n, complete: d, step: function (e, i) {
+                    i.now = Math.round(e), "height" !== i.prop ? r += i.now : "content" !== o.options.heightStyle && (i.now = Math.round(s - t.outerHeight() - r), r = 0)
+                }
+            }), void 0) : t.animate(this.hideProps, a, n, d) : e.animate(this.showProps, a, n, d)
         },
         _toggleComplete: function (e) {
             var t = e.oldPanel;
@@ -676,7 +698,8 @@
         },
         _createHandles: function () {
             var t, i, s = this.options, n = this.element.find(".ui-slider-handle").addClass("ui-state-default ui-corner-all"), a = "<span class='ui-slider-handle ui-state-default ui-corner-all' tabindex='0'></span>", o = [];
-            for (i = s.values && s.values.length || 1, n.length > i && (n.slice(i).remove(), n = n.slice(0, i)), t = n.length; i > t; t++)o.push(a);
+            for (i = s.values && s.values.length || 1, n.length > i && (n.slice(i).remove(), n = n.slice(0, i)), t = n.length; i > t; t++)
+                o.push(a);
             this.handles = n.add(e(o.join("")).appendTo(this.element)), this.handle = this.handles.eq(0), this.handles.each(function (t) {
                 e(this).data("ui-slider-handle-index", t)
             })
@@ -684,9 +707,9 @@
         _createRange: function () {
             var t = this.options, i = "";
             t.range ? (t.range === !0 && (t.values ? t.values.length && 2 !== t.values.length ? t.values = [t.values[0], t.values[0]] : e.isArray(t.values) && (t.values = t.values.slice(0)) : t.values = [this._valueMin(), this._valueMin()]), this.range && this.range.length ? this.range.removeClass("ui-slider-range-min ui-slider-range-max").css({
-                        left: "",
-                        bottom: ""
-                    }) : (this.range = e("<div></div>").appendTo(this.element), i = "ui-slider-range ui-widget-header ui-corner-all"), this.range.addClass(i + ("min" === t.range || "max" === t.range ? " ui-slider-range-" + t.range : ""))) : (this.range && this.range.remove(), this.range = null)
+                left: "",
+                bottom: ""
+            }) : (this.range = e("<div></div>").appendTo(this.element), i = "ui-slider-range ui-widget-header ui-corner-all"), this.range.addClass(i + ("min" === t.range || "max" === t.range ? " ui-slider-range-" + t.range : ""))) : (this.range && this.range.remove(), this.range = null)
         },
         _setupEvents: function () {
             this._off(this.handles), this._on(this.handles, this._handleEvents), this._hoverable(this.handles), this._focusable(this.handles)
@@ -697,21 +720,21 @@
         _mouseCapture: function (t) {
             var i, s, n, a, o, r, h, l, u = this, d = this.options;
             return d.disabled ? !1 : (this.elementSize = {
-                    width: this.element.outerWidth(),
-                    height: this.element.outerHeight()
-                }, this.elementOffset = this.element.offset(), i = {
-                    x: t.pageX,
-                    y: t.pageY
-                }, s = this._normValueFromMouse(i), n = this._valueMax() - this._valueMin() + 1, this.handles.each(function (t) {
-                    var i = Math.abs(s - u.values(t));
-                    (n > i || n === i && (t === u._lastChangedValue || u.values(t) === d.min)) && (n = i, a = e(this), o = t)
-                }), r = this._start(t, o), r === !1 ? !1 : (this._mouseSliding = !0, this._handleIndex = o, a.addClass("ui-state-active").focus(), h = a.offset(), l = !e(t.target).parents().addBack().is(".ui-slider-handle"), this._clickOffset = l ? {
-                            left: 0,
-                            top: 0
-                        } : {
-                            left: t.pageX - h.left - a.width() / 2,
-                            top: t.pageY - h.top - a.height() / 2 - (parseInt(a.css("borderTopWidth"), 10) || 0) - (parseInt(a.css("borderBottomWidth"), 10) || 0) + (parseInt(a.css("marginTop"), 10) || 0)
-                        }, this.handles.hasClass("ui-state-hover") || this._slide(t, o, s), this._animateOff = !0, !0))
+                width: this.element.outerWidth(),
+                height: this.element.outerHeight()
+            }, this.elementOffset = this.element.offset(), i = {
+                x: t.pageX,
+                y: t.pageY
+            }, s = this._normValueFromMouse(i), n = this._valueMax() - this._valueMin() + 1, this.handles.each(function (t) {
+                var i = Math.abs(s - u.values(t));
+                (n > i || n === i && (t === u._lastChangedValue || u.values(t) === d.min)) && (n = i, a = e(this), o = t)
+            }), r = this._start(t, o), r === !1 ? !1 : (this._mouseSliding = !0, this._handleIndex = o, a.addClass("ui-state-active").focus(), h = a.offset(), l = !e(t.target).parents().addBack().is(".ui-slider-handle"), this._clickOffset = l ? {
+                left: 0,
+                top: 0
+            } : {
+                left: t.pageX - h.left - a.width() / 2,
+                top: t.pageY - h.top - a.height() / 2 - (parseInt(a.css("borderTopWidth"), 10) || 0) - (parseInt(a.css("borderBottomWidth"), 10) || 0) + (parseInt(a.css("marginTop"), 10) || 0)
+            }, this.handles.hasClass("ui-state-hover") || this._slide(t, o, s), this._animateOff = !0, !0))
         },
         _mouseStart: function () {
             return !0
@@ -737,13 +760,13 @@
         _slide: function (e, t, i) {
             var s, n, a;
             this.options.values && this.options.values.length ? (s = this.values(t ? 0 : 1), 2 === this.options.values.length && this.options.range === !0 && (0 === t && i > s || 1 === t && s > i) && (i = s), i !== this.values(t) && (n = this.values(), n[t] = i, a = this._trigger("slide", e, {
-                    handle: this.handles[t],
-                    value: i,
-                    values: n
-                }), s = this.values(t ? 0 : 1), a !== !1 && this.values(t, i))) : i !== this.value() && (a = this._trigger("slide", e, {
-                    handle: this.handles[t],
-                    value: i
-                }), a !== !1 && this.value(i))
+                handle: this.handles[t],
+                value: i,
+                values: n
+            }), s = this.values(t ? 0 : 1), a !== !1 && this.values(t, i))) : i !== this.value() && (a = this._trigger("slide", e, {
+                handle: this.handles[t],
+                value: i
+            }), a !== !1 && this.value(i))
         },
         _stop: function (e, t) {
             var i = {handle: this.handles[t], value: this.value()};
@@ -760,10 +783,14 @@
         },
         values: function (t, i) {
             var s, n, a;
-            if (arguments.length > 1)return this.options.values[t] = this._trimAlignValue(i), this._refreshValue(), this._change(null, t), void 0;
-            if (!arguments.length)return this._values();
-            if (!e.isArray(arguments[0]))return this.options.values && this.options.values.length ? this._values(t) : this.value();
-            for (s = this.options.values, n = arguments[0], a = 0; s.length > a; a += 1)s[a] = this._trimAlignValue(n[a]), this._change(null, a);
+            if (arguments.length > 1)
+                return this.options.values[t] = this._trimAlignValue(i), this._refreshValue(), this._change(null, t), void 0;
+            if (!arguments.length)
+                return this._values();
+            if (!e.isArray(arguments[0]))
+                return this.options.values && this.options.values.length ? this._values(t) : this.value();
+            for (s = this.options.values, n = arguments[0], a = 0; s.length > a; a += 1)
+                s[a] = this._trimAlignValue(n[a]), this._change(null, a);
             this._refreshValue()
         },
         _setOption: function (t, i) {
@@ -776,7 +803,8 @@
                     this._animateOff = !0, this._refreshValue(), this._change(null, 0), this._animateOff = !1;
                     break;
                 case"values":
-                    for (this._animateOff = !0, this._refreshValue(), s = 0; n > s; s += 1)this._change(null, s);
+                    for (this._animateOff = !0, this._refreshValue(), s = 0; n > s; s += 1)
+                        this._change(null, s);
                     this._animateOff = !1;
                     break;
                 case"step":
@@ -794,16 +822,20 @@
         },
         _values: function (e) {
             var t, i, s;
-            if (arguments.length)return t = this.options.values[e], t = this._trimAlignValue(t);
+            if (arguments.length)
+                return t = this.options.values[e], t = this._trimAlignValue(t);
             if (this.options.values && this.options.values.length) {
-                for (i = this.options.values.slice(), s = 0; i.length > s; s += 1)i[s] = this._trimAlignValue(i[s]);
+                for (i = this.options.values.slice(), s = 0; i.length > s; s += 1)
+                    i[s] = this._trimAlignValue(i[s]);
                 return i
             }
             return []
         },
         _trimAlignValue: function (e) {
-            if (this._valueMin() >= e)return this._valueMin();
-            if (e >= this._valueMax())return this._valueMax();
+            if (this._valueMin() >= e)
+                return this._valueMin();
+            if (e >= this._valueMax())
+                return this._valueMax();
             var t = this.options.step > 0 ? this.options.step : 1, i = (e - this._valueMin()) % t, s = e - i;
             return 2 * Math.abs(i) >= t && (s += i > 0 ? t : -t), parseFloat(s.toFixed(5))
         },
@@ -828,20 +860,20 @@
         _refreshValue: function () {
             var t, i, s, n, a, o = this.options.range, r = this.options, h = this, l = this._animateOff ? !1 : r.animate, u = {};
             this.options.values && this.options.values.length ? this.handles.each(function (s) {
-                    i = 100 * ((h.values(s) - h._valueMin()) / (h._valueMax() - h._valueMin())), u["horizontal" === h.orientation ? "left" : "bottom"] = i + "%", e(this).stop(1, 1)[l ? "animate" : "css"](u, r.animate), h.options.range === !0 && ("horizontal" === h.orientation ? (0 === s && h.range.stop(1, 1)[l ? "animate" : "css"]({left: i + "%"}, r.animate), 1 === s && h.range[l ? "animate" : "css"]({width: i - t + "%"}, {
-                            queue: !1,
-                            duration: r.animate
-                        })) : (0 === s && h.range.stop(1, 1)[l ? "animate" : "css"]({bottom: i + "%"}, r.animate), 1 === s && h.range[l ? "animate" : "css"]({height: i - t + "%"}, {
-                            queue: !1,
-                            duration: r.animate
-                        }))), t = i
-                }) : (s = this.value(), n = this._valueMin(), a = this._valueMax(), i = a !== n ? 100 * ((s - n) / (a - n)) : 0, u["horizontal" === this.orientation ? "left" : "bottom"] = i + "%", this.handle.stop(1, 1)[l ? "animate" : "css"](u, r.animate), "min" === o && "horizontal" === this.orientation && this.range.stop(1, 1)[l ? "animate" : "css"]({width: i + "%"}, r.animate), "max" === o && "horizontal" === this.orientation && this.range[l ? "animate" : "css"]({width: 100 - i + "%"}, {
+                i = 100 * ((h.values(s) - h._valueMin()) / (h._valueMax() - h._valueMin())), u["horizontal" === h.orientation ? "left" : "bottom"] = i + "%", e(this).stop(1, 1)[l ? "animate" : "css"](u, r.animate), h.options.range === !0 && ("horizontal" === h.orientation ? (0 === s && h.range.stop(1, 1)[l ? "animate" : "css"]({left: i + "%"}, r.animate), 1 === s && h.range[l ? "animate" : "css"]({width: i - t + "%"}, {
                     queue: !1,
                     duration: r.animate
-                }), "min" === o && "vertical" === this.orientation && this.range.stop(1, 1)[l ? "animate" : "css"]({height: i + "%"}, r.animate), "max" === o && "vertical" === this.orientation && this.range[l ? "animate" : "css"]({height: 100 - i + "%"}, {
+                })) : (0 === s && h.range.stop(1, 1)[l ? "animate" : "css"]({bottom: i + "%"}, r.animate), 1 === s && h.range[l ? "animate" : "css"]({height: i - t + "%"}, {
                     queue: !1,
                     duration: r.animate
-                }))
+                }))), t = i
+            }) : (s = this.value(), n = this._valueMin(), a = this._valueMax(), i = a !== n ? 100 * ((s - n) / (a - n)) : 0, u["horizontal" === this.orientation ? "left" : "bottom"] = i + "%", this.handle.stop(1, 1)[l ? "animate" : "css"](u, r.animate), "min" === o && "horizontal" === this.orientation && this.range.stop(1, 1)[l ? "animate" : "css"]({width: i + "%"}, r.animate), "max" === o && "horizontal" === this.orientation && this.range[l ? "animate" : "css"]({width: 100 - i + "%"}, {
+                queue: !1,
+                duration: r.animate
+            }), "min" === o && "vertical" === this.orientation && this.range.stop(1, 1)[l ? "animate" : "css"]({height: i + "%"}, r.animate), "max" === o && "vertical" === this.orientation && this.range[l ? "animate" : "css"]({height: 100 - i + "%"}, {
+                queue: !1,
+                duration: r.animate
+            }))
         },
         _handleEvents: {
             keydown: function (t) {
@@ -855,7 +887,8 @@
                     case e.ui.keyCode.RIGHT:
                     case e.ui.keyCode.DOWN:
                     case e.ui.keyCode.LEFT:
-                        if (t.preventDefault(), !this._keySliding && (this._keySliding = !0, e(t.target).addClass("ui-state-active"), i = this._start(t, o), i === !1))return
+                        if (t.preventDefault(), !this._keySliding && (this._keySliding = !0, e(t.target).addClass("ui-state-active"), i = this._start(t, o), i === !1))
+                            return
                 }
                 switch (a = this.options.step, s = n = this.options.values && this.options.values.length ? this.values(o) : this.value(), t.keyCode) {
                     case e.ui.keyCode.HOME:
@@ -872,12 +905,14 @@
                         break;
                     case e.ui.keyCode.UP:
                     case e.ui.keyCode.RIGHT:
-                        if (s === this._valueMax())return;
+                        if (s === this._valueMax())
+                            return;
                         n = this._trimAlignValue(s + a);
                         break;
                     case e.ui.keyCode.DOWN:
                     case e.ui.keyCode.LEFT:
-                        if (s === this._valueMin())return;
+                        if (s === this._valueMin())
+                            return;
                         n = this._trimAlignValue(s - a)
                 }
                 this._slide(t, o, n)
@@ -969,9 +1004,10 @@
     function s(o, a) {
         var s = a;
         return o.length ? o.each(function () {
-                e(this).data(i + ".options", s)
-            }) : e.extend(c, s), e(n).bind("keydown", function (t) {
-            if (!t.ctrlKey || 65 != t.keyCode)return !0;
+            e(this).data(i + ".options", s)
+        }) : e.extend(c, s), e(n).bind("keydown", function (t) {
+            if (!t.ctrlKey || 65 != t.keyCode)
+                return !0;
             var o = new e.Event("onSelectAll");
             return o.parentEvent = t, e(n).trigger(o), !0
         }), o.bind("keydown", function (n) {
@@ -1010,12 +1046,13 @@
         focusable: function (n) {
             function t(n) {
                 return e.expr.filters.visible(n) && !e(n).parents().addBack().filter(function () {
-                        return "hidden" === e.css(this, "visibility")
-                    }).length
+                    return "hidden" === e.css(this, "visibility")
+                }).length
             }
 
             var o, a, r, l = n.nodeName.toLowerCase(), s = !isNaN(e.attr(n, "tabindex"));
-            if ("area" === l)return o = n.parentNode, a = o.name, n.href && a && "map" === o.nodeName.toLowerCase() ? (r = e("img[usemap=#" + a + "]")[0], !!r && t(r)) : !1;
+            if ("area" === l)
+                return o = n.parentNode, a = o.name, n.href && a && "map" === o.nodeName.toLowerCase() ? (r = e("img[usemap=#" + a + "]")[0], !!r && t(r)) : !1;
             var i = s;
             return /input|select|textarea|button|object/.test(l) ? i = !n.disabled : "a" === l && (i = n.href || s), i && t(n)
         }
@@ -1036,7 +1073,7 @@
         return s(this, e)
     }
 }(jQuery, window, document);
-
+var $ = jQuery.noConflict();
 var AxoScript9473 = new function () {
     var e, t = "sv", n = "SE", a = !1, o = 0, r = {
         NO: {
@@ -1080,10 +1117,11 @@ var AxoScript9473 = new function () {
             selector: "#form-annual-terms select",
             range: [1, 18],
             suffix: {nb: " år", sv: " år", en: {0: " year", 1: " years"}},
-            selected: (function(){
-                if ( document.querySelectorAll('.first-step-form').length > 0 ) return 18;
+            selected: (function () {
+                if (document.querySelectorAll('.first-step-form').length > 0)
+                    return 18;
                 var data = localStorage.getItem('SEAXOcalcValuesList'),
-                    calcValues;
+                        calcValues;
                 if (data) {
                     calcValues = JSON.parse(data);
                 }
@@ -1432,11 +1470,15 @@ var AxoScript9473 = new function () {
                 return 11 == n && (n = 0), n == t[9] && i == t[10]
             }, SE: function (e) {
                 var t = String(e.replace(/( |-)/g, ""));
-                if (isNotFpn = !1, 0 == t.length)return !1;
-                if (11 == t.length)return isNotFpn = !0, !1;
-                if (12 == t.length && (t = String(t.substr(2))), isNotFpn)return !1;
+                if (isNotFpn = !1, 0 == t.length)
+                    return !1;
+                if (11 == t.length)
+                    return isNotFpn = !0, !1;
+                if (12 == t.length && (t = String(t.substr(2))), isNotFpn)
+                    return !1;
                 if (10 != t.length || isNaN(t)) {
-                    if (11 == t.length)return !1
+                    if (11 == t.length)
+                        return !1
                 } else {
                     switch (imonth = t.substr(2, 2), iday = t.substr(4, 2), imonth) {
                         case"01":
@@ -1461,8 +1503,10 @@ var AxoScript9473 = new function () {
                             isNotFpn = !0
                     }
                     if (!isNotFpn) {
-                        for (i = 0, iValue = 0, iSum = 0; i < t.length - 1 && !isNotFpn;)tChar = t.substr(i, 1), isNaN(tChar) ? isNotFpn = !0 : (iValue = tChar * ((i + 1) % 2 + 1), iValue > 9 && (iValue -= 9), iSum += iValue), i++;
-                        if (!isNotFpn && i == t.length - 1 && (10 - iSum % 10) % 10 == t.substr(t.length - 1, 1))return !0
+                        for (i = 0, iValue = 0, iSum = 0; i < t.length - 1 && !isNotFpn; )
+                            tChar = t.substr(i, 1), isNaN(tChar) ? isNotFpn = !0 : (iValue = tChar * ((i + 1) % 2 + 1), iValue > 9 && (iValue -= 9), iSum += iValue), i++;
+                        if (!isNotFpn && i == t.length - 1 && (10 - iSum % 10) % 10 == t.substr(t.length - 1, 1))
+                            return !0
                     }
                 }
             }
@@ -1471,10 +1515,14 @@ var AxoScript9473 = new function () {
             return (11 - (5 * t[0] + 4 * t[1] + 3 * t[2] + 2 * t[3] + 7 * t[4] + 6 * t[5] + 5 * t[6] + 4 * t[7] + 3 * t[8] + 2 * t[9]) % 11) % 11 == t[10]
         }, email: function (e) {
             var t = e.lastIndexOf("@");
-            if (t < 1)return !1;
-            if (t == e.length - 1)return !1;
-            if (t > 64)return !1;
-            if (e.length - t > 255)return !1;
+            if (t < 1)
+                return !1;
+            if (t == e.length - 1)
+                return !1;
+            if (t > 64)
+                return !1;
+            if (e.length - t > 255)
+                return !1;
             var n = e.lastIndexOf(".");
             return n > t + 1 && n < e.length - 1 || "[" == e.charAt(t + 1) && "]" == e.charAt(e.length - 1)
         }
@@ -1590,7 +1638,8 @@ var AxoScript9473 = new function () {
             $(this).is(":not([type=checkbox])") && AxoScript9473.addWarning($(this)), m || (m = !0)
         }), e.find("input, select").blur(function () {
             if (AxoScript9473.removeWarning($(this)), AxoScript9473.validate(), $(this).hasClass("not-valid") && $(window).width() <= 760) {
-                for (var e = $("input,select").filter(":visible"), t = (e.index(this), !1), n = !1, i = !1, a = 0; a < e.length; a++)$(e[a]).is(this) && (t = !0), $(e[a]).is($(event.relatedTarget)) && (n = !0, i = 1 != t);
+                for (var e = $("input,select").filter(":visible"), t = (e.index(this), !1), n = !1, i = !1, a = 0; a < e.length; a++)
+                    $(e[a]).is(this) && (t = !0), $(e[a]).is($(event.relatedTarget)) && (n = !0, i = 1 != t);
                 if (1 == n && 1 == t) {
                     if (1 == i) {
                         o = $(this).offset().top - $(event.relatedTarget).offset().top;
@@ -1632,15 +1681,16 @@ var AxoScript9473 = new function () {
     }, this.addDropdowns = function () {
         $.each(s, function (e, n) {
             if (void 0 !== n.options && void 0 !== n.options[t] && (void 0 !== n["first-empty"] && n["first-empty"] && AxoScript9473.addDropdownOption("", "", n.selector), $.each(n.options[t], function (e, t) {
-                    AxoScript9473.addDropdownOption(e, t, n.selector)
-                }), $(n.selector).data("Options", n.options[t]), $(n.selector).change(function () {
-                    var e = $(this).data("Options"), t = AxoScript9473.getValueFieldName($(this).attr("name")), n = $(this).parent().find("input[name='" + t + "']"), i = e[$(this).val()];
-                    void 0 === n.val() ? (n = $("<input />").addClass("value-field").attr("type", "hidden").attr("name", t).attr("value", i), $(this).parent().append(n)) : n.val(i)
-                }), void 0 !== $(n.selector).data("selected") && String($(n.selector).data("selected")) && (n.selected = $(n.selector).data("selected")), void 0 !== n.selected && String(n.selected) && $(n.selector).val(n.selected)), void 0 !== n.range) {
+                AxoScript9473.addDropdownOption(e, t, n.selector)
+            }), $(n.selector).data("Options", n.options[t]), $(n.selector).change(function () {
+                var e = $(this).data("Options"), t = AxoScript9473.getValueFieldName($(this).attr("name")), n = $(this).parent().find("input[name='" + t + "']"), i = e[$(this).val()];
+                void 0 === n.val() ? (n = $("<input />").addClass("value-field").attr("type", "hidden").attr("name", t).attr("value", i), $(this).parent().append(n)) : n.val(i)
+            }), void 0 !== $(n.selector).data("selected") && String($(n.selector).data("selected")) && (n.selected = $(n.selector).data("selected")), void 0 !== n.selected && String(n.selected) && $(n.selector).val(n.selected)), void 0 !== n.range) {
                 var a = [];
                 void 0 !== n["first-empty"] && n["first-empty"] && a.push("");
                 var o = 1;
-                for (void 0 !== n.step && n.step && (o = n.step), i = Math.max(n.range[0], n.range[1]); i >= Math.min(n.range[0], n.range[1]); i -= o)(void 0 === n.exclude || $.inArray(i, n.exclude)) && a.push(i);
+                for (void 0 !== n.step && n.step && (o = n.step), i = Math.max(n.range[0], n.range[1]); i >= Math.min(n.range[0], n.range[1]); i -= o)
+                    (void 0 === n.exclude || $.inArray(i, n.exclude)) && a.push(i);
                 n.range[0] < n.range[1] && a.sort(function (e, t) {
                     return e - t
                 }), $.each(a, function (e, i) {
@@ -1663,7 +1713,9 @@ var AxoScript9473 = new function () {
         document.cookie = e + "=" + a
     }, this.getPopCookie = function (e) {
         var t, n, i, a = document.cookie.split(";");
-        for (t = 0; t < a.length; t++)if (n = a[t].substr(0, a[t].indexOf("=")), i = a[t].substr(a[t].indexOf("=") + 1), (n = n.replace(/^\s+|\s+$/g, "")) == e)return unescape(i)
+        for (t = 0; t < a.length; t++)
+            if (n = a[t].substr(0, a[t].indexOf("=")), i = a[t].substr(a[t].indexOf("=") + 1), (n = n.replace(/^\s+|\s+$/g, "")) == e)
+                return unescape(i)
     };
     var y = 0, b = 0, x = 0, C = 0;
     $(".intercom-launcher-frame").bind("click", function () {
@@ -1674,14 +1726,14 @@ var AxoScript9473 = new function () {
         popCookie = AxoScript9473.getPopCookie("overlay_up"), window.onload = function () {
             popCookie
         }, C = e, 1 == t && C ? window.addEventListener("mouseout", function (e) {
-                b = setTimeout(function () {
-                    (x = e.clientY) <= 0 && 0 == y && 1 != popCookie && (AxoScript9473.getAB(1), y = 1, AxoScript9473.setPopCookie("overlay_up", "1", 1))
-                }, C)
-            }, !1) : 0 != t && void 0 != t || window.addEventListener("mouseout", function (e) {
-                b = setTimeout(function () {
-                    (x = e.clientY) <= 0 && 0 == y && 1 != popCookie && (AxoScript9473.getAB(1), y = 1, AxoScript9473.setPopCookie("overlay_up", "1", 1))
-                }, 2e3)
-            }, !1), window.addEventListener("mouseover", function (e) {
+            b = setTimeout(function () {
+                (x = e.clientY) <= 0 && 0 == y && 1 != popCookie && (AxoScript9473.getAB(1), y = 1, AxoScript9473.setPopCookie("overlay_up", "1", 1))
+            }, C)
+        }, !1) : 0 != t && void 0 != t || window.addEventListener("mouseout", function (e) {
+            b = setTimeout(function () {
+                (x = e.clientY) <= 0 && 0 == y && 1 != popCookie && (AxoScript9473.getAB(1), y = 1, AxoScript9473.setPopCookie("overlay_up", "1", 1))
+            }, 2e3)
+        }, !1), window.addEventListener("mouseover", function (e) {
             clearTimeout(b)
         }), $(".form-body, .form-body *, .ui-slider-handle").bind("click", function () {
             var e = 0;
@@ -1753,7 +1805,8 @@ var AxoScript9473 = new function () {
         return 12 == (e = e.replace("-", "")).length && (e = e.substring(2)), e
     }, this.getCurrencyFormat = function (e) {
         var t = String(e), n = "";
-        for (i = 0; i < t.length; i++)n += (t.length - i && (t.length - i) % 3 ? "" : " ") + t.charAt(i);
+        for (i = 0; i < t.length; i++)
+            n += (t.length - i && (t.length - i) % 3 ? "" : " ") + t.charAt(i);
         return n
     }, this.getValueFieldName = function (e) {
         return "value_" + e.replace("-", "_")
@@ -1888,7 +1941,8 @@ var AxoScript9473 = new function () {
             if (e.val() && e.is(":not([type=checkbox])")) {
                 var t = !0;
                 e.is("input.validate-email") && (e.val(e.val().toLowerCase()), t = v.email.test(e.val())), e.is("input.validate-phone") && (e.val(e.val().replace(/ /g, "")), e.val(e.val().replace(/-/g, "")), t = v.phone[n].test(e.val())), e.is("input.validate-mobile") && (e.val(e.val().replace(/ /g, "")), e.val(e.val().replace(/-/g, "")), t = v.mobile[n].test(e.val())), !e.is("input.validate-currency") || v.currency_integer.test(e.val()) || v.currency.test(e.val()) || (t = !1), e.is("input.validate-clearing-number") && (e.val(AxoScript9473.stripChars(e.val())), t = v.clearing.test(e.val())), e.is("input.validate-account-number") && (e.val(AxoScript9473.stripChars(e.val())), t = v.account_number.test(e.val())), e.is("input.validate-birth-number") && (e.val(AxoScript9473.stripChars(e.val())), t = h.nin[n](AxoScript9473.stripChars(e.val()))), e.is("input.validate-text") && (t = v.text.test(e.val())), e.is("input.validate-number") && (t = v.number.test(e.val())), e.is(":checkbox") && (t = e.is(":checked")), t ? (e.removeClass("not-valid"), e.parent().removeClass("error"), e.addClass("valid"), e.parent().addClass("parent-valid")) : (e.addClass("not-valid"), e.parent().addClass("error"), e.removeClass("valid"), e.parent().removeClass("parent-valid"))
-            } else e.removeClass("not-valid"), e.parent().removeClass("error"), e.removeClass("valid"), e.parent().removeClass("parent-valid")
+            } else
+                e.removeClass("not-valid"), e.parent().removeClass("error"), e.removeClass("valid"), e.parent().removeClass("parent-valid")
         }), e.find("select.required:visible").not(function () {
             return $(this).parent().removeClass("error"), !$(this).val()
         }).addClass("valid").parent().addClass("parent-valid"), e.find("select.required:visible").not(function () {
@@ -1909,14 +1963,15 @@ var AxoScript9473 = new function () {
             AxoScript9473.validate();
             var n = [];
             if (n = $.merge(n, $(e).find(".col:not(:hidden) input.not-valid")), n = $.merge(n, $(e).find("input.required:checkbox").not(":checked")), n = $.merge(n, $(e).find("input.required:visible:not(:checkbox)").not(".valid")), (n = $.merge(n, $(e).find(".col:not(:hidden) select.required:visible").not(function () {
-                    return !!$(this).val()
-                }))).length) {
+                return !!$(this).val()
+            }))).length) {
                 var i = 9999;
                 return $.each(n, function () {
                     $(this).offset().top < i && (i = $(this).offset().top), AxoScript9473.addError($(this))
                 }), $(window).width() < 760 ? $("html, body").animate({scrollTop: i - 80}, 400) : $("html, body").animate({scrollTop: i - 150}, 400), !1
             }
-            if (0 == o && $(".collapse1").length)return t.preventDefault(), o++, AxoScript9473.expand(!0), !0;
+            if (0 == o && $(".collapse1").length)
+                return t.preventDefault(), o++, AxoScript9473.expand(!0), !0;
             $("#submitbutton").attr("disabled", "disabled"), setTimeout(function () {
                 $("#submitbutton").removeAttr("disabled")
             }, 5e3), $(this).find("input.strip-non-numeric").each(function () {
@@ -2019,27 +2074,28 @@ $(document).ready(function () {
     })
 }), jQuery(function (e) {
     if (e(".close-call-me-x .closewindow").click(function () {
-            e("#call-me-panel").fadeOut(300), e("#call-me-panel-thanks").fadeOut(300), e("#lightbox").fadeOut(300)
-        }), e(".open-call-me").click(function (t) {
-            t.preventDefault(), e("#lightbox").fadeIn(300), e("#call-me-panel").fadeIn(300)
-        }), e("#call-me-send").click(function (t) {
-            t.preventDefault();
-            var n = e("#maybe").find("input.required"), i = e("#call_me_num"), a = e("#whichhelp");
-            i.val(), i.val(i.val().replace(/ /g, "")), i.val(i.val().replace(/-/g, ""));
-            var o = !0, r = e("#whichhelp option:selected").text(), s = e("#whichhelp option:selected").val(), l = e("#call_me_num").val();
-            if (n.each(function () {
-                    e(this).val() || (e(this).parent().addClass("error"), o = !1)
-                }), AxoScript9473.getValidationRegex().phone.SE.test(l) ? i.parent().removeClass("error") : (i.parent().addClass("error"), o = !1), "" == r ? (e("#whichhelp").parent().addClass("error"), o = !1) : e("#whichhelp").parent().removeClass("error"), o) {
-                i.parent().removeClass("error"), a.parent().removeClass("error");
-                e.post("/ajaxo/sendtlf", {valg: s, number: l}, function () {
-                    e("#call-me-panel-thanks .action-before-words p").html("Tack!</br>Du valde: " + r + "</br>Telefonnummer: " + l + "</br></br>Vi ringer så fort vi kan"), e("#call-me-panel").fadeOut(300), e("#call-me-panel-thanks").fadeIn(300), e("#call_me_num").val(""), e("#whichhelp").val(0)
-                })
-            } else e("#call_me_num").addClass("not-valid")
-        }), e("body").on("click", "#open-terms-modal", function (t) {
-            t.preventDefault(), e("#terms-modalbox").modal().open()
-        }), e(".terms-modal .close").on("click", function (t) {
-            t.preventDefault(), e.modal().close()
-        }), e("#footer-contact-form").length) {
+        e("#call-me-panel").fadeOut(300), e("#call-me-panel-thanks").fadeOut(300), e("#lightbox").fadeOut(300)
+    }), e(".open-call-me").click(function (t) {
+        t.preventDefault(), e("#lightbox").fadeIn(300), e("#call-me-panel").fadeIn(300)
+    }), e("#call-me-send").click(function (t) {
+        t.preventDefault();
+        var n = e("#maybe").find("input.required"), i = e("#call_me_num"), a = e("#whichhelp");
+        i.val(), i.val(i.val().replace(/ /g, "")), i.val(i.val().replace(/-/g, ""));
+        var o = !0, r = e("#whichhelp option:selected").text(), s = e("#whichhelp option:selected").val(), l = e("#call_me_num").val();
+        if (n.each(function () {
+            e(this).val() || (e(this).parent().addClass("error"), o = !1)
+        }), AxoScript9473.getValidationRegex().phone.SE.test(l) ? i.parent().removeClass("error") : (i.parent().addClass("error"), o = !1), "" == r ? (e("#whichhelp").parent().addClass("error"), o = !1) : e("#whichhelp").parent().removeClass("error"), o) {
+            i.parent().removeClass("error"), a.parent().removeClass("error");
+            e.post("/ajaxo/sendtlf", {valg: s, number: l}, function () {
+                e("#call-me-panel-thanks .action-before-words p").html("Tack!</br>Du valde: " + r + "</br>Telefonnummer: " + l + "</br></br>Vi ringer så fort vi kan"), e("#call-me-panel").fadeOut(300), e("#call-me-panel-thanks").fadeIn(300), e("#call_me_num").val(""), e("#whichhelp").val(0)
+            })
+        } else
+            e("#call_me_num").addClass("not-valid")
+    }), e("body").on("click", "#open-terms-modal", function (t) {
+        t.preventDefault(), e("#terms-modalbox").modal().open()
+    }), e(".terms-modal .close").on("click", function (t) {
+        t.preventDefault(), e.modal().close()
+    }), e("#footer-contact-form").length) {
         var t = e("#footer-contact-form"), n = t.find("input.validate-email"), i = t.find("input"), a = t.find("input.required");
         t.hide(), e("#contact-sent").hide(), e(".contact-icon").click(function (n) {
             n.preventDefault(), e("#footer-contact-form").fadeIn(300), e(window).width() >= 1 && e("html, body").animate({scrollTop: t.offset().top}, 400)

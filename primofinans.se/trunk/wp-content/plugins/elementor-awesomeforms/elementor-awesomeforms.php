@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Plugin Name: Elementor Awesomeforms
  * Description: A Elementor Awesomeforms plugin add custom widgets.
@@ -193,17 +192,40 @@ add_action('wp_enqueue_scripts', 'register_plugin_styles', 99);
 
 // регистрируем файл стилей и добавляем его в очередь
 function register_plugin_styles() {
+    wp_enqueue_script('elementor-awesomeforms-owl', plugin_dir_url(__FILE__) . 'assets/js/owl.js', ['jquery'], false, true);
     wp_enqueue_script('elementor-awesomeforms-sl-min', plugin_dir_url(__FILE__) . 'assets/js/sl-min.js', ['jquery'], false, true);
     wp_enqueue_script('elementor-awesomeforms-steps', plugin_dir_url(__FILE__) . 'assets/js/app.js', ['jquery'], false, true);
-    
+
     wp_enqueue_style('elementor-awesomeforms-style', plugin_dir_url(__FILE__) . 'assets/css/style.css');
 }
 
 // add claasname for step1 form
-add_filter( 'body_class', 'extra_body_class' );
+add_filter('body_class', 'extra_body_class');
+
 // Add specific CSS class by filter
-function extra_body_class( $classes ) {
-    if ( is_page(971) )
-    	$classes[] = 'first-step-form';
+function extra_body_class($classes) {
+    if (is_page(971))
+        $classes[] = 'first-step-form';
     return $classes;
+}
+
+function custom_content_after_body_open_tag() {
+    ?>
+    <input type="hidden" name="domain_val" id="domain_val" value="<?php echo get_bloginfo('url'); ?>">
+    <?php
+}
+
+add_action('after_body_open_tag', 'custom_content_after_body_open_tag');
+
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page(array(
+        'page_title' => 'Awesome forms settings',
+        'menu_title' => 'Awesome forms',
+        'menu_slug' => 'awesomeforms-general-settings',
+        'icon_url' => 'dashicons-feedback',
+        'position' => 3.6,
+        'redirect' => false
+    ));
+
 }
