@@ -116,7 +116,7 @@ $(document).ready(function() {
     function calcPageInit() {
         checkCalcState();
 
-        if (document.querySelectorAll('.first-step-form').length > 0) {
+        if (document.querySelectorAll('.home.elementor-page').length > 0) {
             // initialize Axo script logic from sl-min.js
             AxoScript9473.setLanguage("sv");
             AxoScript9473.setCountry("SE");
