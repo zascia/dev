@@ -350,7 +350,7 @@ address, p {
 }
 
 a {
-    color: #66972c;
+    color: #0095F8;
 }
 
 a:focus, a:hover {
@@ -930,7 +930,7 @@ p.legendreplace {
 }
 
 .small-form {
-    background: #8caf2c;
+    background: #0095F8;
     padding: 1px;
     border-radius: 6px
 }
@@ -1119,7 +1119,7 @@ img.bg-decor {
 .savings-calculator .savings .price {
     font-size: 2em;
     font-weight: 700;
-    color: #e16a0f;
+    color: #2B50D9;
     margin-bottom: 10px;
     margin-top: 10px
 }
@@ -1488,7 +1488,7 @@ img.bg-decor {
 }
 
 .form .amount-wrapper .amount-number-wrapper .amount.color {
-    color: #e16a0f
+    color: #2B50D9
 }
 
 .form .amount-wrapper .amount-number-wrapper .amount.color.main {
@@ -1690,7 +1690,7 @@ input[type=radio] + span {
 
 input[type=radio]:checked + span {
     color: #fff;
-    background: #e16a0f
+    background: #2B50D9
 }
 
 input[type=checkbox] {
@@ -1718,7 +1718,7 @@ input[type=checkbox] + span {
 .banner-custom-wrapper {
     width: 30%;
     background-color: #f5f7f6;
-    border: 1px solid #e16a0f;
+    border: 1px solid #2B50D9;
     border-radius: 4px;
     padding: 10px 15px 140px;
     text-align: center;
@@ -1757,7 +1757,7 @@ input[type=checkbox] + span {
     text-decoration: none;
     width: 90%;
     max-width: 250px;
-    background: #e16a0f;
+    background: #2B50D9;
     color: #fff;
     text-align: center;
     font-size: 24px;
@@ -1828,22 +1828,23 @@ select::-ms-expand {
     display: inline-block;
     text-decoration: none;
     width: 100%;
-    background: #e16a0f;
+    background: #2B50D9;
     color: #fff;
     text-align: center;
     font-size: 1.2em;
     cursor: pointer;
     border: 0;
-    border-radius: 3px;
+    border-radius: 50px;
     height: 44px;
     line-height: 44px;
     margin-bottom: .5em;
     padding: 0;
     font-family: Arial, sans-serif;
+    text-transform: none;
 }
 
 .button.next.step {
-    background-color: #e16a0f;
+    background-color: #2B50D9;
     font-size: 24px
 }
 
@@ -1855,13 +1856,13 @@ select::-ms-expand {
     width: 50%;
     float: left;
     font-size: 22px;
-    background-color: #e16a0f;
+    background-color: #2B50D9;
 }
 
 .button.next.small-screens {
     margin: auto;
     font-size: 22px;
-    background-color: #e16a0f;
+    background-color: #2B50D9;
 }
 
 .div-next {
@@ -1963,12 +1964,12 @@ select::-ms-expand {
 .value.text.large input[type=email], .value.text.large input[type=number], .value.text.large input[type=password], .value.text.large input[type=tel], .value.text.large input[type=text] {
     font-size: 2em;
     text-align: center;
-    color: #e16a0f;
+    color: #2B50D9;
     font-weight: 700
 }
 
 .value.text.green input[type=email], .value.text.green input[type=number], .value.text.green input[type=password], .value.text.green input[type=tel], .value.text.green input[type=text] {
-    color: #e16a0f
+    color: #2B50D9
 }
 
 .value.text.grey-border input[type=email], .value.text.grey-border input[type=number], .value.text.grey-border input[type=password], .value.text.grey-border input[type=tel], .value.text.grey-border input[type=text], .value.text.grey-border textarea {
@@ -1976,19 +1977,19 @@ select::-ms-expand {
 }
 
 .value.text.parent-valid:after {
-    background: url(../images/check-approved.png) center center no-repeat #e16a0f
+    background: url(../images/check-approved.png) center center no-repeat #2B50D9
 }
 
 .value.text.parent-valid input[type=email], .value.text.parent-valid input[type=number], .value.text.parent-valid input[type=password], .value.text.parent-valid input[type=tel], .value.text.parent-valid input[type=text] {
-    border-color: #e16a0f
+    border-color: #2B50D9
 }
 
 .value.text.valid:after {
-    background: url(../images/check-approved.png) center center no-repeat #e16a0f
+    background: url(../images/check-approved.png) center center no-repeat #2B50D9
 }
 
 .value.text.valid input[type=email], .value.text.valid input[type=number], .value.text.valid input[type=password], .value.text.valid input[type=tel], .value.text.valid input[type=text] {
-    border-color: #e16a0f
+    border-color: #2B50D9
 }
 
 .value.text.warning:after {
@@ -2024,11 +2025,11 @@ select::-ms-expand {
 }
 
 .value.select.parent-valid select {
-    border-color: #e16a0f
+    border-color: #2B50D9
 }
 
 .value.select.parent-valid:after {
-    background: url(../images/check-approved.png) center center no-repeat #e16a0f
+    background: url(../images/check-approved.png) center center no-repeat #2B50D9
 }
 
 .value:after {
@@ -2136,7 +2137,7 @@ select::-ms-expand {
 
 #monthly-amount {
     font-size: 40px;
-    color: #e16a0f;
+    color: #2B50D9;
     border-style: dashed;
     border-width: 1px;
     border-radius: 6px;
@@ -2772,6 +2773,10 @@ select::-ms-expand {
     display: table;
     width: 100%;
     max-width: 960px;
+}
+
+.home.elementor-page .breadcrumbs-top {
+    display: none;
 }
 
 .breadcrumbs-top .breadcrumb-item {
