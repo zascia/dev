@@ -7,11 +7,11 @@ $loading_icon = plugins_url('/elementor-awesomeforms/assets/images/loading_icon.
         <!--<form action="https://www.axofinans.se/partner" id="axo-form-small" method="post" class="form small-form swedish-version" novalidate="novalidate">-->
         <form action="https://nyweb.axofinans.se/partner" id="axo-form-small" method="post" class="form small-form swedish-version"
               novalidate="novalidate">
-            <input id="source" value="Smartresponse_partner" name="source" type="hidden">
+            <input id="source" value="Primofinans" name="source" type="hidden">
             <input id="useragentCtrl" value="" name="useragent" type="hidden">
-            <input id="conversionPageCtrl" value="https://smartlaanet.se" name="conversion_page" type="hidden">
+            <input id="conversionPageCtrl" value="https://primofinans.se" name="conversion_page" type="hidden">
             <input id="acceptedTerms" value="" name="accepts_marketing" type="hidden">
-            <input id="privacyPolicyUrlCtrl" value="https://smartlaanet.se/persondatapolitik_t_с_se_sl.html"
+            <input id="privacyPolicyUrlCtrl" value="https://primofinans.se/villkor-och-sekretesspolicy/"
                    name="privacy_policy_url" type="hidden">
             <div class="form-top">
                 <!-- first step fields -->

@@ -1120,7 +1120,7 @@ var AxoScript9473 = new function () {
             selected: (function () {
                 if (document.querySelectorAll('.first-step-form').length > 0)
                     return 18;
-                var data = localStorage.getItem('SEAXOcalcValuesList'),
+                var data = localStorage.getItem('SEPRMValues'),
                         calcValues;
                 if (data) {
                     calcValues = JSON.parse(data);

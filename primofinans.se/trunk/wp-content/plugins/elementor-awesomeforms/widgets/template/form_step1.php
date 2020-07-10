@@ -2,6 +2,7 @@
 $form_step1 = get_field('form_step1', 'option');
 if (!empty($form_step1)) {
     ?>
+<div class="first-step-form">
     <form action="" id="axo-form-small" method="post" class="form small-form swedish-version" novalidate="novalidate">
         <div class="form-body form-main">
             <fieldset class="form-set loan-amount">
@@ -138,7 +139,7 @@ if (!empty($form_step1)) {
 
                     <center>
                         <a href="#"
-                           onClick="window.open('<?php echo $form_step1['personuppgiftspolicy'];?>', 'personuppgiftspolicy', 'resizable,height=900,width=500,scrollbars=yes'); return false;"><?php echo $form_step1['personuppgiftspolicy-url'];?></a>
+                           onClick="window.open('<?php echo $form_step1['personuppgiftspolicy-url'];?>', 'personuppgiftspolicy', 'resizable,height=900,width=500,scrollbars=yes'); return false;"><?php echo $form_step1['personuppgiftspolicy'];?></a>
                     </center>
                 </div>
                 <div class="collapse1">
@@ -1114,8 +1115,10 @@ if (!empty($form_step1)) {
         <input type="hidden" id="customAfID" name="custom_afid" value="" />
         <input type="hidden" id="customCurrentDate" name="custom_signup_date" value="" />
         <input type="hidden" id="customPermission" name="custom_permissiontext" value="" />
-        <input type="hidden" name="campaign_token" value="6B0Wt" />
+        <input type="hidden" name="campaign_token" value="KXcKY" />
         <input type="hidden" name="start_day" value="0" />
     </form>
     <!-- Campaign form -->
+
+</div>
 <?php } ?>

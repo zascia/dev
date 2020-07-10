@@ -122,11 +122,8 @@ $(document).ready(function() {
             AxoScript9473.setCountry("SE");
             AxoScript9473.init("#axo-form-small");
 
-            calcState.calcValues['reqid'] = getURLParameter('reqid') || generateReqId() || 0;
+            calcState.calcValues['reqid'] = getURLParameter('reqid') || 0;
             var affid = getURLParameter('utm_content') || 14611;
-            if (affid == '13720') {
-                $(".accept-terms").hide();
-            }
 
             setTimeout(function() {applyDynamicCalculator();},0);
 
@@ -161,7 +158,7 @@ $(document).ready(function() {
 
 
     function checkCalcState() {
-        var data = localStorage.getItem('SEAXOcalcValuesList');
+        var data = localStorage.getItem('SEPRMValues');
         if (data) {
             calcState.calcValues = JSON.parse(data);
         }
@@ -169,7 +166,7 @@ $(document).ready(function() {
 
     function updateCalcState() {
         dataToPut = JSON.stringify(calcState.calcValues);
-        localStorage.setItem('SEAXOcalcValuesList', dataToPut);
+        localStorage.setItem('SEPRMValues', dataToPut);
     };
 
     function restoreCurrentValues() {
@@ -201,7 +198,8 @@ $(document).ready(function() {
         var $form = $('#' + formID);
         $.ajax({
             type: $form.attr('method'),
-            url: $form.attr('action'),
+            //url: $form.attr('action'),
+            url: $form.attr(''),
             data: $form.serialize()
         }).done(function() {
             location.href = domain_val+"/step2";
@@ -271,92 +269,45 @@ $(document).ready(function() {
         }).done(function(response) {
             // success here;
             var responseObj = JSON.parse(response);
+
+            console.log("responseObj", responseObj);
+
             responseStatus = responseObj.status;
             transactionID = responseObj.transactionID;
             $.each(responseObj.errors, function(i, val) {
                 applicationComments += val + " ";
             });
 
-            $("#loading-modalbox").modal().close();
+            //$("#loading-modalbox").modal().close();
 
             // reswitch active breadcrumb
             $(".breadcrumb-active").removeClass("breadcrumb-active").next().addClass("breadcrumb-active");
 
             $form.hide();
             if (responseStatus === "Accepted") {
-                $(".response-success").show();
-
-				// create the array of tracking sources here
-				var trackingSRCArr = [
-					"https://secure.smartresponse-media.com/p.ashx?o=115867&e=560&f=pb&r=" + reqid,
-					"https://www.facebook.com/tr?id=301716627371321&ev=Purchase&noscript=1&cd[value]=852&cd[currency]=DKK"
-				];
-
-				//add them to the page
-				$.each(trackingSRCArr, function(i){
-					addTrackingPixel("response-success", trackingSRCArr[i]);
-				});
+                location.href = domain_val+"/a";
 
             } else if (responseStatus === "Rejected") {
-                $(".response-reject").show();
-
-                var OneSignal = window.OneSignal || [];
-                OneSignal.push(["init", {
-                    appId: "1cb60c1e-eb58-4150-86a4-b0613861bcd0",
-                    autoRegister: true,
-                    notifyButton: {
-                        enable: true /* Set to false to hide */
-                    }
-                }]);
-
-
+                location.href = domain_val+"/r";
             }
 
             // list 2 subscribe user
             prepareCampaignForm();
             sendStep2CampaignForm('campaignForm');
 
-            if (localStorage.getItem('SEAXOcalcValuesList')) {
-                localStorage.removeItem('SEAXOcalcValuesList');
+            if (localStorage.getItem('SEPRMValues')) {
+                localStorage.removeItem('SEPRMValues');
             }
 
         }).fail(function(response) {
             // fail here;
-            var responseObj = JSON.parse(response);
-            responseStatus = responseObj.status;
+            /*var responseObj = JSON.parse(response);
+            responseStatus = responseObj.status;*/
 
-            $("#loading-modalbox").modal().close();
+            location.href = domain_val+"/er";
 
-            // reswitch active breadcrumb
-            $(".breadcrumb-active").removeClass("breadcrumb-active").next().addClass("breadcrumb-active");
-
-            $form.hide();
-            $(".response-error").show();
         }).always(function() {
-			// this tracking pixel will work always
-			var trackingSRCArr = [
-				"https://www.facebook.com/tr?id=301716627371321&ev=CompleteRegistration&noscript=1"
-			];
 
-			//add them to the page
-			$.each(trackingSRCArr, function(i){
-				addTrackingPixel("main-content", trackingSRCArr[i]);
-			});
-
-            // save application data
-            /*$.ajax({
-                'url': "/smartresponse/skabelon/trunk/modules/savedata/savedb.php",
-                data: {
-                    userapply: true,
-                    partnerID: "SEAXO",
-                    applicationID: transactionID,
-                    reqID: reqid,
-                    valuePairs: dataToSend,
-                    applicationStatus: responseStatus,
-                    applicationComments: applicationComments
-                },
-                method: "POST"
-            });*/
 		});
 
     }
@@ -426,9 +377,11 @@ $(document).ready(function() {
 
     function checktermsStep1() {
         var termsCheckbox = $("input[name='accepted-terms']");
-        if (!$(termsCheckbox).is(":checked")) {
+        return $(termsCheckbox).is(":checked");
+
+        /*if (!$(termsCheckbox).is(":checked")) {
             termsCheckbox.parent().addClass("error");
-        }
+        }*/
     }
 
     function checkErrors(form) {
