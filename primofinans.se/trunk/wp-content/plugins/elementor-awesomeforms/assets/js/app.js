@@ -196,8 +196,7 @@ $(document).ready(function() {
         var $form = $('#' + formID);
         $.ajax({
             type: $form.attr('method'),
-            //url: $form.attr('action'),
-            url: $form.attr(''),
+            url: $form.attr('action'),
             data: $form.serialize()
         }).done(function() {
             location.href = domain_val+"/step2";
