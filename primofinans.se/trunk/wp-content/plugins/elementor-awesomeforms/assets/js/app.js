@@ -174,9 +174,7 @@ $(document).ready(function() {
         document.querySelector('#loan-amount-value').value = calcState.calcValues['loanAmountValue'] || 0;
         document.querySelector('#mobile-number').value = calcState.calcValues['mobileNumberValue'] || 0;
         document.querySelector('#acceptedTerms').value = calcState.calcValues['accepts_marketing'];
-        if (calcState.calcValues['afid'] == '13720') {
-            //$("#acceptedTerms").attr('disabled', true);
-        }
+
         //if ( calcState.calcValues['consolidateDebt'] == 1 ) document.querySelector('#consolidate-debt-1').checked = true;
 
     };
@@ -188,8 +186,8 @@ $(document).ready(function() {
         calcState.calcValues['mobileNumberValue'] = document.querySelector('#mobile-number').value || 0;
         //calcState.calcValues['consolidateDebt'] = document.querySelector('[name=consolidate_debt]:checked').value || 0;
 
-        calcState.calcValues['afid'] = getURLParameter('utm_content') || 14611;
-        calcState.calcValues['utm_content'] = getURLParameter('utm_content') || 14611;
+        calcState.calcValues['afid'] = getURLParameter('caid') || 0;
+        calcState.calcValues['utm_content'] = getURLParameter('caid') || 0;
         calcState.calcValues['accepts_marketing'] = document.querySelector('#acceptedTerms').checked ? 1 : 0;
     }
 
