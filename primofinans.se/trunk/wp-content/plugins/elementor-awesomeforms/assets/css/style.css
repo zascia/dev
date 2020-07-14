@@ -518,7 +518,7 @@ ol li ol {
 .col-set .col {
     width: 100%;
     float: none;
-    padding: 0 15px
+    padding: 0 12px
 }
 
 .large-form .col-set .col, .small-form.two-column .col-set .col {
@@ -1813,7 +1813,7 @@ select {
     position: relative;
     cursor: pointer;
     background: #fff;
-    color: #555;
+    color: #2B50D9;
 }
 
 select::-ms-expand {
@@ -1962,7 +1962,7 @@ select::-ms-expand {
 }
 
 .value.text.large input[type=email], .value.text.large input[type=number], .value.text.large input[type=password], .value.text.large input[type=tel], .value.text.large input[type=text] {
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
     color: #2B50D9;
     font-weight: 700
@@ -2136,7 +2136,7 @@ select::-ms-expand {
 }
 
 #monthly-amount {
-    font-size: 40px;
+    font-size: 36px;
     color: #2B50D9;
     border-style: dashed;
     border-width: 1px;
@@ -2153,8 +2153,8 @@ select::-ms-expand {
 }
 
 .first-step-form #monthlytext {
-    font-size: 2em;
-    margin: .8em auto 10px;
+    font-size: 1em;
+    margin: 0 auto;
 }
 
 #monthly-amount-span {
