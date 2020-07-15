@@ -616,6 +616,21 @@ fieldset.form-set {
     padding-top: 26px
 }
 
+.first-step-form .form-main fieldset.loan-amount {
+    width: 100%;
+}
+.first-step-form .form-main fieldset.annual-terms {
+    width: 50%;
+}
+.first-step-form .form-main fieldset.monthly-amount {
+    width: 50%;
+}
+.home.elementor-page .elementor-widget-container h2{
+    //text-align: center;
+}
+
+
+
 .with-co-applicant fieldset.form-set {
     width: 25%
 }
@@ -930,9 +945,12 @@ p.legendreplace {
 }
 
 .small-form {
-    background: #0095F8;
+    background: #fff;
     padding: 1px;
-    border-radius: 6px
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 15px -1px rgba(0,0,0,0.75);
 }
 
 .small-form.two-column {
