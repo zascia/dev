@@ -366,6 +366,22 @@ a.remove-lender.no-link {
     color: #fff;
     text-decoration: none
 }
+.elementor-element elementor-element-a359374 .menu {
+    margin: 0 0 3rem 3rem;
+    padding: 0;
+}
+.elementor-element elementor-element-a359374 .menu li {
+    margin: 0.5rem 0 0 2rem;
+    padding: 0;
+}
+.elementor-element elementor-element-a359374 .menu-item a {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.elementor-658 .elementor-element.elementor-element-c303020 .elementor-nav-menu--main .elementor-item {
+    font-size: 19px;
+}
 
 img {
     max-width: 100%;
@@ -1929,11 +1945,8 @@ select::-ms-expand {
 }
 
 .ui-slider {
-    /*background: #fff;
-    height: 24px;*/
-    /*width: calc(100% - 33px);*/
     margin: 0;
-    background: #8caf2c;
+    background: #6EC1E4;
     border: none;
     height: 4px;
     position: relative;
@@ -1943,18 +1956,11 @@ select::-ms-expand {
 
 .ui-slider .ui-slider-range {
     /*background: url(../images/slider-bg.png) top;*/
-    background: #006d38;
+    background: #2B50D9;
 }
 
 .ui-slider .ui-slider-handle {
-    /*height: 44px;
-    top: -10px;
-    width: 44px;
-    cursor: ew-resize;
-    border: 2px solid #333;
-    border-radius: 3px;
-    background: url(../images/slider-arrows.svg) center center no-repeat #fff*/
-    background: #006d38;
+    background: #2B50D9;
     width: 32px;
     height: 32px;
     margin-left: -1.4em;
@@ -3396,6 +3402,12 @@ ul.accordion li.single-accordion p.accordion-category {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .elementor-658 .elementor-element.elementor-element-5c9146c {
+        width: 200px;
+    }
+}
+
 @media screen and (max-width: 930px) {
     #header #desc-head-form {
         padding-top: 15px;
@@ -3434,6 +3446,12 @@ ul.accordion li.single-accordion p.accordion-category {
         top: 0
     }
 
+}
+
+@media (min-width: 700px) {
+    section {
+        padding: 8rem 0;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -3675,6 +3693,10 @@ ul.accordion li.single-accordion p.accordion-category {
 @media screen and (max-width: 760px) {
     h1 {
         font-size: 1.8em
+    }
+
+    .home .elementor-658 .elementor-heading-title {
+        font-size: 3rem !important;
     }
 
     .hidden-mobile {
