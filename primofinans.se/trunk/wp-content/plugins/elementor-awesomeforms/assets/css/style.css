@@ -3406,6 +3406,9 @@ ul.accordion li.single-accordion p.accordion-category {
     .elementor-658 .elementor-element.elementor-element-5c9146c {
         width: 200px;
     }
+    .elementor-658 .elementor-element.elementor-element-0a1c416 {
+        width: calc(100% - 200px);
+    }
 }
 
 @media screen and (max-width: 930px) {
