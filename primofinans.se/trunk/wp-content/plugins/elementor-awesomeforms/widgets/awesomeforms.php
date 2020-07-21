@@ -114,7 +114,8 @@ class AwesomeformsStep1 extends Widget_Base {
 
         $this->add_inline_editing_attributes('title', 'none');
         ?>
-        <h2 <?php echo $this->get_render_attribute_string('title'); ?>><?php echo $settings['title']; ?></h2>
+        <h2 class="step1-form-title" <?php echo $this->get_render_attribute_string('title'); ?>><?php echo
+        $settings['title']; ?></h2>
         <?php
         require_once( __DIR__ . '/template/breadcrumbs.php' );
         require_once( __DIR__ . '/template/form_step1.php' );

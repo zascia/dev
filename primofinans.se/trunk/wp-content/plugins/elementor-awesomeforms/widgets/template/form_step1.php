@@ -18,6 +18,7 @@ if (!empty($form_step1)) {
                             </div>
                         </label>
 
+
                         <label id="refinancing-footnote" class="label" style="display: none;">
                             <span class="label inline center nomargin"><span
                                     class="hide-mobile">Besparelse inntil:</span><span
@@ -48,13 +49,21 @@ if (!empty($form_step1)) {
                             <div class="ui-slider-wrapper">
                                 <div id="loan-amount-slider"
                                      class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-                                    <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min"
-                                         style="width: 18.3673%;"></div>
+                                    <!--div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min"
+                                         style="width: 18.3673%;"></div-->
                                     <span class="ui-slider-handle ui-state-default ui-corner-all"
                                           tabindex="0" style="left: 18.3673%;"></span>
                                 </div>
                             </div>
                         </label>
+                        <div class="label-amount-container">
+                            <div class="calculator-slider-start">
+                                <?php echo $form_step1['label-amount-start'];?> kr
+                            </div>
+                            <div class="calculator-slider-end">
+                                <?php echo $form_step1['label-amount-end'];?> kr
+                            </div>
+                        </div>
                     </div>
                 </div>
             </fieldset>

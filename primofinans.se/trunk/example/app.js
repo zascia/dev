@@ -1,7 +1,7 @@
 /**
  * Created by ashu on 10-Mar-17.
  */
-( function( $ ) {
+
 /* dynamic calculator */
 function applyDynamicCalculator() {
     /**
@@ -22,6 +22,7 @@ function applyDynamicCalculator() {
         var monthlyFee = loans["consumer-credit"].monthlyFee
         let monthlyTerms = years * 12;
         let payment = (Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) == 0) ? Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) : Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) + monthlyFee;
+        //console.log("från " + payment + " kr" );
         return payment;
     };
 
@@ -50,8 +51,7 @@ function applyDynamicCalculator() {
 
 /* eo dynamic calculator */
 
-$(document).ready(function() {
-    var domain_val = $('#domain_val').val();
+jQuery(document).ready(function($) {
     /* validation on the fly */
     function addEventsValidate(formClass) {
         let inputArray = $(formClass).serializeArray();
@@ -115,27 +115,18 @@ $(document).ready(function() {
     function calcPageInit() {
         checkCalcState();
 
-        if (document.querySelectorAll('.home.elementor-page').length > 0) {
-            // initialize Axo script logic from sl-min.js
-            AxoScript9473.setLanguage("sv");
-            AxoScript9473.setCountry("SE");
-            AxoScript9473.init("#axo-form-small");
-
-            calcState.calcValues['reqid'] = getURLParameter('reqid') || 0;
+        if (document.querySelectorAll('.first-step-form').length > 0) {
+            calcState.calcValues['reqid'] = getURLParameter('reqid') || generateReqId() || 0;
             var affid = getURLParameter('utm_content') || 14611;
+            if (affid == '13720') {
+                $(".accept-terms").hide();
+            }
 
             setTimeout(function() {applyDynamicCalculator();},0);
 
             btn = document.querySelector('.button.next.step');
             btn.addEventListener('click', step2Click);
         } else {
-            if ($("#axo-form-small").length) {
-                AxoScript9473.setLanguage("sv");
-                AxoScript9473.setCountry("SE");
-
-                AxoScript9473.init("#axo-form-small");
-            }
-
             restoreCurrentValues();
 
             setTimeout(function() {applyDynamicCalculator();},0);
@@ -154,10 +145,8 @@ $(document).ready(function() {
         $("#removeme").hide("slow");
     }
 
-
-
     function checkCalcState() {
-        var data = localStorage.getItem('SEPRMValues');
+        var data = localStorage.getItem('SEAXOcalcValuesList');
         if (data) {
             calcState.calcValues = JSON.parse(data);
         }
@@ -165,7 +154,7 @@ $(document).ready(function() {
 
     function updateCalcState() {
         dataToPut = JSON.stringify(calcState.calcValues);
-        localStorage.setItem('SEPRMValues', dataToPut);
+        localStorage.setItem('SEAXOcalcValuesList', dataToPut);
     };
 
     function restoreCurrentValues() {
@@ -173,7 +162,9 @@ $(document).ready(function() {
         document.querySelector('#loan-amount-value').value = calcState.calcValues['loanAmountValue'] || 0;
         document.querySelector('#mobile-number').value = calcState.calcValues['mobileNumberValue'] || 0;
         document.querySelector('#acceptedTerms').value = calcState.calcValues['accepts_marketing'];
-
+        if (calcState.calcValues['afid'] == '13720') {
+            //$("#acceptedTerms").attr('disabled', true);
+        }
         //if ( calcState.calcValues['consolidateDebt'] == 1 ) document.querySelector('#consolidate-debt-1').checked = true;
 
     };
@@ -185,8 +176,8 @@ $(document).ready(function() {
         calcState.calcValues['mobileNumberValue'] = document.querySelector('#mobile-number').value || 0;
         //calcState.calcValues['consolidateDebt'] = document.querySelector('[name=consolidate_debt]:checked').value || 0;
 
-        calcState.calcValues['afid'] = getURLParameter('caid') || 0;
-        calcState.calcValues['utm_content'] = getURLParameter('caid') || 0;
+        calcState.calcValues['afid'] = getURLParameter('utm_content') || 14611;
+        calcState.calcValues['utm_content'] = getURLParameter('utm_content') || 14611;
         calcState.calcValues['accepts_marketing'] = document.querySelector('#acceptedTerms').checked ? 1 : 0;
     }
 
@@ -198,9 +189,9 @@ $(document).ready(function() {
             url: $form.attr('action'),
             data: $form.serialize()
         }).done(function() {
-            location.href = domain_val+"/step2";
+            location.href = "step2.htm";
         }).fail(function() {
-            location.href = domain_val+"/step2";
+            location.href = "step2.htm";
         });
     }
 
@@ -265,45 +256,92 @@ $(document).ready(function() {
         }).done(function(response) {
             // success here;
             var responseObj = JSON.parse(response);
-
-            console.log("responseObj", responseObj);
-
             responseStatus = responseObj.status;
             transactionID = responseObj.transactionID;
             $.each(responseObj.errors, function(i, val) {
                 applicationComments += val + " ";
             });
 
-            //$("#loading-modalbox").modal().close();
+            $("#loading-modalbox").modal().close();
 
             // reswitch active breadcrumb
             $(".breadcrumb-active").removeClass("breadcrumb-active").next().addClass("breadcrumb-active");
 
             $form.hide();
             if (responseStatus === "Accepted") {
-                location.href = domain_val+"/a";
+                $(".response-success").show();
+
+				// create the array of tracking sources here
+				var trackingSRCArr = [
+					"https://secure.smartresponse-media.com/p.ashx?o=115867&e=560&f=pb&r=" + reqid,
+					"https://www.facebook.com/tr?id=301716627371321&ev=Purchase&noscript=1&cd[value]=852&cd[currency]=DKK"
+				];
+
+				//add them to the page
+				$.each(trackingSRCArr, function(i){
+					addTrackingPixel("response-success", trackingSRCArr[i]);
+				});
 
             } else if (responseStatus === "Rejected") {
-                location.href = domain_val+"/r";
+                $(".response-reject").show();
+
+                var OneSignal = window.OneSignal || [];
+                OneSignal.push(["init", {
+                    appId: "1cb60c1e-eb58-4150-86a4-b0613861bcd0",
+                    autoRegister: true,
+                    notifyButton: {
+                        enable: true /* Set to false to hide */
+                    }
+                }]);
+
+
             }
 
             // list 2 subscribe user
             prepareCampaignForm();
             sendStep2CampaignForm('campaignForm');
 
-            if (localStorage.getItem('SEPRMValues')) {
-                localStorage.removeItem('SEPRMValues');
+            if (localStorage.getItem('SEAXOcalcValuesList')) {
+                localStorage.removeItem('SEAXOcalcValuesList');
             }
 
         }).fail(function(response) {
             // fail here;
-            /*var responseObj = JSON.parse(response);
-            responseStatus = responseObj.status;*/
+            var responseObj = JSON.parse(response);
+            responseStatus = responseObj.status;
 
-            location.href = domain_val+"/er";
+            $("#loading-modalbox").modal().close();
 
+            // reswitch active breadcrumb
+            $(".breadcrumb-active").removeClass("breadcrumb-active").next().addClass("breadcrumb-active");
+
+            $form.hide();
+            $(".response-error").show();
         }).always(function() {
+			// this tracking pixel will work always
+			var trackingSRCArr = [
+				"https://www.facebook.com/tr?id=301716627371321&ev=CompleteRegistration&noscript=1"
+			];
 
+			//add them to the page
+			$.each(trackingSRCArr, function(i){
+				addTrackingPixel("main-content", trackingSRCArr[i]);
+			});
+
+            // save application data
+            /*$.ajax({
+                'url': "/smartresponse/skabelon/trunk/modules/savedata/savedb.php",
+                data: {
+                    userapply: true,
+                    partnerID: "SEAXO",
+                    applicationID: transactionID,
+                    reqID: reqid,
+                    valuePairs: dataToSend,
+                    applicationStatus: responseStatus,
+                    applicationComments: applicationComments
+                },
+                method: "POST"
+            });*/
 		});
 
     }
@@ -373,11 +411,9 @@ $(document).ready(function() {
 
     function checktermsStep1() {
         var termsCheckbox = $("input[name='accepted-terms']");
-        return $(termsCheckbox).is(":checked");
-
-        /*if (!$(termsCheckbox).is(":checked")) {
+        if (!$(termsCheckbox).is(":checked")) {
             termsCheckbox.parent().addClass("error");
-        }*/
+        }
     }
 
     function checkErrors(form) {
@@ -491,4 +527,3 @@ $(document).ready(function() {
 
 
 });
-} )( jQuery );
