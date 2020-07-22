@@ -99,9 +99,14 @@ if (!empty($form_step1)) {
                 </div>
             </fieldset>
 
+            <div class="div-next-container fictiveNextStep1Head">
+                <a href="#" id="fictiveNextStep1" class="button next custom-submit"><?php echo $form_step1['next-fictive-text'];
+                ?></a>
+            </div>
+
             <div class="form-set up main-applicant">
-                <!-- first step fields -->
-                <div class="collapse0">
+                <!-- first step hidden fields -->
+                <div class="collapse0 fictiveNextStep1Container">
                     <div class="form-set main-personal-info">
                         <div class="col-set">
                             <div class="col">
@@ -144,7 +149,7 @@ if (!empty($form_step1)) {
 
                     </div>
 
-                    <div class="div-next">
+                    <div class="div-next-container">
                         <!--<a href="step2.htm" class="button next step">Neste</a>-->
                         <button type="button" class="button next step custom-submit"><?php echo $form_step1['button-text'];?></button>
                     </div>
@@ -154,6 +159,7 @@ if (!empty($form_step1)) {
                            onClick="window.open('<?php echo $form_step1['personuppgiftspolicy-url'];?>', 'personuppgiftspolicy', 'resizable,height=900,width=500,scrollbars=yes'); return false;"><?php echo $form_step1['personuppgiftspolicy'];?></a>
                     </center>
                 </div>
+                <!-- first step hidden fields -->
             </div>
         </div>
     </form>

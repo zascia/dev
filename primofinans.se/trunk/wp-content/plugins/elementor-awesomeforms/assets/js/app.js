@@ -124,6 +124,13 @@ $(document).ready(function() {
             calcState.calcValues['reqid'] = getURLParameter('reqid') || 0;
             var affid = getURLParameter('utm_content') || 14611;
 
+            $("#fictiveNextStep1").on("click", function(e) {
+                e.preventDefault();
+                $(".fictiveNextStep1Container").show();
+                $(".fictiveNextStep1Head").hide();
+                setTimeout(function() {AxoScript9473.validate();},0);
+            });
+
             setTimeout(function() {applyDynamicCalculator();},0);
 
             btn = document.querySelector('.button.next.step');

@@ -632,6 +632,25 @@ fieldset.form-set {
     padding-top: 26px
 }
 
+.fictiveNextStep1Container {
+    display: none;
+}
+
+.div-next-container {
+    padding: 12px;
+}
+
+a.button.next,
+a.button.next:hover,
+button.button.next:hover {
+    text-decoration: none;
+}
+
+.div-next.fictiveNextStep1Head {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 .first-step-form .form-main fieldset.loan-amount {
     width: 100%;
 }
@@ -1673,6 +1692,12 @@ img.bg-decor {
     padding: 10px 15px;
     float: left;
     width: 50%;
+}
+
+.main-applicant .main-personal-info .col-set .col {
+    padding: 10px 12px;
+    float: left;
+    width: 100%;
 }
 
 input[type=email], input[type=number], input[type=password], input[type=tel], input[type=text] {
