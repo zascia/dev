@@ -178,6 +178,7 @@ $(document).ready(function() {
     function restoreCurrentValues() {
         document.querySelector('#email').value = calcState.calcValues['emailValue'] || '';
         document.querySelector('#loan-amount-value').value = calcState.calcValues['loanAmountValue'] || 0;
+        document.querySelector('#loan-amount').value = calcState.calcValues['loanAmountValue'] || 0;
         document.querySelector('#mobile-number').value = calcState.calcValues['mobileNumberValue'] || 0;
         document.querySelector('#acceptedTerms').value = calcState.calcValues['accepts_marketing'];
 

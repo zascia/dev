@@ -2050,7 +2050,8 @@ select::-ms-expand {
 }
 
 .value.text.parent-valid:after {
-    background: url(../images/check-approved.png) center center no-repeat #2B50D9
+    //background: url(../images/check-approved.png) center center no-repeat #2B50D9;
+    background: #2B50D9;
 }
 
 .value.text.parent-valid input[type=email], .value.text.parent-valid input[type=number], .value.text.parent-valid input[type=password], .value.text.parent-valid input[type=tel], .value.text.parent-valid input[type=text] {
@@ -2058,7 +2059,17 @@ select::-ms-expand {
 }
 
 .value.text.valid:after {
-    background: url(../images/check-approved.png) center center no-repeat #2B50D9
+    //background: url(../images/check-approved.png) center center no-repeat #2B50D9;
+    background: #2B50D9;
+}
+
+.value.text.parent-valid:after,
+.value.text.valid:after,
+.value.select.parent-valid:after {
+    content: "\2713";
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
 }
 
 .value.text.valid input[type=email], .value.text.valid input[type=number], .value.text.valid input[type=password], .value.text.valid input[type=tel], .value.text.valid input[type=text] {
@@ -2102,7 +2113,7 @@ select::-ms-expand {
 }
 
 .value.select.parent-valid:after {
-    background: url(../images/check-approved.png) center center no-repeat #2B50D9
+    background: #2B50D9;
 }
 
 .value:after {
@@ -2118,9 +2129,9 @@ select::-ms-expand {
 }
 
 .value.select:after {
-    height: 40px;
-    right: 2px;
-    top: 2px;
+    height: 42px;
+    right: 1px;
+    top: 1px;
 }
 
 .value .warning-message-wrapper {

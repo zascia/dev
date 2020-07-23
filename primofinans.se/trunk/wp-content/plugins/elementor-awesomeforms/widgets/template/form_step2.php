@@ -58,8 +58,6 @@ $loading_icon = plugins_url('/elementor-awesomeforms/assets/images/loading_icon.
                                     <div class="ui-slider-wrapper">
                                         <div id="loan-amount-slider"
                                              class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-                                            <div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min"
-                                                 style="width: 18.3673%;"></div>
                                             <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0"
                                                   style="left: 18.3673%;"></span></div>
                                     </div>
