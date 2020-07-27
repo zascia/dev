@@ -200,6 +200,8 @@ $(document).ready(function() {
 
     function sendCampaignForm(formID) {
         // campaign form submit
+        fbq('track', 'Lead');
+
         var $form = $('#' + formID);
         $.ajax({
             type: $form.attr('method'),
@@ -289,6 +291,7 @@ $(document).ready(function() {
 
             $form.hide();
             if (responseStatus === "Accepted") {
+                fbq('track', 'Completeregistration');
                 location.href = domain_val+"/a";
 
             } else if (responseStatus === "Rejected") {
