@@ -1115,7 +1115,7 @@ var AxoScript9473 = new function () {
         },
         "annual-terms": {
             selector: "#form-annual-terms select",
-            range: [1, 20],
+            range: [1, 18],
             suffix: {nb: " år", sv: " år", en: {0: " year", 1: " years"}},
             selected: (function () {
                 if (document.querySelectorAll('.first-step-form').length > 0)

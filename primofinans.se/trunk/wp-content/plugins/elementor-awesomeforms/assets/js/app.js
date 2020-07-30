@@ -292,10 +292,10 @@ $(document).ready(function() {
             $form.hide();
             if (responseStatus === "Accepted") {
                 fbq('track', 'Completeregistration');
-                location.href = domain_val+"/a";
+                location.href = domain_val+"/a/?tid=" + responseObj.transactionID;
 
             } else if (responseStatus === "Rejected") {
-                location.href = domain_val+"/r";
+                location.href = domain_val+"/r/?tid=" + responseObj.transactionID;
             }
 
             // list 2 subscribe user

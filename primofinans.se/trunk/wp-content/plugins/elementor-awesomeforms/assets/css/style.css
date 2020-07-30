@@ -2331,7 +2331,8 @@ select::-ms-expand {
 .arrow-img {
     padding-left: 10px;
     height: 20px;
-    width: auto
+    width: auto;
+    display: inline-block;
 }
 
 .total-unsecured-debt {
@@ -4565,6 +4566,7 @@ ul.accordion li.single-accordion p.accordion-category {
 }
 .swedish-version #changestep1 {
     display: inline-block;
+    margin-bottom: 5px;
 }
 .second-step-form  .swedish-version.small-form .col-set .col.border-col {
     padding-top: 20px;
