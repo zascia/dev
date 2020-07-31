@@ -638,6 +638,7 @@ fieldset.form-set {
 
 .div-next-container {
     padding: 12px;
+    clear: both;
 }
 
 a.button.next,
@@ -2122,6 +2123,7 @@ select::-ms-expand {
     display: block;
     width: 42px;
     height: 42px;
+    line-height: 41px;
     position: absolute;
     right: 1px;
     top: 1px;
@@ -2226,14 +2228,8 @@ select::-ms-expand {
 }
 
 #monthly-amount {
-    font-size: 36px;
+    font-size: 2em;
     color: #2B50D9;
-    /*border-style: dashed;
-    border-width: 1px;
-    border-radius: 6px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border-color: #ccc*/
 }
 
 #monthlytext {
@@ -2243,13 +2239,17 @@ select::-ms-expand {
 }
 
 .first-step-form #monthlytext {
-    font-size: 1em;
+    font-size: 1.1em;
     margin: 0 auto;
 }
 
 #monthly-amount-span {
     text-align: center;
     width: 100%
+}
+
+.form .annual-terms .label .desc {
+    font-size: 1.1em;
 }
 
 #refinancing-footnote {
@@ -3470,10 +3470,12 @@ ul.accordion li.single-accordion p.accordion-category {
 }
 
 @media screen and (max-width: 1024px) {
-    .elementor-658 .elementor-element.elementor-element-5c9146c {
+    .elementor-658 .elementor-element.elementor-element-5c9146c,
+    .elementor-365 .elementor-element.elementor-element-51829486 {
         width: 200px;
     }
-    .elementor-658 .elementor-element.elementor-element-0a1c416 {
+    .elementor-658 .elementor-element.elementor-element-0a1c416,
+    .elementor-365 .elementor-element.elementor-element-5a656317 {
         width: calc(100% - 200px);
     }
 }
@@ -4646,9 +4648,6 @@ ul.accordion li.single-accordion p.accordion-category {
 @media screen and (max-width: 398px) {
     .accept-terms input[type=checkbox] + span {
         line-height: 16px;
-    }
-    .first-step-form #monthlytext {
-        font-size: 1.5em;
     }
 }
 

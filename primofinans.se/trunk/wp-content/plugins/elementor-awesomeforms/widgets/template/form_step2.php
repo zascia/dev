@@ -146,7 +146,7 @@ $loading_icon = plugins_url('/elementor-awesomeforms/assets/images/loading_icon.
 
                 </div>
                 <div class="hide-mobile inline-block" id="removeme">
-                    <div class="hide-mobile" id="form-top-additional">
+                    <div class="" id="form-top-additional">
                         <a id="changestep1" class="no-text-decoration" href="#" style="">
                             <div class="col removediv">
                                 <p><span class="underlined"> Ändra lånebelopp</span> <img class="arrow-img" src="<?php echo $change; ?>" alt="Endre steg 1"></p>
