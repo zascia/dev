@@ -4,9 +4,8 @@ $loading_icon = plugins_url('/elementor-awesomeforms/assets/images/loading_icon.
 ?>
 <div class="second-step-form">
     <div class="swedish-version">
-        <!--<form action="https://www.axofinans.se/partner" id="axo-form-small" method="post" class="form small-form swedish-version" novalidate="novalidate">-->
-        <form action="https://nyweb.axofinans.se/partner" id="axo-form-small" method="post" class="form small-form swedish-version"
-              novalidate="novalidate">
+        <form action="https://www.axofinans.se/partner" id="axo-form-small" method="post" class="form small-form swedish-version" novalidate="novalidate">
+        <!-- form action="https://nyweb.axofinans.se/partner" id="axo-form-small" method="post" class="form small-form swedish-version" novalidate="novalidate" -->
             <input id="source" value="Primofinans" name="source" type="hidden">
             <input id="useragentCtrl" value="" name="useragent" type="hidden">
             <input id="conversionPageCtrl" value="https://primofinans.se" name="conversion_page" type="hidden">
