@@ -138,6 +138,24 @@ if (!empty($form_step1)) {
 
                     <div class="col border-col">
                         <div class="accept-terms">
+                            <label class="value">
+                                <input name="accepted-terms-mandatory" id="acceptedTermsMandatory"
+                                       title="Jag samtycker till att Primofinans får behandla mina/våra personuppgifter såsom"
+                                       type="checkbox">
+                                <span><?php echo $form_step1['accepted-terms-mandatory'];?><span> </span>
+                                <a href="#" onClick="window.open('<?php echo $form_step1['personuppgiftspolicy-url'];?>', 'personuppgiftspolicy', 'resizable,height=900,width=500,scrollbars=yes'); return false;"><?php echo $form_step1['personuppgiftspolicy'];?></a>
+                                </span>
+                                <span class="error-message-wrapper">
+                                    <span class="error-message-arrow"></span>
+                                    <span class="error-message"><?php echo $form_step1['accepted-terms-mandatory-error'];?></span>
+                                </span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="col border-col">
+                        <div class="accept-terms">
                             <label>
                                 <input name="accepted-terms" id="acceptedTerms"
                                        title="Jeg godtar at modtage lånetilbud fra SmartLånet"
@@ -155,8 +173,7 @@ if (!empty($form_step1)) {
                     </div>
 
                     <center>
-                        <a href="#"
-                           onClick="window.open('<?php echo $form_step1['personuppgiftspolicy-url'];?>', 'personuppgiftspolicy', 'resizable,height=900,width=500,scrollbars=yes'); return false;"><?php echo $form_step1['personuppgiftspolicy'];?></a>
+
                     </center>
                 </div>
                 <!-- first step hidden fields -->

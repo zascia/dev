@@ -563,7 +563,6 @@ ol li ol {
 .accept-terms .error .error-message {
     display: block;
     margin-top: 16px;
-    color: #e7511e
 }
 
 .col-set.col-set-2 .col {
@@ -619,13 +618,15 @@ fieldset.form-set {
 }
 
 .fictiveNextStep1Container a {
-    font-size: 1.2em;
+
 }
 
 .div-next-container {
     padding: 12px;
     clear: both;
 }
+
+
 
 a.button.next,
 a.button.next:hover,
@@ -2177,7 +2178,8 @@ select::-ms-expand {
     font-size: .8em;
     float: right;
     width: 100%;
-    display: block
+    display: block;
+    text-align: left;
 }
 
 .value.error .error-message-wrapper .error-message {
@@ -4518,11 +4520,21 @@ ul.accordion li.single-accordion p.accordion-category {
     display: none;
 }
 
+.accept-terms {
+    margin: 20px 0 10px;
+}
+
 .accept-terms input[type=checkbox] + span {
     background-position: left center;
     text-align: left;
     margin-left: 1.2em;
     font-size:1.2em;
+}
+
+.accept-terms .error-message-wrapper {
+    margin-bottom: 20px;
+    test-align: left;
+    padding: 0 10px;
 }
 
 /* swedish version new styles */

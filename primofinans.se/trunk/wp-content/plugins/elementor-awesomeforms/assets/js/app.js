@@ -354,7 +354,7 @@ $(document).ready(function() {
         // very bad workaround to avoid sending empty fields
         checkInputsEmptyStep1()
             // adding custom validation method to check terms and conditions on step1
-        //checktermsStep1();
+        checktermsStep1();
 
         setTimeout(function() {
             var form = $("#axo-form-small");
@@ -383,12 +383,11 @@ $(document).ready(function() {
     }
 
     function checktermsStep1() {
-        var termsCheckbox = $("input[name='accepted-terms']");
-        return $(termsCheckbox).is(":checked");
+        var termsCheckbox = $("input[name='accepted-terms-mandatory']");
 
-        /*if (!$(termsCheckbox).is(":checked")) {
+        if (!$(termsCheckbox).is(":checked")) {
             termsCheckbox.parent().addClass("error");
-        }*/
+        }
     }
 
     function checkErrors(form) {
