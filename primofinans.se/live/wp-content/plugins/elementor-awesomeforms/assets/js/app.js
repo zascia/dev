@@ -200,7 +200,9 @@ $(document).ready(function() {
 
     function sendCampaignForm(formID) {
         // campaign form submit
-        fbq('track', 'Lead');
+        if (fbq !== undefined) {
+            fbq('track', 'Lead');
+        }
 
         var $form = $('#' + formID);
         $.ajax({
@@ -291,7 +293,9 @@ $(document).ready(function() {
 
             $form.hide();
             if (responseStatus === "Accepted") {
-                fbq('track', 'Completeregistration');
+                if (fbq !== undefined) {
+                    fbq('track', 'Completeregistration');
+                }
                 location.href = domain_val+"/a/?tid=" + responseObj.transactionID;
 
             } else if (responseStatus === "Rejected") {
