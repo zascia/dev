@@ -160,7 +160,10 @@ if (!empty($form_step1)) {
                                 <input name="accepted-terms" id="acceptedTerms"
                                        title="Jeg godtar at modtage lånetilbud fra SmartLånet"
                                        type="checkbox">
-                                <span id="permissionTextLabel"><?php echo $form_step1['accepted-terms'];?></span>
+                                <span id="permissionTextLabel"><?php echo $form_step1['accepted-terms'];?>
+                                    <span> </span>
+                                    <a href="#" onClick="window.open('<?php echo $form_step1['acceptmarketing-url'];?>', 'acceptmarketing', 'resizable,height=900,width=500,scrollbars=yes'); return false;"><?php echo $form_step1['acceptmarketing-link-text'];?></a>
+                                </span>
                                 <span class="error-message error-message-custom"><?php echo $form_step1['accepted-terms-error'];?></span>
                             </label>
                         </div>
