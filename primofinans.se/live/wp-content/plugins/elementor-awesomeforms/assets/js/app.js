@@ -141,15 +141,27 @@ $(document).ready(function() {
                 AxoScript9473.setCountry("SE");
 
                 AxoScript9473.init("#axo-form-small");
+
+                restoreCurrentValues();
+
+                setTimeout(function() {applyDynamicCalculator();},0);
+
+                $form = document.querySelector('#axo-form-small');
+                $form.addEventListener('submit', submitEvent);
+                $("#changestep1").on("click", showhiddenstep1);
             }
 
-            restoreCurrentValues();
+            // fire accepted facebook pixel
+            if( $(".accept-end-page").length > 0 ) {
+                if (getURLParameter("tid")) {
+                    var src = "https://www.facebook.com/tr?id=3374662439258353&ev=Completeregistration&noscript=1";
+                    addTrackingPixel("accept-end-page", src);
+                }
 
-            setTimeout(function() {applyDynamicCalculator();},0);
-
-            $form = document.querySelector('#axo-form-small');
-            $form.addEventListener('submit', submitEvent);
-            $("#changestep1").on("click", showhiddenstep1);
+                if (localStorage.getItem('SEPRMValues')) {
+                    localStorage.removeItem('SEPRMValues');
+                }
+            }
 
         }
 
@@ -293,22 +305,12 @@ $(document).ready(function() {
 
             $form.hide();
             if (responseStatus === "Accepted") {
-                if (fbq !== undefined) {
-                    fbq('track', 'Completeregistration');
-                }
                 location.href = domain_val+"/a/?tid=" + responseObj.transactionID;
 
             } else if (responseStatus === "Rejected") {
                 location.href = domain_val+"/r/?tid=" + responseObj.transactionID;
             }
 
-            // list 2 subscribe user
-            prepareCampaignForm();
-            sendStep2CampaignForm('campaignForm');
-
-            if (localStorage.getItem('SEPRMValues')) {
-                localStorage.removeItem('SEPRMValues');
-            }
 
         }).fail(function(response) {
             // fail here;
