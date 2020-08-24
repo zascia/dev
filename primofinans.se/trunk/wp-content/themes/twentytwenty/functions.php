@@ -758,3 +758,38 @@ function twentytwenty_get_elements_array() {
 	*/
 	return apply_filters( 'twentytwenty_get_elements_array', $elements );
 }
+
+// custom AJAX
+add_action( 'wp_ajax_unsubscribeuser', 'unsubscribe_user' );
+add_action( 'wp_ajax_nopriv_unsubscribeuser', 'unsubscribe_user' );
+
+function unsubscribe_user(){
+// https://stackoverflow.com/questions/57721149/how-to-store-form-data-using-wordpress-ajax-in-db
+
+    $userEmail = sanitize_text_field(($_POST['userEmail']));
+
+    //$phn = intval($_POST["phn"]);
+
+    $apiEndpoint = "https://api.getresponse.com/v3/contacts/";
+    $unsubscribeurl = $apiEndpoint . $userEmail;
+    $headers = array();
+    $headers[] = "x-auth-token: api-key 98e9893f951367413bd5204890473ba0";
+    $headers[] = "Content-Type: application/json";
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $unsubscribeurl);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $resp = curl_exec($ch);
+    $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+    $header = substr($resp, 0, $header_size);
+    $body = substr($resp, $header_size);
+    curl_close($ch);
+
+    echo $resp;
+
+    wp_die();
+}
+// eo custom AJAX

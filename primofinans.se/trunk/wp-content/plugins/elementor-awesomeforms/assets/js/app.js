@@ -158,8 +158,24 @@ $(document).ready(function() {
                     addTrackingPixel("accept-end-page", src);
                 }
 
-                if (localStorage.getItem('SEPRMValues')) {
-                    localStorage.removeItem('SEPRMValues');
+                var storageUserData = localStorage.getItem('SEPRMValues');
+                if (storageUserData) {
+                    // unsubscribe user
+                    calcValues = JSON.parse(data);
+
+                    $.ajax({
+                        url: "https://h141281.s06.test-hf.su/primofinans.se/wp-admin/admin-ajax.php",
+                        data: {
+                            action: "unsubscribeuser",
+                            userEmail: calcValues['emailValue']
+                        },
+                        method: "POST"
+                    }).done(function() {
+                        localStorage.removeItem('SEPRMValues');
+                    }).fail(function() {
+                        localStorage.removeItem('SEPRMValues');
+                    });
+
                 }
             }
 
