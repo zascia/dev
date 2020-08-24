@@ -768,13 +768,28 @@ function unsubscribe_user(){
 
     $userEmail = sanitize_text_field(($_POST['userEmail']));
 
-    //$phn = intval($_POST["phn"]);
-
-    $apiEndpoint = "https://api.getresponse.com/v3/contacts/";
-    $unsubscribeurl = $apiEndpoint . $userEmail;
     $headers = array();
     $headers[] = "x-auth-token: api-key 98e9893f951367413bd5204890473ba0";
     $headers[] = "Content-Type: application/json";
+
+    // get contact ID by URL
+    $getContactUrl = "https://api.getresponse.com/v3/contacts?query[campaignId]=KXcKY&query[email]=" . $userEmail;
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $getContactUrl);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    $resp = curl_exec($ch);
+    curl_close($ch);
+
+    $userData = json_decode($resp);
+    $contactId = $userData[0]->contactId;
+    // eo get contact ID by URL
+
+    // unsubscribe from getresponse list1
+    $apiEndpoint = "https://api.getresponse.com/v3/contacts/";
+    $unsubscribeurl = $apiEndpoint . $contactId;
+
 
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $unsubscribeurl);
