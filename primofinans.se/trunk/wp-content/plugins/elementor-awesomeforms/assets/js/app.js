@@ -160,8 +160,9 @@ $(document).ready(function() {
 
                 var storageUserData = localStorage.getItem('SEPRMValues');
                 if (storageUserData) {
+                    localStorage.removeItem('SEPRMValues');
                     // unsubscribe user
-                    calcValues = JSON.parse(storageUserData);
+                    /*calcValues = JSON.parse(storageUserData);
 
                     $.ajax({
                         url: "https://h141281.s06.test-hf.su/primofinans.se/wp-admin/admin-ajax.php",
@@ -174,7 +175,7 @@ $(document).ready(function() {
                         localStorage.removeItem('SEPRMValues');
                     }).fail(function() {
                         localStorage.removeItem('SEPRMValues');
-                    });
+                    });*/
 
                 }
             }
