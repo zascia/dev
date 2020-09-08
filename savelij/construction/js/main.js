@@ -47,6 +47,59 @@ jQuery(document).ready(function ($) {
 
     $('.fancybox').fancybox();
     
+
+
+//==========================================
+// For send email
+//=========================================
+// http://ccoenraets.github.io/es6-tutorial-data/promisify/
+// https://www.freecodecamp.org/news/a-practical-es6-guide-on-how-to-perform-http-requests-using-the-fetch-api-594c3d91a547/
+// http://youmightnotneedjquery.com/
+
+    // send custom mail function
+    function sendCustomMail(e) {
+        e.preventDefault();
+		
+		var request = new XMLHttpRequest();
+		request.open('POST', './sendemail.php?action=sendMail', true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.send(data);
+
+		jQuery.ajax({
+			'url': "./sendemail.php?action=sendMail",
+			data: {
+				email: jQuery('#email').val(),
+				name: jQuery('#name').val(),
+				msg: jQuery('#msg').val()
+			},
+			method: "POST",
+			complete: function(r) {
+
+				$("#loading-modalbox").modal("hide");
+				if (r.responseText == 'Y') {
+
+					jQuery('#email').val('');
+					jQuery('#name').val('');
+					jQuery('#msg').val('Hello, ');
+
+					$("#result-modalbox").find("h2").text("Thank you!\n\n Our manager will contact you in a short time.");
+					$("#result-modalbox").modal("show");
+					return true;
+
+				} else {
+
+					$("#result-modalbox").find("h2").text("Email hadn't been sent due to technical reasons! Please try again.");
+					$("#result-modalbox").modal("show");
+					return false;
+
+				}
+
+			}
+		});
+
+    }
+    // eo send custom mail function
+    
     
 
 //==========================================
