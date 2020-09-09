@@ -57,15 +57,18 @@ jQuery(document).ready(function ($) {
 // http://youmightnotneedjquery.com/
 
     // send custom mail function
-    function sendCustomMail(e) {
+    function sendCustomMail(e, form) {
         e.preventDefault();
+
+        let data = new FormData(form);
+        console.log("data ${data}");
 		
 		var request = new XMLHttpRequest();
 		request.open('POST', './sendemail.php?action=sendMail', true);
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 		request.send(data);
 
-		jQuery.ajax({
+		/*jQuery.ajax({
 			'url': "./sendemail.php?action=sendMail",
 			data: {
 				email: jQuery('#email').val(),
@@ -95,7 +98,7 @@ jQuery(document).ready(function ($) {
 				}
 
 			}
-		});
+		});*/
 
     }
     // eo send custom mail function
@@ -108,6 +111,9 @@ jQuery(document).ready(function ($) {
 
     $(window).load(function () {
         $("#loading").fadeOut(500);
+
+        let sendEmailForm = document.getElementById("sendMailForm");
+        sendEmailForm.addEventListener("submit", function(e){sendCustomMail(e, this)});
     });
 
 

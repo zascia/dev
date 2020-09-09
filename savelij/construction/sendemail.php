@@ -10,7 +10,9 @@ if( array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'sendMail')
 	// Only allow ajax requests
     if( !isset($_SERVER["HTTP_REFERER"]) || !isset($_SERVER["HTTP_X_REQUESTED_WITH"]) || strtolower($_SERVER["HTTP_X_REQUESTED_WITH"]) != "xmlhttprequest" ) {
 
-		exit("N - not allowed");
+		///exit("N - not allowed");
+		/*print_r($_REQUEST);
+		exit();*/
 
 	}
 
@@ -39,7 +41,7 @@ if( array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'sendMail')
 
 	} else {
 
-		exit("N");
+		exit("empty value");
 
 	}
 
