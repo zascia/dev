@@ -4,7 +4,7 @@
 
 
 // If the users wants to send and email and contact SMARTLainat
-if( array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'sendMail')
+if( array_key_exists('action', $_POST) && $_POST['action'] == 'sendMail')
 {
 
 	// Only allow ajax requests
@@ -16,9 +16,9 @@ if( array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'sendMail')
 
 	}
 
-	$msg = !empty($_REQUEST['msg']) ? trim(strip_tags($_REQUEST['msg'])) : null;
-	$name = !empty($_REQUEST['name']) ? trim(strip_tags($_REQUEST['name'])) : null;
-	$from = !empty($_REQUEST['email']) && filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL) ? filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL) : null;
+	$msg = !empty($_POST['msg']) ? trim(strip_tags($_POST['msg'])) : null;
+	$name = !empty($_POST['name']) ? trim(strip_tags($_POST['name'])) : null;
+	$from = !empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ? filter_var($_POST['email'], FILTER_SANITIZE_EMAIL) : null;
 
 	$headers = "From: " . strip_tags($from) . "\r\n";
 	$headers .= "Reply-To: ". strip_tags($from) . "\r\n";
@@ -40,11 +40,17 @@ if( array_key_exists('action', $_REQUEST) && $_REQUEST['action'] == 'sendMail')
 		}
 
 	} else {
-
+        echo '<pre>';
+        print_r($_POST['email']);
+        echo '</pre>';
 		exit("empty value");
 
 	}
 
 
 }
+echo 'nothing exists';
+echo '<pre>';
+        print_r($_POST['email']);
+        echo '</pre>';
 ?>

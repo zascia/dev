@@ -60,11 +60,13 @@ jQuery(document).ready(function ($) {
     function sendCustomMail(e, form) {
         e.preventDefault();
 
+        console.log("form",form);
         let data = new FormData(form);
-        console.log("data ${data}");
+        data.append('action','sendMail');
+        console.log("data",data);
 		
 		var request = new XMLHttpRequest();
-		request.open('POST', './sendemail.php?action=sendMail', true);
+		request.open('POST', './sendemail.php', true);
 		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 		request.send(data);
 
@@ -113,7 +115,7 @@ jQuery(document).ready(function ($) {
         $("#loading").fadeOut(500);
 
         let sendEmailForm = document.getElementById("sendMailForm");
-        sendEmailForm.addEventListener("submit", function(e){sendCustomMail(e, this)});
+        sendEmailForm.addEventListener("submit", function(e){sendCustomMail(e, sendEmailForm)});
     });
 
 
