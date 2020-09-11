@@ -27,8 +27,8 @@ if( array_key_exists('action', $_POST) && $_POST['action'] == 'sendMail')
 
 	if( !empty($msg) && !empty($from) ) {
 
-        //$send = mail("s.rezni4encko@gmail.com", "Вопрос с сайта ремонтов", $name ."<br>". $msg, $headers);
-        $send = mail("zascia@ukr.net", "Вопрос с сайта ремонтов", $name ."<br>". $msg, $headers);
+        $send = mail("s.rezni4encko@gmail.com", "Вопрос по ремонтам", $name ."<br>". $msg, $headers);
+        //$send = mail("zascia@ukr.net", "Вопрос с сайта ремонтов", $name ."<br>". $msg, $headers);
 		if( $send ) {
 
 			exit("Y");

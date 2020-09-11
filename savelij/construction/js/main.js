@@ -59,16 +59,26 @@ jQuery(document).ready(function ($) {
     // send custom mail function
     function sendCustomMail(e, form) {
         e.preventDefault();
+        $("#loading").fadeIn(500);
 
         console.log("form",form);
         let data = new FormData(form);
         data.append('action','sendMail');
-        console.log("data",data);
-		
+        for (var value of data.values()) {
+            console.log(value);
+        }
+
 		var request = new XMLHttpRequest();
 		request.open('POST', './sendemail.php', true);
-		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 		request.send(data);
+
+        request.onreadystatechange=function(){
+            if (request.readyState==4 && request.status==200){
+                console.log("readyState", request.readyState);
+                form.reset();
+                setTimeout(() => $("#loading").fadeOut(500), 3000);
+            }
+        }
 
 		/*jQuery.ajax({
 			'url': "./sendemail.php?action=sendMail",
