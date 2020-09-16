@@ -304,12 +304,33 @@ $(document).ready(function() {
             $(".breadcrumb-active").removeClass("breadcrumb-active").next().addClass("breadcrumb-active");
 
             $form.hide();
-            if (responseStatus === "Accepted") {
-                location.href = domain_val+"/a/?tid=" + responseObj.transactionID;
 
-            } else if (responseStatus === "Rejected") {
-                location.href = domain_val+"/r/?tid=" + responseObj.transactionID;
-            }
+            $.ajax({
+                type: "POST",
+                url: "https://script.google.com/macros/s/AKfycbyRx0o5LKu1sgVBxBmMvuzTO2mWJvttmrWPLVMxDewVZ_s_8Bk/exec",
+                data: {
+                    orig_data: dataToSend,
+                    status: responseStatus
+                }
+            }).done(function(response2) {
+                if (responseStatus === "Accepted") {
+                    location.href = domain_val+"/a/?tid=" + responseObj.transactionID;
+                } else if (responseStatus === "Rejected") {
+                    location.href = domain_val+"/r/?tid=" + responseObj.transactionID;
+                } else {
+                    location.href = domain_val+"/er";
+                }
+            }).fail(function(response2) {
+                // fail here;
+                /*var responseObj = JSON.parse(response);
+                responseStatus = responseObj.status;*/
+
+                location.href = domain_val+"/er";
+
+            }).always(function() {
+
+		    });
+
 
 
         }).fail(function(response) {

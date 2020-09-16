@@ -1,7 +1,7 @@
 /**
  * Created by ashu on 10-Mar-17.
  */
-( function( $ ) {
+
 /* dynamic calculator */
 function applyDynamicCalculator() {
     /**
@@ -22,6 +22,7 @@ function applyDynamicCalculator() {
         var monthlyFee = loans["consumer-credit"].monthlyFee
         let monthlyTerms = years * 12;
         let payment = (Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) == 0) ? Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) : Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) + monthlyFee;
+        //console.log("från " + payment + " kr" );
         return payment;
     };
 
@@ -50,8 +51,7 @@ function applyDynamicCalculator() {
 
 /* eo dynamic calculator */
 
-$(document).ready(function() {
-    var domain_val = $('#domain_val').val();
+jQuery(document).ready(function($) {
     /* validation on the fly */
     function addEventsValidate(formClass) {
         let inputArray = $(formClass).serializeArray();
@@ -115,53 +115,25 @@ $(document).ready(function() {
     function calcPageInit() {
         checkCalcState();
 
-        if (document.querySelectorAll('.elementor-widget-awesomeformsstep1').length > 0) {
-            // initialize Axo script logic from sl-min.js
-            AxoScript9473.setLanguage("sv");
-            AxoScript9473.setCountry("SE");
-            AxoScript9473.init("#axo-form-small");
-
-            calcState.calcValues['reqid'] = getURLParameter('reqid') || 0;
+        if (document.querySelectorAll('.first-step-form').length > 0) {
+            calcState.calcValues['reqid'] = getURLParameter('reqid') || generateReqId() || 0;
             var affid = getURLParameter('utm_content') || 14611;
-
-            $("#fictiveNextStep1").on("click", function(e) {
-                e.preventDefault();
-                $(".fictiveNextStep1Container").show();
-                $(".fictiveNextStep1Head").hide();
-                setTimeout(function() {AxoScript9473.validate();},0);
-            });
+            if (affid == '13720') {
+                $(".accept-terms").hide();
+            }
 
             setTimeout(function() {applyDynamicCalculator();},0);
 
             btn = document.querySelector('.button.next.step');
             btn.addEventListener('click', step2Click);
         } else {
-            if ($("#axo-form-small").length) {
-                AxoScript9473.setLanguage("sv");
-                AxoScript9473.setCountry("SE");
+            restoreCurrentValues();
 
-                AxoScript9473.init("#axo-form-small");
+            setTimeout(function() {applyDynamicCalculator();},0);
 
-                restoreCurrentValues();
-
-                setTimeout(function() {applyDynamicCalculator();},0);
-
-                $form = document.querySelector('#axo-form-small');
-                $form.addEventListener('submit', submitEvent);
-                $("#changestep1").on("click", showhiddenstep1);
-            }
-
-            // fire accepted facebook pixel
-            if( $(".accept-end-page").length > 0 ) {
-                if (getURLParameter("tid")) {
-                    var src = "https://www.facebook.com/tr?id=3374662439258353&ev=Completeregistration&noscript=1";
-                    addTrackingPixel("accept-end-page", src);
-                }
-
-                if (localStorage.getItem('SEPRMValues')) {
-                    localStorage.removeItem('SEPRMValues');
-                }
-            }
+            $form = document.querySelector('#axo-form-small');
+            $form.addEventListener('submit', submitEvent);
+            $("#changestep1").on("click", showhiddenstep1);
 
         }
 
@@ -173,10 +145,8 @@ $(document).ready(function() {
         $("#removeme").hide("slow");
     }
 
-
-
     function checkCalcState() {
-        var data = localStorage.getItem('SEPRMValues');
+        var data = localStorage.getItem('SEAXOcalcValuesList');
         if (data) {
             calcState.calcValues = JSON.parse(data);
         }
@@ -184,16 +154,17 @@ $(document).ready(function() {
 
     function updateCalcState() {
         dataToPut = JSON.stringify(calcState.calcValues);
-        localStorage.setItem('SEPRMValues', dataToPut);
+        localStorage.setItem('SEAXOcalcValuesList', dataToPut);
     };
 
     function restoreCurrentValues() {
         document.querySelector('#email').value = calcState.calcValues['emailValue'] || '';
         document.querySelector('#loan-amount-value').value = calcState.calcValues['loanAmountValue'] || 0;
-        document.querySelector('#loan-amount').value = calcState.calcValues['loanAmountValue'] || 0;
         document.querySelector('#mobile-number').value = calcState.calcValues['mobileNumberValue'] || 0;
         document.querySelector('#acceptedTerms').value = calcState.calcValues['accepts_marketing'];
-
+        if (calcState.calcValues['afid'] == '13720') {
+            //$("#acceptedTerms").attr('disabled', true);
+        }
         //if ( calcState.calcValues['consolidateDebt'] == 1 ) document.querySelector('#consolidate-debt-1').checked = true;
 
     };
@@ -205,37 +176,41 @@ $(document).ready(function() {
         calcState.calcValues['mobileNumberValue'] = document.querySelector('#mobile-number').value || 0;
         //calcState.calcValues['consolidateDebt'] = document.querySelector('[name=consolidate_debt]:checked').value || 0;
 
-        calcState.calcValues['afid'] = getURLParameter('caid') || 0;
-        calcState.calcValues['utm_content'] = getURLParameter('caid') || 0;
+        calcState.calcValues['afid'] = getURLParameter('utm_content') || 14611;
+        calcState.calcValues['utm_content'] = getURLParameter('utm_content') || 14611;
         calcState.calcValues['accepts_marketing'] = document.querySelector('#acceptedTerms').checked ? 1 : 0;
     }
 
     function sendCampaignForm(formID) {
-        // campaign form submit
-        if (fbq !== undefined) {
-            fbq('track', 'Lead');
-        }
+        // campaign form submit if marketing is checked
+        if ($("#acceptedTerms").is(":checked")) {
 
-        var $form = $('#' + formID);
-        $.ajax({
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize()
-        }).done(function() {
-            location.href = domain_val+"/step2";
-        }).fail(function() {
-            location.href = domain_val+"/step2";
-        });
+            var $form = $('#' + formID);
+            $.ajax({
+                type: $form.attr('method'),
+                url: $form.attr('action'),
+                data: $form.serialize()
+            }).done(function () {
+                location.href = "step2.htm";
+            }).fail(function () {
+                location.href = "step2.htm";
+            });
+        } else {
+            location.href = "step2.htm";
+        }
     }
 
     function sendStep2CampaignForm(formID) {
         // campaign form submit
-        var $form = $('#' + formID);
-        $.ajax({
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize()
-        }).done(function() {}).fail(function() {});
+        if (calcState.calcValues['accepts_marketing']) {
+            var $form = $('#' + formID);
+            $.ajax({
+                type: $form.attr('method'),
+                url: $form.attr('action'),
+                data: $form.serialize()
+            }).done(function() {}).fail(function() {});
+        }
+
     }
 
     function prepareCampaignForm() {
@@ -289,59 +264,95 @@ $(document).ready(function() {
         }).done(function(response) {
             // success here;
             var responseObj = JSON.parse(response);
-
-            console.log("responseObj", responseObj);
-
             responseStatus = responseObj.status;
             transactionID = responseObj.transactionID;
             $.each(responseObj.errors, function(i, val) {
                 applicationComments += val + " ";
             });
 
-            //$("#loading-modalbox").modal().close();
+            $("#loading-modalbox").modal().close();
 
             // reswitch active breadcrumb
             $(".breadcrumb-active").removeClass("breadcrumb-active").next().addClass("breadcrumb-active");
 
             $form.hide();
+            if (responseStatus === "OK") {
+                $(".response-success").show();
 
-            $.ajax({
-                type: "POST",
-                url: "https://script.google.com/macros/s/AKfycbyRx0o5LKu1sgVBxBmMvuzTO2mWJvttmrWPLVMxDewVZ_s_8Bk/exec",
-                data: {
-                    orig_data: dataToSend,
-                    status: responseStatus
-                }
-            }).done(function(response2) {
-                if (responseStatus === "Accepted") {
-                    location.href = domain_val+"/a/?tid=" + responseObj.transactionID;
-                } else if (responseStatus === "Rejected") {
-                    location.href = domain_val+"/r/?tid=" + responseObj.transactionID;
-                } else {
-                    location.href = domain_val+"/er";
-                }
-            }).fail(function(response2) {
-                // fail here;
-                /*var responseObj = JSON.parse(response);
-                responseStatus = responseObj.status;*/
+				// create the array of tracking sources here
+                ///// this is the old one before
+                // change of status "https://secure.smartresponse-media.com/p.ashx?o=115867&e=560&f=pb&r=" + reqid,
+				var trackingSRCArr1 = [
+					"https://secure.smartresponse-media.com/p.ashx?o=134810&e=1862&f=pb&r=" + reqid
+				];
 
-                location.href = domain_val+"/er";
+				//add them to the page
+				$.each(trackingSRCArr1, function(i){
+					addTrackingPixel("response-success", trackingSRCArr1[i]);
+				});
 
-            }).always(function() {
+            } else if (responseStatus === "Rejected") {
+                $(".response-reject").show();
 
-		    });
+                var OneSignal = window.OneSignal || [];
+                OneSignal.push(["init", {
+                    appId: "1cb60c1e-eb58-4150-86a4-b0613861bcd0",
+                    autoRegister: true,
+                    notifyButton: {
+                        enable: true /* Set to false to hide */
+                    }
+                }]);
 
 
+            }
+
+            // list 2 subscribe user
+            prepareCampaignForm();
+            sendStep2CampaignForm('campaignForm');
+
+            if (localStorage.getItem('SEAXOcalcValuesList')) {
+                localStorage.removeItem('SEAXOcalcValuesList');
+            }
 
         }).fail(function(response) {
             // fail here;
-            /*var responseObj = JSON.parse(response);
-            responseStatus = responseObj.status;*/
+            var responseObj = JSON.parse(response);
+            responseStatus = responseObj.status;
 
-            location.href = domain_val+"/er";
+            $("#loading-modalbox").modal().close();
 
+            // reswitch active breadcrumb
+            $(".breadcrumb-active").removeClass("breadcrumb-active").next().addClass("breadcrumb-active");
+
+            $form.hide();
+            $(".response-error").show();
         }).always(function() {
+			// this tracking pixel will work always
+			var trackingSRCArr2 = [
+				"https://www.facebook.com/tr?id=214395353301824&ev=CompleteRegistration&noscript=1"
+			];
 
+			//add them to the page
+			$.each(trackingSRCArr2, function(i){
+				addTrackingPixel("main-content", trackingSRCArr2[i]);
+			});
+
+            // save application data
+            $.ajax({
+                'url': "/api/savedata/handleloandata.php",
+                data: {
+                    userapply: true,
+                    partnerID: "SEAXO",
+                    applicationID: transactionID,
+                    reqID: reqid,
+                    valuePairs: dataToSend,
+                    applicationStatus: responseStatus,
+                    applicationComments: applicationComments,
+                    affiliateID: calcState.calcValues['afid'],
+                    userEmail: calcState.calcValues['emailValue']
+                },
+                method: "POST"
+            });
 		});
 
     }
@@ -381,7 +392,7 @@ $(document).ready(function() {
         // very bad workaround to avoid sending empty fields
         checkInputsEmptyStep1()
             // adding custom validation method to check terms and conditions on step1
-        checktermsStep1();
+        //checktermsStep1();
 
         setTimeout(function() {
             var form = $("#axo-form-small");
@@ -410,8 +421,7 @@ $(document).ready(function() {
     }
 
     function checktermsStep1() {
-        var termsCheckbox = $("input[name='accepted-terms-mandatory']");
-
+        var termsCheckbox = $("input[name='accepted-terms']");
         if (!$(termsCheckbox).is(":checked")) {
             termsCheckbox.parent().addClass("error");
         }
@@ -531,4 +541,3 @@ $(document).ready(function() {
 
 
 });
-} )( jQuery );
