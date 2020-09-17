@@ -122,7 +122,6 @@ $(document).ready(function() {
             AxoScript9473.init("#axo-form-small");
 
             calcState.calcValues['reqid'] = getURLParameter('reqid') || 0;
-            var affid = getURLParameter('utm_content') || 0;
 
             $("#fictiveNextStep1").on("click", function(e) {
                 e.preventDefault();
@@ -211,12 +210,14 @@ $(document).ready(function() {
     }
 
     function sendCampaignForm(formID) {
-        // campaign form submit
+        // campaign form submit but it's temporary disabled
         if (fbq !== undefined) {
             fbq('track', 'Lead');
         }
 
-        var $form = $('#' + formID);
+        location.href = domain_val+"/step2";
+
+        /*var $form = $('#' + formID);
         $.ajax({
             type: $form.attr('method'),
             url: $form.attr('action'),
@@ -225,7 +226,7 @@ $(document).ready(function() {
             location.href = domain_val+"/step2";
         }).fail(function() {
             location.href = domain_val+"/step2";
-        });
+        });*/
     }
 
     function sendStep2CampaignForm(formID) {
