@@ -22,7 +22,6 @@ function applyDynamicCalculator() {
         var monthlyFee = loans["consumer-credit"].monthlyFee
         let monthlyTerms = years * 12;
         let payment = (Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) == 0) ? Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) : Math.round((loanAmount * termInterest) / (1.0 - Math.pow((1.0 + termInterest), -monthlyTerms))) + monthlyFee;
-        //console.log("från " + payment + " kr" );
         return payment;
     };
 

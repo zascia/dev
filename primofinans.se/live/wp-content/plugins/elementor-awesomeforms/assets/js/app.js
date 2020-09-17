@@ -122,7 +122,7 @@ $(document).ready(function() {
             AxoScript9473.init("#axo-form-small");
 
             calcState.calcValues['reqid'] = getURLParameter('reqid') || 0;
-            var affid = getURLParameter('utm_content') || 14611;
+            var affid = getURLParameter('utm_content') || 0;
 
             $("#fictiveNextStep1").on("click", function(e) {
                 e.preventDefault();
@@ -266,7 +266,7 @@ $(document).ready(function() {
             reqid = calcState.calcValues['reqid'];
 
         for (var i = 0; i < formArrayFiltered.length; i++) {
-            dataToSend += formArrayFiltered[i]['name'] + "=" + formArrayFiltered[i]['value'];
+            dataToSend += formArrayFiltered[i]['name'] + "=" + encodeURIComponent(formArrayFiltered[i]['value']);
             if (formArrayFiltered[i]['name'] === 'credit_loan_amount') {
                 dataToSend += "&privateloan=" + formArrayFiltered[i]['value'] / 2 + "&creditloan=" + formArrayFiltered[i]['value'] / 2;
             }
@@ -289,16 +289,11 @@ $(document).ready(function() {
         }).done(function(response) {
             // success here;
             var responseObj = JSON.parse(response);
-
-            console.log("responseObj", responseObj);
-
             responseStatus = responseObj.status;
             transactionID = responseObj.transactionID;
             $.each(responseObj.errors, function(i, val) {
                 applicationComments += val + " ";
             });
-
-            //$("#loading-modalbox").modal().close();
 
             // reswitch active breadcrumb
             $(".breadcrumb-active").removeClass("breadcrumb-active").next().addClass("breadcrumb-active");
@@ -313,7 +308,7 @@ $(document).ready(function() {
                     status: responseStatus
                 }
             }).done(function(response2) {
-                if (responseStatus === "Accepted") {
+                if (responseStatus === "OK") {
                     location.href = domain_val+"/a/?tid=" + responseObj.transactionID;
                 } else if (responseStatus === "Rejected") {
                     location.href = domain_val+"/r/?tid=" + responseObj.transactionID;
@@ -515,6 +510,9 @@ $(document).ready(function() {
         if (calcState.calcValues['utm_content'] != 0) {
             form.append("<input type='hidden' name='content' value='" + calcState.calcValues['utm_content'] + "'>");
         }
+
+        // August 2020 modification - adding reqid to send
+        form.append("<input type='hidden' name='applicationid' value='" + calcState.calcValues['reqid'] + "'>");
 
         /* section for the new fields version June 2019 */
         $("#useragentCtrl").prop("value", navigator.userAgent);
