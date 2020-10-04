@@ -714,6 +714,14 @@ footer::after {
     background: url(../images/top.png)no-repeat scroll 0 -40px;
 }
 
+.about_banner {
+    margin-top: 100px;
+}
+
+.fa.fa-bars {
+    padding: 10px;
+}
+
 /* Responsive Styles for various devices */
 @media (min-width: 1600px) {
     .container{ width: 1200px;}
@@ -750,9 +758,9 @@ footer::after {
     }
 
     .about_banner > img {
-        width: 334px;
+        /*width: 334px;
         display:block;
-        margin:0 auto;
+        margin:0 auto;*/
     }
     .grid-item {
         height: 220px !important;
