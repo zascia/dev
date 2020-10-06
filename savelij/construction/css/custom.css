@@ -325,7 +325,22 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     font-size: 15px;
     margin: 60px 0 20px;
 }
-
+.why_us_ico {
+    width:200px;
+    height: 200px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 10px #ffcb0f, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
+    padding: 38px;
+    background:#fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.why_us_ico img {
+    border-radius: 50%;
+}
 /* Services */
 #services h2 {
     margin: 85px 0 50px;
@@ -783,6 +798,18 @@ footer::after {
     }
     #contact_form .btn.submit_btn {
         width: 95px;
+    }
+    .why_us_ico {
+        width: 12vw;
+        height: 12vw;
+        border-radius: 100%;
+        box-shadow: 0 0 0 10px #ffcb0f, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
+        padding: 0px;
+        background: #fff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 
