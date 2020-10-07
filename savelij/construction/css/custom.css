@@ -330,7 +330,7 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
     height: 200px;
     border-radius: 100%;
     box-shadow: 0 0 0 10px #ffcb0f, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
-    padding: 38px;
+    padding: 0;
     background:#fff;
     overflow: hidden;
     display: flex;
@@ -340,6 +340,50 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 }
 .why_us_ico img {
     border-radius: 50%;
+}
+
+/* How we */
+#how_we_work {
+    background: #f2f7fa none repeat scroll 0 0;
+    padding-bottom: 50px;
+    line-height: 18px;
+}
+#how_we_work h2 {
+    margin: 70px 0 20px;
+}
+.how_we_item{ padding-top: 55px;}
+#how_we_work .fa{
+    border-radius: 100%;
+    box-shadow: 0 0 0 10px #ffcb0f, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
+    padding: 38px;
+    font-size:45px;
+}
+.how_we_item > h4 {
+    font-size: 15px;
+    margin: 60px 0 20px;
+}
+.how_we_ico {
+    width:200px;
+    height: 200px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 10px #ffcb0f, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
+    padding: 0;
+    background:#fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.how_we_ico img {
+    border-radius: 50%;
+    width: auto;
+    height: 100%;
+}
+.how_we_item_consultation .how_we_ico img {
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
 }
 /* Services */
 #services h2 {
