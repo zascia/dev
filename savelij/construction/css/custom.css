@@ -340,6 +340,8 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 }
 .why_us_ico img {
     border-radius: 50%;
+    width: auto;
+    height: 100%;
 }
 
 /* How we */
@@ -351,15 +353,23 @@ nav.navbar.bootsnav ul.nav > li > a:hover,nav.navbar.bootsnav ul.nav > li > a:fo
 #how_we_work h2 {
     margin: 70px 0 20px;
 }
-.how_we_item{ padding-top: 55px;}
+.how_we_item{
+    padding-top: 55px;
+    text-align: left;
+    overflow: hidden;
+}
 #how_we_work .fa{
     border-radius: 100%;
     box-shadow: 0 0 0 10px #ffcb0f, 0 0 0 20px #fadb64, 0 0 0 30px #f7e59c;
     padding: 38px;
     font-size:45px;
 }
+.how_we_item h4 {
+    font-size: 40px;
+    color: #ffcb0f;
+    margin: 60px 0 20px;
+}
 .how_we_item > h4 {
-    font-size: 15px;
     margin: 60px 0 20px;
 }
 .how_we_ico {
