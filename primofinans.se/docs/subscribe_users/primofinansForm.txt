@@ -1,0 +1,128 @@
+<!--
+Do not modify the NAME value of any of the INPUT fields
+the FORM action, or any of the hidden fields (eg. input type=hidden).
+These are all required for this form to function correctly.
+-->
+<!DOCTYPE html>
+	<html>
+	<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="https://client3.mailmailmail.net/admin/includes/assets/plugins/intl-tel-input-master/build/js/intlTelInput.js"></script>
+	<script src="https://client3.mailmailmail.net/admin/includes/assets/plugins/intl-tel-input-master/build/js/utils.js"></script>
+	<link rel="stylesheet" href="https://client3.mailmailmail.net/admin/includes/assets/plugins/intl-tel-input-master/build/css/intlTelInput.css">
+	<link rel="stylesheet" href="https://client3.mailmailmail.net/admin/includes/assets/plugins/intl-tel-input-master/build/css/demo.css">
+	</head>
+	<body>
+<script type="text/javascript">// <![CDATA[
+function CheckMultiple5077(frm, name) {
+				for (var i=0; i < frm.length; i++)
+				{
+					fldObj = frm.elements[i];
+					fldId = fldObj.id;
+					if (fldId) {
+						var fieldnamecheck=fldObj.id.indexOf(name);
+						if (fieldnamecheck != -1) {
+							if (fldObj.checked) {
+								return true;
+							}
+						}
+					}
+				}
+				return false;
+			}
+		var mobileInputHTML = '<input id="mobile" type="tel" name="mobile">';
+				$(function() {
+				$("#mobileHolder").html(mobileInputHTML);
+				$("#mobile").intlTelInput({
+				preferredCountries: ['dk','no','de','se', 'mk'],
+					initialCountry: 'SE',
+				onlyCountries:["SE"]
+       					 });
+				});
+				
+		function CheckForm5077(f) {
+			var email_re = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i;
+				if (!email_re.test(f.email.value)) {
+					alert("Please enter your email address.:");
+					f.email.focus();
+					return false;
+				}
+		
+			var intlNumber = '';
+				//var mobileNumber =
+				if ($('#mobile').val() != '')
+				{
+					var intlNumber = $("#mobile").intlTelInput("getNumber");
+					var countryData = $("#mobile").intlTelInput("getSelectedCountryData");
+							
+					var isValid = $("#mobile").intlTelInput("isValidNumber");
+					if(!isValid)
+					{
+						alert('Please Enter Valid Mobile Number');
+						$('#mobile').focus();
+						return false;
+					}
+					$("#mobile").val(intlNumber);
+				}
+				else
+				{
+					var countryData = $("#mobile").intlTelInput("getSelectedCountryData");
+					if(!jQuery.isEmptyObject( countryData ))
+					{
+						alert('Please Enter Valid Mobile Number');
+						$('#mobile').focus();
+						return false;
+					}
+				}
+			
+				return true;
+			}
+// ]]></script>
+<style type="text/css"><!--
+.myForm td, input, select, textarea, checkbox {
+	font-family: tahoma;
+	font-size: 12px;
+}
+
+.required {
+	color: red;
+}
+
+input.fb {
+	background-image: url('https://client3.mailmailmail.net/admin/images/facebookautofill.jpg');
+	width: 179px;
+	height: 37px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+--></style>
+<div>
+<table class="myForm" cellpadding="2" border="0">
+<tbody>
+<tr>
+<td></td>
+<td><form method="post" action="https://client3.mailmailmail.net/form.php?form=5077" id="frmSS5077" onsubmit="return CheckForm5077(this);">
+<table>
+<tbody>
+<tr>
+<td><span class="required">*</span> &nbsp; Your Email Address:</td>
+<td><input type="text" name="email" /></td>
+</tr>
+<tr>
+<td><span class="required">*</span> &nbsp; Mobile:</td>
+<td>
+<div id="mobileHolder"></div>
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><input type="submit" value="Subscribe" style="background-color: #f0f0f0; font-size: 12px;" /></td>
+</tr>
+<tr>
+<td colspan="2" style="text-align: right;"><a href="http://www.marketingplatform.com" target="_blank" rel="noopener noreferrer">Email Marketing System fra MarketingPlatform.com</a></td>
+</tr>
+</tbody>
+</table>
+</form></td>
+</tr>
+</tbody>
+</table>
+</div>
