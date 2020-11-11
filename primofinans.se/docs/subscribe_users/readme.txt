@@ -1,5 +1,5 @@
 before we added reqId, he had another developer activate the feed and change it ti another company called:
-Marketingplatformand this is what stopped working around the time you did the reqId updateHe sent me these details meanwhile for logging in:
+Marketingplatform and this is what stopped working around the time you did the reqId updateHe sent me these details meanwhile for logging in:
 
 Primofinans:
 jh@lacuna-digital.com
@@ -7,7 +7,8 @@ UVsCU75hp@P9GSdTRxs7eeNI
 
 Marketingplatform:
 lacuna-digital_dk
-Markersej2020I'm assuming the development he had someone else do towards MarketingPlatform is still there, so I'm hoping that it is just activating it again somehow
+Markersej2020
+I'm assuming the development he had someone else do towards MarketingPlatform is still there, so I'm hoping that it is just activating it again somehow
 
 fount this one: https://marketingplatform.com/api/php/
 

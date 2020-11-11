@@ -11,8 +11,11 @@ These are all required for this form to function correctly.
 	<link rel="stylesheet" href="https://client3.mailmailmail.net/admin/includes/assets/plugins/intl-tel-input-master/build/css/demo.css">
 	</head>
 	<body>
-<script type="text/javascript">// <![CDATA[
-function CheckMultiple5077(frm, name) {
+
+<script type="text/javascript">
+// <![CDATA[
+
+			function CheckMultiple5077(frm, name) {
 				for (var i=0; i < frm.length; i++)
 				{
 					fldObj = frm.elements[i];
@@ -37,7 +40,7 @@ function CheckMultiple5077(frm, name) {
 				onlyCountries:["SE"]
        					 });
 				});
-				
+
 		function CheckForm5077(f) {
 			var email_re = /[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i;
 				if (!email_re.test(f.email.value)) {
@@ -45,14 +48,14 @@ function CheckMultiple5077(frm, name) {
 					f.email.focus();
 					return false;
 				}
-		
+
 			var intlNumber = '';
 				//var mobileNumber =
 				if ($('#mobile').val() != '')
 				{
 					var intlNumber = $("#mobile").intlTelInput("getNumber");
 					var countryData = $("#mobile").intlTelInput("getSelectedCountryData");
-							
+
 					var isValid = $("#mobile").intlTelInput("isValidNumber");
 					if(!isValid)
 					{
@@ -72,11 +75,13 @@ function CheckMultiple5077(frm, name) {
 						return false;
 					}
 				}
-			
+
 				return true;
 			}
-// ]]></script>
-<style type="text/css"><!--
+
+// ]]>
+</script>
+<style type="text/css">
 .myForm td, input, select, textarea, checkbox {
 	font-family: tahoma;
 	font-size: 12px;
@@ -93,36 +98,40 @@ input.fb {
 	border-radius: 5px;
 	cursor: pointer;
 }
---></style>
+</style>
 <div>
-<table class="myForm" cellpadding="2" border="0">
-<tbody>
-<tr>
-<td></td>
-<td><form method="post" action="https://client3.mailmailmail.net/form.php?form=5077" id="frmSS5077" onsubmit="return CheckForm5077(this);">
-<table>
-<tbody>
-<tr>
-<td><span class="required">*</span> &nbsp; Your Email Address:</td>
-<td><input type="text" name="email" /></td>
+	<table border="0" cellpadding="2" class="myForm">
+		<tbody>
+			<tr>
+				<td></td>
+				<td>
+					<form method="post" action="https://client3.mailmailmail.net/form.php?form=5077" id="frmSS5077"
+						onsubmit="return CheckForm5077(this);">
+						<table>
+							<tr>
+	<td><span class="required">*</span>
+&nbsp;
+Your Email Address:</td>
+	<td><input type="text" name="email" /></td>
+</tr><tr>
+	<td><span class="required">*</span>
+&nbsp;
+Mobile:</td>
+	<td><div id="mobileHolder"> </div></td>
 </tr>
-<tr>
-<td><span class="required">*</span> &nbsp; Mobile:</td>
-<td>
-<div id="mobileHolder"></div>
-</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td><input type="submit" value="Subscribe" style="background-color: #f0f0f0; font-size: 12px;" /></td>
-</tr>
-<tr>
-<td colspan="2" style="text-align: right;"><a href="http://www.marketingplatform.com" target="_blank" rel="noopener noreferrer">Email Marketing System fra MarketingPlatform.com</a></td>
-</tr>
-</tbody>
-</table>
-</form></td>
-</tr>
-</tbody>
-</table>
+							<tr>
+								<td>&nbsp;</td>
+								<td><input type="submit"
+									value="Subscribe"
+									style="background-color: #f0f0f0; font-size: 12px;'" /></td>
+							</tr>
+							<tr>
+								<td colspan="2" style="text-align: right"><a href="http://www.marketingplatform.com" target="_blank">Email Marketing System fra MarketingPlatform.com</a></td>
+							</tr>
+						</table>
+					</form>
+				</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
