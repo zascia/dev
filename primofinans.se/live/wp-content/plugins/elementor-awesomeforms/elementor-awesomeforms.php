@@ -194,7 +194,7 @@ add_action('wp_enqueue_scripts', 'register_plugin_styles', 99);
 function register_plugin_styles() {
     wp_enqueue_script('elementor-awesomeforms-owl', plugin_dir_url(__FILE__) . 'assets/js/owl.js', ['jquery'], false, true);
     wp_enqueue_script('elementor-awesomeforms-sl-min', plugin_dir_url(__FILE__) . 'assets/js/sl-min.js', ['jquery'], false, true);
-    wp_enqueue_script('elementor-awesomeforms-steps', plugin_dir_url(__FILE__) . 'assets/js/app.js', ['jquery'], '1.0.1', true);
+    wp_enqueue_script('elementor-awesomeforms-steps', plugin_dir_url(__FILE__) . 'assets/js/app.js', ['jquery'], '1.0.2', true);
 
     wp_enqueue_style('elementor-awesomeforms-style', plugin_dir_url(__FILE__) . 'assets/css/style.css');
 }

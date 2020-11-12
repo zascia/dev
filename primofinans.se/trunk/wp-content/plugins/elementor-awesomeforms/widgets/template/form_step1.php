@@ -186,16 +186,9 @@ if (!empty($form_step1)) {
 <div>
 
     <!-- Campaign form -->
-    <form id="campaignForm" action="https://app.getresponse.com/add_subscriber.html" accept-charset="utf-8" method="post" style="display: none">
-        <input type="text" id="customEmailCampaign" name="email" />
-        <input name="custom_loanamount" id="customLoanamountCampaign" type="text" value="" />
-        <input name="custom_loanduration" id="customLoandurationCampaign" type="text" value="" />
-        <input name="custom_mobilenumber" id="customMobilenumberCampaign" type="text" value="" />
-        <input type="hidden" id="customAfID" name="custom_afid" value="" />
-        <input type="hidden" id="customCurrentDate" name="custom_signup_date" value="" />
-        <input type="hidden" id="customPermission" name="custom_permissiontext" value="" />
-        <input type="hidden" name="campaign_token" value="KXcKY" />
-        <input type="hidden" name="start_day" value="0" />
+    <form id="campaignForm" action="https://client3.mailmailmail.net/form.php?form=5077" accept-charset="utf-8" method="post" style="display: none">
+        <input name="email" id="customEmailCampaign" type="text" />
+        <input name="mobile" id="customMobileCampaign" type="text" value="" />
     </form>
     <!-- Campaign form -->
 
