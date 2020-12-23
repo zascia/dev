@@ -215,18 +215,16 @@ $(document).ready(function() {
             fbq('track', 'Lead');
         }
 
-        location.href = domain_val+"/step2";
+        //location.href = domain_val+"/step2";
 
-        /*var $form = $('#' + formID);
+        var $form = $('#' + formID);
         $.ajax({
             type: $form.attr('method'),
             url: $form.attr('action'),
             data: $form.serialize()
-        }).done(function() {
+        }).always(function() {
             location.href = domain_val+"/step2";
-        }).fail(function() {
-            location.href = domain_val+"/step2";
-        });*/
+        });
     }
 
     function sendStep2CampaignForm(formID) {
@@ -242,14 +240,11 @@ $(document).ready(function() {
     function prepareCampaignForm() {
         // fill the step1 campaign form values
         document.querySelector('#customEmailCampaign').value = calcState.calcValues['emailValue'] || '';
-        document.querySelector('#customLoanamountCampaign').value = calcState.calcValues['loanAmountValue'] || 0;
-        document.querySelector('#customMobilenumberCampaign').value = calcState.calcValues['mobileNumberValue'] || 0;
-        document.querySelector('#customLoandurationCampaign').value = calcState.calcValues['loanTenureValue'] || 0;
-        document.querySelector('#customAfID').value = calcState.calcValues['afid'];
+        document.querySelector('#customMobileCampaign').value = calcState.calcValues['mobileNumberValue'] || 0;
 
-        var newDate = new Date();
+        /*var newDate = new Date();
         var currentDate = newDate.toISOString().slice(0,10);
-        $("#customCurrentDate").attr("value", currentDate);
+        $("#customCurrentDate").attr("value", currentDate);*/
 
     }
 
