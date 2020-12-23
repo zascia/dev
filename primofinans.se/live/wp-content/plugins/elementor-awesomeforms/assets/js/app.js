@@ -215,16 +215,20 @@ $(document).ready(function() {
             fbq('track', 'Lead');
         }
 
-        //location.href = domain_val+"/step2";
+        if (calcState.calcValues['accepts_marketing']) {
+            var $form = $('#' + formID);
+            $.ajax({
+                type: $form.attr('method'),
+                url: $form.attr('action'),
+                data: $form.serialize()
+            }).always(function() {
+                location.href = domain_val+"/step2";
+            });
+        }
 
-        var $form = $('#' + formID);
-        $.ajax({
-            type: $form.attr('method'),
-            url: $form.attr('action'),
-            data: $form.serialize()
-        }).always(function() {
-            location.href = domain_val+"/step2";
-        });
+        location.href = domain_val+"/step2";
+
+
     }
 
     function sendStep2CampaignForm(formID) {
