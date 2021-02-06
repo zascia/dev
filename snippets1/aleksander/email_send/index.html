@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Send email</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<style type="text/css">
+		body {
+			max-width: 400px;
+			margin: 0px auto;
+			padding: 40px;
+		}
+	</style>
+</head>
+<body>
+	<form action="send.php" method="post">
+		<div class="form-group">
+		<label for="name">Name:</label>
+		<input type="text" name="name" id="name" class="form-control" />
+		</div>
+
+		<div class="form-group">
+		<label for="Email">Email:</label>
+		<input type="text" name="email" id="email" class="form-control" />
+		</div>
+
+		<div class="form-group">
+		<label for="Message">Message:</label><br />
+		<textarea name="message" rows="20" cols="20" id="message" class="form-control"></textarea>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</body>
+</html>
