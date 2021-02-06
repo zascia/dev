@@ -1,0 +1,221 @@
+﻿******************************************************************
+*
+                           MODUL INFO
+
+****************************************************************
+
+* Target     : CubeCart version 3.0.x
+
+*              --------------------------------------------------
+
+*
+
+* Fil info  : ePay gateway HINT File, revision 1.0
+
+*
+
+* Author     : Milos Homola aka convict
+
+* Contact    : milos@cc3.biz
+
+* Translation: Thomas Pedersen - Thomas@2T-Webdesign.net
+
+* Last update: July 7 2007
+
+****************************************************************/
+
+
+
+###############
+
+Module settings
+
+###############
+
+
+
+┌-------┐
+
+│Status │
+
+└-------┘
+Hvis du vil aktivere dette betalingsmodul, skal du sætte status til aktiveret.
+
+
+
+┌-----------┐
+
+│Beskrivelse│
+
+└-----------┘
+
+Her skrives hvad du vil have kunden til at se, når de skal vælge denne betalingsmåde.
+
+
+
+┌------------┐
+
+│Merchant Id:│
+
+└------------┘
+
+Dette er Merchant identifikationsnummeret som du har fået fra Epay.
+
+
+
+┌--------┐
+
+│MD5 kode│
+
+└--------┘
+
+Her vælger du selv en kode, og skriver den samme kode i din konto hos Epay.
+
+
+
+┌-------------┐
+
+|Brug MD5 tjek│
+
+└-------------┘
+
+Sæt denne til Nej, hvis du har sat MD5 metoden på din Epay konto til "Ønsker ikke at bruge MD5"
+
+Sæt den til Ja, hvis du har sat MD5 metoden på din Epay konto til "Kun på min acceptside"
+
+eller "På acceptsiden og ved autorisation"
+
+
+
+┌---------┐
+
+|3D Secure│
+
+└---------┘
+
+Deactiveret - Der vil ikke blive brugt 3D Secure på ePay
+
+Activeret - 3D secure vil blive brugt hvis det er nødvendigt
+
+Kun - Kun betalinger der bruger 3D Secure er tilladt
+
+
+
+
+OBS: Hvis du bruger MD5 "På acceptsiden og ved autorisation" skal du sørge for at sætte denne til Aktiveret eller "Only".
+
+Hvis den er sat til deaktiveret, vil betalingssiden fejle ved epay, hvis der bruges MD5 error using MD5 "På acceptsiden og ved autorisation".
+
+
+
+┌----------------┐
+
+|Tillæg kortgebyr│
+
+└----------------┘
+
+Butiksejer - Alle kortgebyrer vil blive afholdt af butiksejer
+
+kortholder - Alle kortgebyrer vil blive afholdt af kunden (en acceptside vil komme frem under betaling på Epay's betalingsside)
+
+
+kombineret - Ethvert kortgebyr bliver tillagt kunden udfra om de er registrert med adresse indenlands eller udenlands.
+	     Hvis det er indenlands betales gebyret af butiksejer, mens det betales af kunden, hvis de er registreret udenlands.
+	     Indenlands bestemmes udfra det land som butikken er sat op med.
+
+┌---------------┐
+
+|Instant Capture│
+
+└---------------┘
+
+Ja - Betaling bliver trukket på kundens kort med det samme
+
+Nej  - Betaling bliver ikke trukket med det samme, men skal gøres manuelt via din administrationskonto hos Epay.
+
+
+
+┌-----------┐
+
+|Abonnement │
+
+└-----------┘
+
+Sæt dette til ja, hvis du KUN vil bruge dette betalingsmodul til abonnementsbetalinger.
+
+
+
+┌--------┐
+
+|Callback│
+
+└--------┘
+
+Dette vil gøre at Epay laver et tilbagekald til butikken, når betaling er gennemført, 
+selvom kunden lukker vinduet ned inden de kommer tilbage.
+
+Og butikken vil have ordren registreret som betalt. 
+
+Det vil også være muligt at se kommentarer på admin ordre detaljesiden såsom Svindel test(hvis sat på din Epay konto), Kortgebyr, 
+hvis 
+"Tillæg kortgebyr" er sat til kunden, og se det nøjagtige beløb Epay har trukket ved kunden.
+
+Det er rekkomenderet at sætte denne til Ja.
+
+
+
+┌--------------------┐
+
+|Email Ved betalinger│
+
+└--------------------┘
+
+Dette er meget brugbart hvis du har flere butikker på den samme konto hos Epay.
+
+Hvis dette felt er udfyldt vil der blive sendt til denne mail, istedetfor den der er angivet i din Epay konto.
+
+
+
+┌----------------------------┐
+
+|SMS ved betalingsgodkendelse│
+
+└----------------------------┘
+
+Dette er meget brugbart hvis du har flere butikker på den samme konto hos Epay.
+
+Dette er en betalingsservice, og skal sættes aktivt på din Epay konto ved brug.
+
+Hvis dette felt er udfyldt med et mobilnummer vil der blive sendt en sms til dette nummer, 
+istedetfor der der er angivet i din Epay konto.
+
+
+
+┌-------┐
+
+|Default│
+
+└-------┘
+
+Ja betyder at radioknappen ved tjek ud er valgt som default.
+
+┌----┐
+|Mode│
+└----┘
+Ved brug af standard mode vil kunden blive redirected til ePay betalingssite for at vælge betalingskort.
+Advanceret mode gør det muligt for dig at tilbyde kunden at vælgekort med det samme og derved springe et vindue over.offers you to force customer to select the desired credit card just at your store.
+
+┌-------┐
+|Default│
+└-------┘
+Ja betyder at der er sat prik i den radiobutton der vælges ved dette modul..
+
+┌----------------------┐
+|Accepted Credict Cards│
+└----------------------┘
+Her vælges hvilke kort du acceptere gennem epay.
+
+
+
+
+Mor dig!
