@@ -1,0 +1,4 @@
+[20-Aug-2019 17:41:39 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/affiliate/clixGalore/tracker.inc.php on line 29
+[20-Aug-2019 17:41:43 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/affiliate/clixGalore/tracker.inc.php on line 29
+[20-Aug-2019 17:41:44 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/affiliate/clixGalore/tracker.inc.php on line 29
+[20-Aug-2019 17:44:22 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/affiliate/clixGalore/tracker.inc.php on line 29

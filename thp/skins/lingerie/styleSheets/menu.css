@@ -1,0 +1,97 @@
+/* Custom made CSS for Advanced Expanding Category Link Mod by convict */
+
+/* Top level categories padding */
+#menu{
+	padding:0px;
+}
+
+/* Menu width  !!!The same dimension have to be #menu li ul  left: !!! */
+#menu, #menu a, div#menu ul, #menu ul ul, div#menu ul ul ul {
+	width:230px;
+}
+
+
+/*
+ 	Font declaration
+ 	Font color
+ 	Background color
+ 	Link behavior
+ 	
+*/
+#menu a, #menu a.cat_f, #menu a.cat_f:visited{
+	font: bold 11px verdana, arial,helvetica,sans-serif;
+	color: #6F645B;
+	background-color: #EFE8E2;
+	display:block;
+	text-decoration:none;
+	padding: 4px;
+	width:226px;
+}
+
+/* Submenu background color */
+#menu ul ul li {
+	background-color: #fff;
+}
+
+/* Link on mouse over colors */
+#menu a:hover, #menu a.cat_f:hover{
+	color:#C2011E;
+	background:#F9AC3A;
+}
+
+/* Link on mouse down colors */
+#menu a:active, #menu a.cat_f:active{
+	color:#000;
+	background:#F6A839;
+}
+
+/* Category with a subcategory(ies) arrow image */
+#menu a.cat_f, #menu a.cat_f:visited, #menu a.cat_f:hover, #menu a.cat_f:active{
+	background-image: url(../styleImages/father.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+/* Submenu declarations */
+#menu ul ul{
+	z-index: 100;
+	position: absolute;
+	border: 1px solid #ccc;
+}
+
+/* Rest of menu declarations */
+#menu li{
+	position: relative;
+	list-style-type: none;
+}
+
+#menu li ul{
+	position: absolute;
+	top: 0;
+	left: 230px;
+	display: none;
+}
+
+div#menu ul, #menu ul ul, div#menu ul ul ul{
+	margin: 0;
+	padding: 0;
+	list-style-image: none;
+}
+
+div#menu ul ul,
+div#menu ul li:hover ul ul,
+div#menu ul ul li:hover ul ul,
+div#menu ul ul ul li:hover ul ul,
+div#menu ul ul ul ul li:hover ul ul
+{
+	display: none;
+}
+
+div#menu ul li:hover ul,
+div#menu ul ul li:hover ul,
+div#menu ul ul ul li:hover ul,
+div#menu ul ul ul ul li:hover ul,
+div#menu ul ul ul ul ul li:hover ul
+{
+	display: block;
+}
