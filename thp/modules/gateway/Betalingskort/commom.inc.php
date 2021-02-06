@@ -244,4 +244,5 @@ else
 {
     $order_fee = $module['fee'];
 }
+
 ?>
