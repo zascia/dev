@@ -1,1 +1,0 @@
-Check the documentation at http://www.qualityunit.com/help/

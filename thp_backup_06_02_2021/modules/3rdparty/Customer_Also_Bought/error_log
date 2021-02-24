@@ -1,4 +1,0 @@
-[20-Aug-2019 17:04:29 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/3rdparty/Customer_Also_Bought/viewProd.inc.php on line 25
-[20-Aug-2019 17:04:49 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/3rdparty/Customer_Also_Bought/viewProd.inc.php on line 25
-[20-Aug-2019 17:04:50 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/3rdparty/Customer_Also_Bought/viewProd.inc.php on line 25
-[20-Aug-2019 17:07:26 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/3rdparty/Customer_Also_Bought/viewProd.inc.php on line 25
