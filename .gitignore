@@ -2,4 +2,5 @@
 *.psd
 *.ai
 node_modules/
+archived/
 *.mov

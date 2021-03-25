@@ -1,4 +1,0 @@
-[20-Aug-2019 17:24:18 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/shipping/Post_Danmark/calc.php on line 31
-[20-Aug-2019 17:24:23 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/shipping/Post_Danmark/calc.php on line 31
-[20-Aug-2019 17:24:24 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/shipping/Post_Danmark/calc.php on line 31
-[20-Aug-2019 17:27:02 America/Chicago] PHP Fatal error:  Call to undefined function fetchDbConfig() in /home3/snoopido/public_html/nyah-beauty/modules/shipping/Post_Danmark/calc.php on line 31
