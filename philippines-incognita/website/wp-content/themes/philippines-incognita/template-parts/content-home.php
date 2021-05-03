@@ -191,16 +191,14 @@ if (!empty($top_sategories)) {
                     $term = get_term($term_id, 'category');
                     ?>
                     <div class="col-md-4">
-                        <a href="<?php echo get_category_link($term_id);?>" class="tile-item">
-                            <div class="tile-item_cont">
-                                <div class="tile-item_image" <?php echo $bg_category; ?>><img src="" alt=""></div>
-                                <div class="tile-item_title">
-                                    <div class="tile-item_title_txt"><?php echo $term->name; ?></div>
-                                </div>
-                                <div class="tile-item_subtitle"><?php echo $term->description; ?></div>
-                                <div class="tile-item_imagebottom"><img src="" alt=""></div>
+                        <div class="tile-item_cont">
+                            <div class="tile-item_image" <?php echo $bg_category; ?>><a href="<?php echo get_category_link($term_id);?>" class="category_link"><img src="" alt=""></a></div>
+                            <div class="tile-item_title">
+                                <div class="tile-item_title_txt"><a href="<?php echo get_category_link($term_id);?>" class="category_link"><?php echo $term->name; ?></a></div>
                             </div>
-                        </a>
+                            <div class="tile-item_subtitle"><?php echo $term->description; ?></div>
+                            <div class="tile-item_imagebottom"><img src="" alt=""></div>
+                        </div>
                     </div>
                 <?php } ?>
             </div>
@@ -217,7 +215,7 @@ if (!empty($top_sategories)) {
                             <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/img/news/last.png" alt="">
                         </div>
                         <div class="news-items_lastnews_text">
-                            Последние новости
+                            <a href="/news" class="section_main_link" title="Архив новостей о жизни на Филиппинах">Последние новости</a>
                         </div>
                     </div>
                     <?php

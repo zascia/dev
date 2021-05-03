@@ -1,10 +1,10 @@
 <div class="listing-item">
     <?php if (has_post_thumbnail()) { ?>                    
         <div class="listing-item_image">
-            <?php the_post_thumbnail(); ?>
+            <?php the_post_thumbnail(); ?></a>
         </div>
     <?php } ?>
-    <?php the_title('<div class="listing-item_title">', '</div>'); ?>
+    <?php the_title('<div class="listing-item_title"><a href="<?php echo esc_url(get_permalink()); ?>">', '</a></div>'); ?>
     <div class="listing-item_text">
         <p>
             <?php the_excerpt(); ?>

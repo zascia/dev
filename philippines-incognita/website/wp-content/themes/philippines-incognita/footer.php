@@ -72,6 +72,14 @@
                                         echo '<img src="' . get_template_directory_uri() . '/inc/assets/img/icons/instagram.png" alt="' . $soc['social_name'] . '">';
                                     }
                                     echo '</a></div>';
+                                } elseif ($soc['social_name'] == 'youtube') {
+                                    echo '<div class="iconsmob_youtube"><a href="' . $soc['social_link'] . '">';
+                                    if (!empty($soc['social_img'])) {
+                                        echo '<img src="' . $soc['social_img'] . '" alt="' . $soc['social_name'] . '">';
+                                    } else {
+                                        echo '<img src="' . get_template_directory_uri() . '/inc/assets/img/icons/youtube.png" alt="' . $soc['social_name'] . '">';
+                                    }
+                                    echo '</a></div>';
                                 } else {
                                     echo '<div class="iconsmob_social"><a href="' . $soc['social_link'] . '">';
                                     if (!empty($soc['social_img'])) {

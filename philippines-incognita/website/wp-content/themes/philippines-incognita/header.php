@@ -59,7 +59,21 @@
                                     }
                                     $social_menu .= '</a></div>';
                                     $social_menu_mob .= '</a></div>';
-                                } else {
+                                } elseif ($soc['social_name'] == 'youtube') {
+                                      $social_menu .= '<div class="header-icons_youtube">';
+                                      $social_menu_mob .= '<div class="header-iconsmob_youtube">';
+                                      $social_menu .= '<a href="' . $soc['social_link'] . '">';
+                                      $social_menu_mob .= '<a href="' . $soc['social_link'] . '">';
+                                      if (!empty($soc['social_img'])) {
+                                          $social_menu .= '<img src="' . $soc['social_img'] . '" alt="' . $soc['social_name'] . '">';
+                                          $social_menu_mob .= '<img src="' . $soc['social_img'] . '" alt="' . $soc['social_name'] . '">';
+                                      } else {
+                                          $social_menu .= '<img src="' . get_template_directory_uri() . '/inc/assets/img/icons/youtube.png" alt="' . $soc['social_name'] . '">';
+                                          $social_menu_mob .= '<img src="' . get_template_directory_uri() . '/inc/assets/img/icons/youtube.png" alt="' . $soc['social_name'] . '">';
+                                      }
+                                      $social_menu .= '</a></div>';
+                                      $social_menu_mob .= '</a></div>';
+                              } else {
                                     $social_menu .= '<div class="header-icons_social">';
                                     $social_menu_mob .= '<div class="header-iconsmob_social">';
                                     $social_menu .= '<a href="' . $soc['social_link'] . '">';
@@ -110,7 +124,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <div class="header-heading">
                                     <div class="header-heading_title">
                                         <span><?php esc_url(bloginfo('description')); ?></span>
@@ -123,7 +137,7 @@
                                     ?>
                                 </div>
                             </div>
-                            <div class="col-md-1">
+                            <div class="col-md-2">
                                 <div class="header-icons">
                                     <?php echo $social_menu;?>
                                     <?php if (false) { ?>

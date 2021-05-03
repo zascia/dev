@@ -473,6 +473,18 @@ p {
     opacity: 0.5;
 }
 
+.header-icons_youtube a::before {
+    cursor: pointer;
+    display: none;
+    top: 5px;
+    position: absolute;
+    content: url(../../../img/icons/youtube_r.png);
+}
+
+.header-icons_youtube a:hover::before {
+    display: block;
+}
+
 .header-icons_language {
     margin-top: -5px;
 }
@@ -543,6 +555,19 @@ p {
     }
     .header-iconsmob_insta:hover {
         opacity: 0.5;
+    }
+    .header-iconsmob_youtube {
+        position: relative;
+    }
+    .header-iconsmob_youtube a::before {
+        cursor: pointer;
+        display: none;
+        top: 2px;
+        position: absolute;
+        content: url(../../../img/icons/youtube_r.png);
+    }
+    .header-iconsmob_youtube a:hover::before {
+        display: block;
     }
     .header-iconsmob_language {
         margin-top: -5px;
@@ -972,6 +997,7 @@ footer .iconsmob {
 .tile-item {
     margin-bottom: 20px;
     position: relative;
+    color:#222;
 }
 
 .tile-item::before {
@@ -1007,6 +1033,11 @@ footer .iconsmob {
     position: relative;
 }
 
+.category_link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .tile-item_title_txt {
     font-size: 18px;
     font-family: "Open Sans";
@@ -1037,6 +1068,9 @@ footer .iconsmob {
 
 /**
  * NEWS */
+.section_main_link {
+    color: inherit;
+}
 .news {
     margin-bottom: 20px;
 }

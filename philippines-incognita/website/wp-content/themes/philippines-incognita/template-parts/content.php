@@ -65,13 +65,13 @@ if (is_single()) {
             <div class="col-md-5">
                 <div class="news-items_item">
                     <div class="news-items_item_image">
-                        <?php the_post_thumbnail(); ?>
+                        <a href="<?php echo esc_url(get_permalink()); ?>"><?php the_post_thumbnail(); ?></a>
                     </div>
                 </div>
             </div>
         <?php } ?>
         <div class="<?php echo (has_post_thumbnail()) ? 'col-md-7' : 'col-md-12'; ?>">
-            <?php the_title('<div class="news-items_item_title">', '</div>'); ?>
+            <?php the_title('<div class="news-items_item_title"><a href="<?php echo esc_url(get_permalink()); ?>">', '</a></div>'); ?>
             <div class="news-items_item_subtitle">
                 <?php the_excerpt(); ?>
             </div>
