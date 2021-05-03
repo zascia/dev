@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'DM Serif Display', serif;
+}
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+.navbar-brand a {
+    font-family: 'DM Serif Display', serif;
+}
+body img {
+    margin-bottom: 10px;
+}

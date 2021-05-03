@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/index/index.sass","components/index/index.css"],"names":[],"mappings":"AAGA;;ECDE","file":"../../../components/index/index.css","sourcesContent":["@import '../../common/mixins';\n@import '../../common/vars';\n\n/**\n * INDEX\n */\n\n.index {}\n\n\n\n\n@media (max-width: 950px) {\n\t.index {} }\n\n","/**\n * INDEX\n */\n"]}
