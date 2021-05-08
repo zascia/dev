@@ -4,7 +4,7 @@
             <?php the_post_thumbnail(); ?></a>
         </div>
     <?php } ?>
-    <?php the_title('<div class="listing-item_title"><a href="<?php echo esc_url(get_permalink()); ?>">', '</a></div>'); ?>
+    <div class="listing-item_title"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></div>
     <div class="listing-item_text">
         <p>
             <?php the_excerpt(); ?>
