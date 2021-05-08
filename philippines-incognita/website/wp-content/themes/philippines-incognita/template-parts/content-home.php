@@ -215,7 +215,7 @@ if (!empty($top_sategories)) {
                             <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/img/news/last.png" alt="">
                         </div>
                         <div class="news-items_lastnews_text">
-                            <a href="/news" class="section_main_link" title="Архив новостей о жизни на Филиппинах">Последние новости</a>
+                            <a href="/news" class="section_main_link" title="Обзор блоггов о жизни на Филиппинах">Блоггеры говорят</a>
                         </div>
                     </div>
                     <?php
