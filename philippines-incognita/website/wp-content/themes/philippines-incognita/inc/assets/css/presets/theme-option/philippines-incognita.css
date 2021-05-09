@@ -1193,6 +1193,10 @@ footer .iconsmob {
     transition: 0.5s;
 }
 
+.news-items_item_icons.publush_date_time_row {
+    display: none;
+}
+
 .news-items_item_icons {
     display: -webkit-box;
     display: -webkit-flex;

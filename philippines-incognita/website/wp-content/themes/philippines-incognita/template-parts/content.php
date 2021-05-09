@@ -21,7 +21,7 @@ if (is_single()) {
             endif;
             echo philippines_incognita_get_sub_title();
             ?>
-            <div class="news-items_item_icons">
+            <div class="news-items_item_icons publush_date_time_row">
                 <div class="news-items_item_icons_icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/img/news/user.svg" alt="">
                     <span><?php echo get_the_author(); ?></span>
