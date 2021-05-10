@@ -215,7 +215,7 @@ if (!empty($top_sategories)) {
                             <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/img/news/last.png" alt="">
                         </div>
                         <div class="news-items_lastnews_text">
-                            <a href="/news" class="section_main_link" title="Обзор блоггов о жизни на Филиппинах">Блоггеры говорят</a>
+                            <a href="/news" class="section_main_link" title="Обзор блогов о жизни на Филиппинах">Интересное у блоггеров</a>
                         </div>
                     </div>
                     <?php
@@ -250,7 +250,7 @@ if (!empty($top_sategories)) {
                     wp_reset_postdata();
                     ?>
                     <div class="news-items_moreb">
-                        <a href="/news">Архив новостей</a>
+                        <a href="/news">Все обзоры от блоггеров</a>
                     </div>
                 </div>
             </div>

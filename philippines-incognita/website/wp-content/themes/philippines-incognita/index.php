@@ -26,7 +26,7 @@ get_header();
                     <div class="news-items_lastnews_image">
                         <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/img/news/last.png" alt="">
                     </div>
-                    <div class="news-items_lastnews_text">Архив новостей</div>
+                    <div class="news-items_lastnews_text">Все обзоры от блоггеров</div>
                 </div>
                 <?php
             endif;

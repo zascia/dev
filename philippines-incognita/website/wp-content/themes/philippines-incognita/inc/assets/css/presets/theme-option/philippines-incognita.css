@@ -398,7 +398,7 @@ p {
 }
 
 .header-logo_image {
-    width: 50px;
+    width: 115px;
 }
 
 .header-logo_image img {
@@ -407,7 +407,7 @@ p {
 
 .header-logo_text {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 25px;
     font-family: "Acrom";
     color: #282828;
     text-transform: uppercase;
@@ -422,7 +422,7 @@ p {
 
 .header-heading_title {
     font-weight: 500;
-    font-size: 26px;
+    font-size: 24px;
     font-family: "Open Sans";
     color: #282828;
     font-style: italic;
@@ -756,17 +756,22 @@ footer .iconsmob {
     font-size: 30px;
     font-family: "Acrom";
     color: #282828;
-    font-weight: bold;
     text-transform: uppercase;
 }
 
 .greeting-left_subtitle {
-    font-size: 30px;
+    /*font-size: 30px;
     font-family: "Acrom";
     color: #282828;
     font-weight: normal;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 20px;*/
+    font-size: 1.31rem;
+    color: #24292e;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 .greeting-left_text {
