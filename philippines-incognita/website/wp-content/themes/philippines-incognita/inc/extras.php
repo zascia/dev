@@ -217,7 +217,7 @@ if (!function_exists('register_news')) :
 
     function register_news() {
         $labels = array(
-            'name' => 'Новости',
+            'name' => 'Обзоры от блоггеров',
             'singular_name' => 'Новость',
             'add_new' => 'Добавить новую',
             'add_new_item' => 'Редактировать запись',
@@ -228,7 +228,7 @@ if (!function_exists('register_news')) :
             'search_items' => 'Поиск записи',
             'not_found' => 'Не найдено не одной записи',
             'not_found_in_trash' => 'В корзине нет записей',
-            'menu_name' => 'Новости'
+            'menu_name' => 'Обзоры от блоггеров'
         );
 
         $args = array(
