@@ -191,13 +191,15 @@ if (!empty($top_sategories)) {
                     $term = get_term($term_id, 'category');
                     ?>
                     <div class="col-md-4">
-                        <div class="tile-item_cont">
-                            <div class="tile-item_image" <?php echo $bg_category; ?>><a href="<?php echo get_category_link($term_id);?>" class="category_link"><img src="" alt=""></a></div>
-                            <div class="tile-item_title">
-                                <div class="tile-item_title_txt"><a href="<?php echo get_category_link($term_id);?>" class="category_link"><?php echo $term->name; ?></a></div>
+                        <div class="tile-item">
+                            <div class="tile-item_cont">
+                                <div class="tile-item_image" <?php echo $bg_category; ?>><a href="<?php echo get_category_link($term_id);?>" class="category_link"><img src="" alt=""></a></div>
+                                <div class="tile-item_title">
+                                    <div class="tile-item_title_txt"><a href="<?php echo get_category_link($term_id);?>" class="category_link"><?php echo $term->name; ?></a></div>
+                                </div>
+                                <div class="tile-item_subtitle"><?php echo $term->description; ?></div>
+                                <div class="tile-item_imagebottom"><img src="" alt=""></div>
                             </div>
-                            <div class="tile-item_subtitle"><?php echo $term->description; ?></div>
-                            <div class="tile-item_imagebottom"><img src="" alt=""></div>
                         </div>
                     </div>
                 <?php } ?>
