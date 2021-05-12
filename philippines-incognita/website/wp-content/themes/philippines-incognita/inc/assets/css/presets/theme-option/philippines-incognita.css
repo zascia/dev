@@ -674,6 +674,10 @@ footer .iconsmob {
     }
 }
 
+#footer-widget .widget_nav_menu {
+    display: none;
+}
+
 /**
  * INDEX
  */
@@ -757,6 +761,10 @@ footer .iconsmob {
     font-family: "Acrom";
     color: #282828;
     text-transform: uppercase;
+}
+
+h2.greeting-left_title {
+    font-weight: 300;
 }
 
 .greeting-left_subtitle {
@@ -990,6 +998,13 @@ footer .iconsmob {
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+}
+
+/**
+ * Recommended
+ */
+.news.section-recommended {
+    margin-bottom: 120px;
 }
 
 /**
@@ -1231,7 +1246,6 @@ footer .iconsmob {
 }
 
 .news-items_moreb {
-    display: none;
     text-align: center;
     margin-bottom: 10px;
 }

@@ -95,6 +95,7 @@ if (!empty($count_last_posts) && $count_last_posts > 0) {
     ?>
     <section class="listing">
         <div class="container">
+            <h2 class="greeting-left_title">Последние публикации</h2>
             <div class="listing-items owl-carousel">
                 <?php
                 $args = array(
@@ -122,7 +123,7 @@ $title_recommended = get_field('title_recommended');
 $recommended_entries = get_field('recommended_entries');
 if (!empty($recommended_entries) && count($recommended_entries) > 0) {
     ?>
-    <section class="news">
+    <section class="news section-recommended">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -166,7 +167,7 @@ if (!empty($recommended_entries) && count($recommended_entries) > 0) {
                         wp_reset_postdata();
                         ?>
                         <div class="news-items_moreb">
-                            <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Архив статей</a>
+                            <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>">Архив публикаций</a>
                         </div>
                     </div>
                 </div>
