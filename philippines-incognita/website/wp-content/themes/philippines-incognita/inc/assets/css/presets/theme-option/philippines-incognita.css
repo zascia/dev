@@ -455,6 +455,10 @@ p {
 
 .header-icons_facebook {
     position: relative;
+    display: none;
+}
+.iconsmob_facebook {
+    display: none;
 }
 
 .header-icons_facebook a::before {
@@ -1389,7 +1393,8 @@ h2.greeting-left_title {
     margin-bottom: 40px;
 }
 
-.comment-title {
+.comment-title,
+.comment-reply-title {
     margin-bottom: 30px;
     font-family: "Acrom";
     padding: 30px 0;
@@ -1404,14 +1409,34 @@ h2.greeting-left_title {
     font-family: "Acrom";
     font-weight: 400;
 }
+.comment .card-header {
+    display: flex;
+    align-items: baseline;
+}
+.comment .card-header h5 {
+    margin-right: 1em;
+}
+.comment .card-header h5 .says {
+    display: none;
+}
+.comment .card-header .comment-meta {
+    font-size: 75%;
+}
 
-.comment button {
+.comment button,
+.comment-reply-link,
+.comment-respond .btn {
     background-color: #a48868;
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     font-family: "Acrom";
     font-weight: 400;
 }
+.comment-list .children {
+    padding-left: 4rem;
+}
+
+
 .weather-atlas-footer,
 .weather-atlas-body .current_text,
 .weather-atlas-header {

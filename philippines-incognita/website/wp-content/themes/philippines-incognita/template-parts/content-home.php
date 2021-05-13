@@ -181,6 +181,7 @@ if (!empty($top_sategories)) {
     ?>
     <section class="tile">
         <div class="container">
+            <h2 class="greeting-left_title">Разделы сайта</h2>
             <div class="row">
                 <?php
                 foreach ($top_sategories as $term_id) {

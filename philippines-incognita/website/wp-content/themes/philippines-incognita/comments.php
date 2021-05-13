@@ -19,30 +19,30 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comment comments-area">
 
     <?php
     // You can start editing here -- including this comment!
     if (have_comments()) :
         ?>
 
-        <h2 class="comments-title">
+        <h2 class="comment-title">Комментарии
             <?php
-            $comments_number = get_comments_number();
+            /*$comments_number = get_comments_number();
             if ('1' === $comments_number) {
                 printf(
-                        /* translators: 1: title. */
+                        *//* translators: 1: title. *//*
                         esc_html__('Один комментарий на &ldquo;%1$s&rdquo;', 'philippines-incognita'),
                         '<span>' . esc_html(get_the_title()) . '</span>'
                 );
             } else {
                 printf(// WPCS: XSS OK.
-                        /* translators: 1: comment count number, 2: title. */
-                        esc_html(_nx('%1$s записей о &ldquo;%2$s&rdquo;', '%1$s записей о &ldquo;%2$s&rdquo;', $comments_number, 'comments title', 'philippines-incognita')),
+                        *//* translators: 1: comment count number, 2: title. *//*
+                        esc_html(_nx('%1$s комментариев о &ldquo;%2$s&rdquo;', '%1$s записей о &ldquo;%2$s&rdquo;', $comments_number, 'comments title', 'philippines-incognita')),
                         esc_html(number_format_i18n($comments_number)),
                         '<span>' . esc_html(get_the_title()) . '</span>'
                 );
-            }
+            }*/
             ?>
         </h2><!-- .comments-title -->
 
@@ -96,7 +96,7 @@ if (post_password_required()) {
         'title_reply_to' => __('Оставить комментарий к %s', 'philippines-incognita'), // that's the wordpress default value! delete it or edit it ;)
         'cancel_reply_link' => __('Отменить комментарий', 'philippines-incognita'), // that's the wordpress default value! delete it or edit it ;)
         'label_submit' => __('Оставить комментарий', 'philippines-incognita'), // that's the wordpress default value! delete it or edit it ;)
-        'comment_field' => '<p><textarea placeholder="Начать печатать ..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+        'comment_field' => '<p><textarea placeholder="Ваш текст ..." id="comment" class="form-control" name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 //        'comment_notes_after' => '<p class="form-allowed-tags">' .
 //            __( 'Вы можете использовать эти <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'philippines-incognita' ) .
 //            '</p><div class="alert alert-info">' . allowed_tags() . '</div>'
