@@ -1227,6 +1227,7 @@ h2.greeting-left_title {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 5px;
+    display: none;
 }
 
 .news-items_item_icons_icon {
