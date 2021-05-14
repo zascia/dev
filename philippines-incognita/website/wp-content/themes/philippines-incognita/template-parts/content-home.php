@@ -224,7 +224,7 @@ if (!empty($top_sategories)) {
                     </div>
                     <?php
                     $args = array(
-                        'posts_per_page' => 4,
+                        'posts_per_page' => 5,
                         'post_type' => 'news'
                     );
 
