@@ -30,12 +30,13 @@ $related_query = new WP_Query($args);
 if ($related_query->have_posts()) :
 
     // выводим заголовок блока похожих постов
-    echo '<h3>Рекомендуемые материалы</h3><ul class="list-group list-group-flush">';
+    echo '<h3 class="comment-title">Рекомендуемые материалы</h3><ul class="list-group list-group-flush">';
 
     // запускаем цикл
     while ($related_query->have_posts()) : $related_query->the_post();
         // в данном случае посты выводятся просто в виде ссылок
-        echo '<li class="list-group-item"><a href="' . get_permalink($related_query->post->ID) . '">' . $related_query->post->post_title . '</a></li>';
+
+        echo '<li class="list-group-item" style="width:300px"><div><img class="related-article-title" src="'.get_the_post_thumbnail_url() . '"/></div><a href="' . get_permalink($related_query->post->ID) . '">' . $related_query->post->post_title . '</a></li>';
     endwhile;
     echo '<ul>';
 endif;
