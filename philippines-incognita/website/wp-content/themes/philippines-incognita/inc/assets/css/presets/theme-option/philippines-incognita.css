@@ -196,11 +196,19 @@ h2 {
 }
 
 p {
-    font-family: "Open Sans";
+    /*font-family: "Open Sans";
     font-size: 14px;
+    font-weight: 600;*/
     color: #282828;
     line-height: 1.714;
-    font-weight: 600;
+
+}
+
+.entry-content ol {
+    margin-bottom: 2em;
+}
+.entry-content ol li {
+    margin-bottom: 1em;
 }
 
 /**

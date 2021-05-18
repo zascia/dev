@@ -1,6 +1,12 @@
+<?php if (has_post_thumbnail()) {
+    $featured_img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large')[0];
+} else {
+    $featured_img_url = "none";
+}
+?>
 <div class="listing-item">
     <?php if (has_post_thumbnail()) { ?>                    
-        <div class="listing-item_image">
+        <div class="listing-item_image" style="background-image: url(<?php echo $featured_img_url ?>)">
             <?php the_post_thumbnail(); ?></a>
         </div>
     <?php } ?>
