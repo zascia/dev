@@ -204,12 +204,31 @@ p {
 
 }
 
+/* entry styles */
+
 .entry-content ol {
     margin-bottom: 2em;
 }
 .entry-content ol li {
     margin-bottom: 1em;
 }
+.entry-footer {
+    font-family: 'dashicons';
+}
+.entry-footer .cat-links a {
+    font-style: italic;
+    text-decoration: underline;
+    color: #007bff;
+}
+.entry-footer .tags-links a {
+    background: #007bff;
+    color: #fff;
+    padding: 5px;
+    font-size: 75%;
+}
+
+/* eo entry styles */
+
 
 /**
  * Form
