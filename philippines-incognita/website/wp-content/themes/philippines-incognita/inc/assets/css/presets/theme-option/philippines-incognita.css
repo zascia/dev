@@ -1437,9 +1437,22 @@ h2.greeting-left_title {
     font-family: "Acrom";
     font-weight: 400;
 }
+.comment .card {
+    border: 0;
+}
+.comment .card-header,
+.comment .card-footer {
+    background: none;
+    border: none;
+}
 .comment .card-header {
     display: flex;
     align-items: baseline;
+    padding-bottom: 0;
+}
+.comment .card-footer {
+    padding-top:0;
+    padding-bottom: 0;
 }
 .comment .card-header h5 {
     margin-right: 1em;
@@ -1450,9 +1463,25 @@ h2.greeting-left_title {
 .comment .card-header .comment-meta {
     font-size: 75%;
 }
+.comment .card-block {
+    padding: 0 20px;
+}
+.comment .card-block p {
+    margin-bottom: 5px;
+}
+.comment-reply-link,
+.comment-reply-link:hover,
+.comment-reply-link.btn-primary:not(:disabled):not(.disabled):active{
+    font-family: 'dashicons';
+    background: none;
+    color: inherit;
+    border: 0;
+    padding: 0;
+    text-transform: none;
+    color: #a48868;
+}
 
 .comment button,
-.comment-reply-link,
 .comment-respond .btn {
     background-color: #a48868;
     border: none;
