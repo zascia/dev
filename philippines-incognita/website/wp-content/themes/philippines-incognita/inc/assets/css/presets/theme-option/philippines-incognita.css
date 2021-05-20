@@ -796,6 +796,7 @@ footer .iconsmob {
 
 h2.greeting-left_title {
     font-weight: 300;
+    text-align: center;
 }
 
 .greeting-left_subtitle {
@@ -938,10 +939,11 @@ h2.greeting-left_title {
 
 @media (max-width: 768px) {
     .greeting-left_title {
-        line-height: 0.5;
+        line-height: 30px;
+        font-size: 24px;
     }
     .greeting-left_text p {
-        font-size: 12px;
+        font-size: 14px;
     }
     .greeting-neset {
         -webkit-box-orient: vertical;
@@ -1001,7 +1003,7 @@ h2.greeting-left_title {
 }
 
 .listing-item_text p {
-    font-size: 13px;
+    font-size: 14px;
     font-family: "Open Sans";
     color: #282828;
     margin: 0;
@@ -1030,6 +1032,44 @@ h2.greeting-left_title {
     -o-transition: 0.5s;
     transition: 0.5s;
 }
+
+/**
+ * Last posts
+ */
+.last-posts .listing-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.last-posts .listing-item {
+    flex-grow: 1;
+    width: 30%;
+    margin: 1em 15px 2em;
+}
+@media only screen and (max-width: 992px) {
+    .last-posts .listing-items {
+
+    }
+    .last-posts .listing-item {
+        flex-grow: 1;
+        width: 45%;
+    }
+}
+@media only screen and (max-width: 576px) {
+    h2.greeting-left_title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .last-posts .listing-items {
+        padding: 0;
+    }
+    .last-posts .listing-item {
+        flex-grow: 1;
+        width: 100%;
+        margin: 1em 0 2em;
+    }
+}
+
 
 /**
  * Recommended

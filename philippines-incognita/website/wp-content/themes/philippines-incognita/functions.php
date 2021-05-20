@@ -200,8 +200,8 @@ function Philippines_Incognita_scripts() {
         wp_enqueue_style('philippines-incognita-fontawesome-cdn', get_template_directory_uri() . '/inc/assets/css/fontawesome.min.css');
     }
 
-    wp_enqueue_style('philippines-incognita-carousel-css', get_template_directory_uri() . '/inc/assets/libs/owlcarousel/assets/owl.carousel.min.css');
-    wp_enqueue_style('philippines-incognita-owl-theme-css', get_template_directory_uri() . '/inc/assets/libs/owlcarousel/assets/owl.theme.default.min.css');
+    //wp_enqueue_style('philippines-incognita-carousel-css', get_template_directory_uri() . '/inc/assets/libs/owlcarousel/assets/owl.carousel.min.css');
+    //wp_enqueue_style('philippines-incognita-owl-theme-css', get_template_directory_uri() . '/inc/assets/libs/owlcarousel/assets/owl.theme.default.min.css');
     // load bootstrap css
     // load Philippines Incognita styles
     wp_enqueue_style('philippines-incognita-style', get_stylesheet_uri());
@@ -264,7 +264,7 @@ function Philippines_Incognita_scripts() {
         wp_enqueue_script('philippines-incognita-popper', get_template_directory_uri() . '/inc/assets/js/popper.min.js', array(), '', true);
         wp_enqueue_script('philippines-incognita-bootstrapjs', get_template_directory_uri() . '/inc/assets/js/bootstrap.min.js', array(), '', true);
     }
-    wp_enqueue_script('philippines-incognita-owlcarousel-js', get_template_directory_uri() . '/inc/assets/libs/owlcarousel/owl.carousel.min.js', array(), '', true);
+    //wp_enqueue_script('philippines-incognita-owlcarousel-js', get_template_directory_uri() . '/inc/assets/libs/owlcarousel/owl.carousel.min.js', array(), '', true);
     wp_enqueue_script('philippines-incognita-wow-js', get_template_directory_uri() . '/inc/assets/js/wow.min.js', array(), '', true);
     wp_enqueue_script('philippines-incognita-themejs', get_template_directory_uri() . '/inc/assets/js/theme-script.js', array(), '', true);
     wp_enqueue_script('philippines-incognita-skip-link-focus-fix', get_template_directory_uri() . '/inc/assets/js/skip-link-focus-fix.min.js', array(), '20151215', true);

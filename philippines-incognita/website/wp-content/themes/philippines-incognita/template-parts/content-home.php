@@ -93,10 +93,10 @@ $count_last_posts = get_field('count_last_posts');
 $count_last_posts = (!empty($count_last_posts))?$count_last_posts:4;
 if (!empty($count_last_posts) && $count_last_posts > 0) {
     ?>
-    <section class="listing">
+    <section class="listing last-posts">
         <div class="container">
-            <h2 class="greeting-left_title">Последние публикации</h2>
-            <div class="listing-items owl-carousel">
+            <h2 class="greeting-left_title"><?php echo get_field('last_posts_title') ?></h2>
+            <div class="listing-items">
                 <?php
                 $args = array(
                     'posts_per_page' => $count_last_posts,
