@@ -167,6 +167,7 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     min-height: 100%;
+    overflow: hidden;
 }
 
 .content {
@@ -816,6 +817,7 @@ h2.greeting-left_title {
 
 .greeting-left_text {
     text-align: justify;
+    font-size: 16px;
 }
 
 .greeting-left_text p {
@@ -943,7 +945,7 @@ h2.greeting-left_title {
         font-size: 24px;
     }
     .greeting-left_text p {
-        font-size: 14px;
+        font-size: 16px;
     }
     .greeting-neset {
         -webkit-box-orient: vertical;
@@ -1003,7 +1005,7 @@ h2.greeting-left_title {
 }
 
 .listing-item_text p {
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Open Sans";
     color: #282828;
     margin: 0;
@@ -1048,7 +1050,7 @@ h2.greeting-left_title {
 }
 @media only screen and (max-width: 992px) {
     .last-posts .listing-items {
-
+        padding: 0;
     }
     .last-posts .listing-item {
         flex-grow: 1;
@@ -1252,7 +1254,7 @@ h2.greeting-left_title {
 }
 
 .news-items_item_subtitle {
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Open Sans";
     color: #282828;
     line-height: 1.143;
@@ -1358,7 +1360,6 @@ h2.greeting-left_title {
 
 .news-items_form {
     width: 100%;
-    min-height: 395px;
     background-color: #f6f2ef;
     margin-bottom: 10px;
 }
@@ -1376,9 +1377,13 @@ h2.greeting-left_title {
     .news-items_item_icons_icon span {
         font-size: 9px;
     }
+    .news-items_item_more {
+        text-align: center;
+    }
     .news-items_moreb {
         display: block;
     }
+    aside .widget-area .widget_custom_html .widget-title {display:none;}
     .news-items_big {
         display: none;
     }
@@ -1400,7 +1405,7 @@ h2.greeting-left_title {
 .banner-item {
     background-color: #f1f1f1;
     width: 100%;
-    min-height: 140px;
+    text-align: center;
 }
 
 /**
