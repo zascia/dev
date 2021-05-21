@@ -1288,7 +1288,7 @@ h2.greeting-left_title {
 }
 
 .news-items_item_icons.publush_date_time_row {
-    display: none;
+    //display: none;
 }
 
 .news-items_item_icons {
@@ -1297,7 +1297,6 @@ h2.greeting-left_title {
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 5px;
-    display: none;
 }
 
 .news-items_item_icons_icon {

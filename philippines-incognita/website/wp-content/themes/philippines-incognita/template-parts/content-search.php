@@ -27,10 +27,10 @@ if ('post' === get_post_type() || 'news' === get_post_type()) {
                 <a href="<?php echo esc_url(get_permalink()); ?>">Читать полностью</a>
             </div>
             <div class="news-items_item_icons">
-                <div class="news-items_item_icons_icon">
+                <!--div class="news-items_item_icons_icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/img/news/user.svg" alt="">
                     <span><?php echo get_the_author(); ?></span>
-                </div>
+                </div-->
                 <div class="news-items_item_icons_icon">
                     <img src="<?php echo get_template_directory_uri(); ?>/inc/assets/img/news/clock.svg" alt="">
                     <span><?php echo human_time_diff(get_post_time('U'), current_time('timestamp')) . ' ' . __('назад', 'worpress'); ?></span>
