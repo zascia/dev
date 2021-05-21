@@ -1304,6 +1304,7 @@ h2.greeting-left_title {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    align-items: center;
     color: #767676;
     margin-right: 10px;
 }
@@ -1311,6 +1312,10 @@ h2.greeting-left_title {
 .news-items_item_icons_icon img {
     width: 15px;
     margin-right: 3px;
+}
+.news-items_item_icons_icon span {
+    color: #767676;
+    font-size: 80%;
 }
 
 .news-items_ad {
