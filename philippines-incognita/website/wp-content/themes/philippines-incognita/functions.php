@@ -308,6 +308,29 @@ function Philippines_Incognita_password_form() {
 add_filter('the_password_form', 'Philippines_Incognita_password_form');
 
 
+// comment fields
+//remove not necessary comment fields
+function remove_comment_fields($fields) {
+    unset($fields['url']); // Удаляем URL
+    unset($fields['email']); // Удаляем E-mail
+    return $fields;
+}
+add_filter('comment_form_default_fields', 'remove_comment_fields');
+
+// make name field mandatory
+function custom_validate_comment_author() {
+if( empty( $_POST['author'] ) || ( !preg_match( '/[^\s]/', $_POST['author'] ) ) )     wp_die( __('Ошибка! Пожалуйста, заполните поле Имя') );
+}
+add_action( 'pre_comment_on_post', 'custom_validate_comment_author' );
+
+// remove "your email will not be visible"
+function my_comments_form($default) {
+     $default['comment_notes_before'] = '';
+     return $default;
+}
+add_filter('comment_form_defaults','my_comments_form',999);
+// eo comment fields
+
 
 /**
  * Implement the Custom Header feature.

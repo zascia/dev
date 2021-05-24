@@ -226,6 +226,9 @@ p {
     color: #fff;
     padding: 5px;
     font-size: 75%;
+    display: inline-block;
+    margin-bottom: 5px;
+    border-radius: 3px;
 }
 
 /* eo entry styles */
@@ -1388,7 +1391,7 @@ h2.greeting-left_title {
     .news-items_moreb {
         display: block;
     }
-    aside .widget-area .widget_custom_html .widget-title {display:none;}
+    aside.widget-area .widget_custom_html .widget-title {display:none;}
     .news-items_big {
         display: none;
     }
@@ -1465,6 +1468,15 @@ h2.greeting-left_title {
 }
 
 /**
+ * RELATED
+ */
+.related-article-link {
+    font-size: 16px;
+}
+
+
+/**
+ *
  * COMMENT
  */
 .comment {
@@ -1542,7 +1554,29 @@ h2.greeting-left_title {
 .comment-list .children {
     padding-left: 4rem;
 }
-
+.comment-form-cookies-consent {
+    display: none;
+}
+.comment-form-author input {
+    border-radius: 50px;
+    padding: 5px 0 5px 15px;
+    border: 2px solid #a48868;
+    font-size: 16px;
+    font-family: "Acrom";
+    color: #a48868;
+    text-transform: uppercase;
+    outline: none;
+}
+.comment-form textarea {
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #a48868;
+    font-size: 16px;
+    font-family: "Acrom";
+    color: #a48868;
+    outline: none;
+    transition: none;
+}
 
 .weather-atlas-footer,
 .weather-atlas-body .current_text,

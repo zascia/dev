@@ -750,6 +750,7 @@ a img.aligncenter {
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
+  font-size: 16px;
 }
 
 .page-links {
