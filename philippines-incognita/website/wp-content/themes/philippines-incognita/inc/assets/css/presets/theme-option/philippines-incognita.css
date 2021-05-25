@@ -216,6 +216,9 @@ p {
 .entry-footer {
     font-family: 'dashicons';
 }
+.entry-footer .cat-links {
+    display: block;
+}
 .entry-footer .cat-links a {
     font-style: italic;
     text-decoration: underline;
@@ -1468,14 +1471,6 @@ h2.greeting-left_title {
 }
 
 /**
- * RELATED
- */
-.related-article-link {
-    font-size: 16px;
-}
-
-
-/**
  *
  * COMMENT
  */
@@ -1554,6 +1549,9 @@ h2.greeting-left_title {
 .comment-list .children {
     padding-left: 4rem;
 }
+.comment-list .comment-body .avatar {
+    border-radius: 50%;
+}
 .comment-form-cookies-consent {
     display: none;
 }
@@ -1577,6 +1575,40 @@ h2.greeting-left_title {
     outline: none;
     transition: none;
 }
+
+/**
+ * RELATED
+ */
+.related-title {
+    background: none;
+    border-bottom: 2px solid #a48868;
+    color: #a48868;
+}
+.related-art-container .list-group {
+    flex-direction: row;
+}
+.related-article-item {
+    border: 0;
+    width: 33%;
+    min-width: 300px;
+}
+.related-article-item div {
+    height: 180px;
+    overflow:hidden;
+}
+.related-article-link {
+    font-size: 16px;
+}
+@media (max-width: 770px) {
+    .related-art-container .list-group {
+        flex-direction: column;
+    }
+    .related-article-item {
+        width: 100%;
+        min-width: auto;
+    }
+}
+
 
 .weather-atlas-footer,
 .weather-atlas-body .current_text,

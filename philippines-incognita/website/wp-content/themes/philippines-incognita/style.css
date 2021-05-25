@@ -849,8 +849,8 @@ object {
 ## Captions
 --------------------------------------------------------------*/
 .wp-caption {
-  background: #f1f1f1 none repeat scroll 0 0;
-  border: 1px solid #f0f0f0;
+  background: none;
+  border: 0;
   max-width: 96%;
   padding: 0.313rem 0.313rem 0;
   text-align: center;
@@ -868,6 +868,8 @@ object {
   line-height: 1.063rem;
   margin: 0;
   padding: 0.625rem;
+  background: #333;
+  color: #fff;
 }
 
 .wp-caption-text {

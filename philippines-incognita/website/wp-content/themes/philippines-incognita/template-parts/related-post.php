@@ -29,6 +29,8 @@ $related_query = new WP_Query($args);
 // если посты, удовлетворяющие нашим условиям, найдены
 if ($related_query->have_posts()) :
 
+    echo '<div class="related-art-container">';
+
     // выводим заголовок блока похожих постов
     echo '<h3 class="comment-title related-title">Рекомендуемые материалы</h3><ul class="list-group list-group-flush">';
 
@@ -36,9 +38,11 @@ if ($related_query->have_posts()) :
     while ($related_query->have_posts()) : $related_query->the_post();
         // в данном случае посты выводятся просто в виде ссылок
 
-        echo '<li class="list-group-item related-article-item" style="width:300px"><div><img class="related-article-image" src="'.get_the_post_thumbnail_url() . '"/></div><a class="related-article-link" href="' . get_permalink($related_query->post->ID) . '">' . $related_query->post->post_title . '</a></li>';
+        echo '<li class="list-group-item related-article-item"><div><img
+        class="related-article-image" src="'.get_the_post_thumbnail_url() . '"/></div><a class="related-article-link" href="' . get_permalink($related_query->post->ID) . '">' . $related_query->post->post_title . '</a></li>';
     endwhile;
     echo '<ul>';
+    echo '</div>';
 endif;
 
 // не забудьте про эту функцию, её отсутствие может повлиять на другие циклы на странице
