@@ -357,3 +357,16 @@ require get_template_directory() . '/inc/plugin-compatibility/plugin-compatibili
 if (!class_exists('wp_bootstrap_navwalker')) {
     require_once(get_template_directory() . '/inc/wp_bootstrap_navwalker.php');
 }
+
+// remove feed
+function fb_disable_feed() {
+wp_redirect(get_option('siteurl'));
+}
+add_action('do_feed', 'fb_disable_feed', 1);
+add_action('do_feed_rdf', 'fb_disable_feed', 1);
+add_action('do_feed_rss', 'fb_disable_feed', 1);
+add_action('do_feed_rss2', 'fb_disable_feed', 1);
+add_action('do_feed_atom', 'fb_disable_feed', 1);
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+remove_action( 'wp_head', 'feed_links', 2 );
+remove_action( 'wp_head', 'rsd_link' );
