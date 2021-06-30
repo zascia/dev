@@ -8,10 +8,15 @@ function sendAJAX(options) {
             headers.key = value;
         }
     }*/
+    paramsObj = {
+        headers: options.headers,
+        method: options.method
+    }
+    if (options.body) {
+        paramsObj.body = options.body;
+    }
 
-    fetch(options.urlpath, {
-        headers: headersData
-    })
+    fetch(options.urlpath, paramsObj)
     .then(response => {
         if (response.status !== 200) {
             return Promise.reject(new Error(`${response.status} + ${response.statusText}`))
@@ -81,6 +86,25 @@ function getUsersFromLivalaan() {
 
     response = sendAJAX(options);
     console.log("response",response);
+}
+
+function sendPOSTFormURLEncoded() {
+    let options = {}
+    options.method = 'POST';
+    options.urlpath = 'facebookAPI_path';
+    options.headers = {
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+    }
+    options.body = new URLSearchParams({
+        'userName': 'test@gmail.com',
+        'password': 'Password!',
+        'grant_type': 'password'
+    })
+
+    /*var data = new URLSearchParams();
+    data.append('userName', 'test@gmail.com');
+    data.append('password', 'Password');
+    data.append('grant_type', 'password');*/
 }
 
 // prepare getresponse data and call getresponse API
