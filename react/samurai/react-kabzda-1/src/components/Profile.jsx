@@ -1,21 +1,29 @@
+import React from 'react';
+import s from './Profile.module.css';
 
 const Profile = () => {
-    return (
-        <div className="content">
-            <div className="big-img"><img src="https://philippines-incognita.com/wp-content/uploads/2021/04/bg.png" /></div>
-            <div className="avadescription">Ava + description</div>
-            <div className="myPosts">
-                My posts
-                <div className="NewPost"></div>
-                <div className="PostList">
-                    <div className="postItem">Post 1</div>
-                    <div className="postItem">Post 2</div>
-                    <div className="postItem">Post 3</div>
-                    <div className="postItem">Post 4</div>
-                </div>
-            </div>
+    return <div className={s.content}>
+    <div>
+      <img src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350' />
+    </div>
+    <div>
+      ava + description
+    </div>
+    <div>
+      My posts
+      <div>
+        New post
+      </div>
+      <div className={s.posts}>
+        <div className={s.item}>
+          post 1
         </div>
-    );
+        <div className={s.item}>
+          post 2
+        </div>
+      </div>
+    </div>
+  </div>
 }
 
 export default Profile;
