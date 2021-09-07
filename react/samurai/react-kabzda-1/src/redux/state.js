@@ -1,4 +1,6 @@
-import {renderEntireTree} from "../render";
+let renderEntireTree = () => {
+
+}
 
 let state = {
     profilePage: {
@@ -43,7 +45,7 @@ let state = {
 }
 
 // profile page logic
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -54,14 +56,14 @@ export let addPost = () => {
     renderEntireTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     renderEntireTree(state);
 }
 // eo profile page logic
 
 // dialogs page logic
-export let addMessage = () => {
+export const addMessage = () => {
     let newMessage = {
         id: 6,
         message: state.dialogsPage.newDialogText
@@ -70,10 +72,14 @@ export let addMessage = () => {
     state.dialogsPage.newDialogText = '';
     renderEntireTree(state);
 }
-export let updateNewDialogText = (newText) => {
+export const updateNewDialogText = (newText) => {
     state.dialogsPage.newDialogText = newText;
     renderEntireTree(state);
 }
 // eo dialogs page logic
+
+export const subscribe = (observer) => {
+    renderEntireTree = observer;
+}
 
 export default state;
