@@ -23,7 +23,8 @@ let state = {
             {id:4,name:'Misha'},
             {id:5,name:'Leonid'},
             {id:6,name:'Leopard'}
-        ]
+        ],
+        newDialogText: 'hi friends'
     },
     sidebarSection: {
         friends: [
@@ -41,6 +42,7 @@ let state = {
     }
 }
 
+// profile page logic
 export let addPost = () => {
     let newPost = {
         id: 5,
@@ -56,5 +58,22 @@ export let updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     renderEntireTree(state);
 }
+// eo profile page logic
+
+// dialogs page logic
+export let addMessage = () => {
+    let newMessage = {
+        id: 6,
+        message: state.dialogsPage.newDialogText
+    }
+    state.dialogsPage.messages.push(newMessage);
+    state.dialogsPage.newDialogText = '';
+    renderEntireTree(state);
+}
+export let updateNewDialogText = (newText) => {
+    state.dialogsPage.newDialogText = newText;
+    renderEntireTree(state);
+}
+// eo dialogs page logic
 
 export default state;
