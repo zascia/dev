@@ -40,13 +40,17 @@ let store = {
             ]
         }
     },
-    getState() {
-        return this._state;
-    },
     _callSubscriber() {
         console.log('state changed')
     },
-    addPost() {
+    getState() {
+        return this._state;
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer;
+    },
+
+    addPost() { //
         let newPost = {
             id: 5,
             message: this._state.profilePage.newPostText,
@@ -56,11 +60,11 @@ let store = {
         this._state.profilePage.newPostText = '';
         this._callSubscriber(this._state);
     },
-    updateNewPostText(newText) {
+    updateNewPostText(newText) { //
         this._state.profilePage.newPostText = newText;
         this._callSubscriber(this._state);
     },
-    addMessage() {
+    addMessage() { //
         let newMessage = {
             id: 6,
             message: this._state.dialogsPage.newDialogText
@@ -69,12 +73,35 @@ let store = {
         this._state.dialogsPage.newDialogText = '';
         this._callSubscriber(this._state);
     },
-    updateNewDialogText(newText) {
+    updateNewDialogText(newText) { //
         this._state.dialogsPage.newDialogText = newText;
         this._callSubscriber(this._state);
     },
-    subscribe(observer) {
-        this._callSubscriber = observer;
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: 5,
+                message: this._state.profilePage.newPostText,
+                likesCount: 0
+            }
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newText;
+            this._callSubscriber(this._state);
+        } else if (action.type === 'ADD-MESSAGE') {
+            let newMessage = {
+                id: 6,
+                message: this._state.dialogsPage.newDialogText
+            }
+            this._state.dialogsPage.messages.push(newMessage);
+            this._state.dialogsPage.newDialogText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-DIALOG-TEXT') {
+            this._state.dialogsPage.newDialogText = action.newText;
+            this._callSubscriber(this._state);
+        }
     }
 }
 
