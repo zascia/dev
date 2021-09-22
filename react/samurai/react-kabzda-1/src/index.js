@@ -4,22 +4,24 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter} from 'react-router-dom';
+import {Provider} from './StoreContext';
 
 let state = store.getState();
 
 let renderEntireTree = (state) => {
     ReactDOM.render(
         <BrowserRouter>
-            <App store={store} state={state} dispatch={store.dispatch.bind(store)} />
+            <Provider store={store}>
+            <App />
+            </Provider>
         </BrowserRouter>, document.getElementById('root'));
 }
-//
 
-renderEntireTree(state);
+renderEntireTree(store);
 
 store.subscribe(()=>{
-    renderEntireTree(store.getState());
+    renderEntireTree(store);
 });
 
 
