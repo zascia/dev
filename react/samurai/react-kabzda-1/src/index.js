@@ -5,11 +5,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
-import {Provider} from './StoreContext';
+import {Provider} from 'react-redux';
 
-let state = store.getState();
-
-let renderEntireTree = (state) => {
+let renderEntireTree = () => {
     ReactDOM.render(
         <BrowserRouter>
             <Provider store={store}>
@@ -18,10 +16,10 @@ let renderEntireTree = (state) => {
         </BrowserRouter>, document.getElementById('root'));
 }
 
-renderEntireTree(store);
+renderEntireTree();
 
 store.subscribe(()=>{
-    renderEntireTree(store);
+    renderEntireTree();
 });
 
 
