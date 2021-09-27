@@ -1,0 +1,6 @@
+.userContainer {
+    display: flex;
+}
+.userPhoto {
+    width: 77px;
+}
