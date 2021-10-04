@@ -4,3 +4,13 @@
 .userPhoto {
     width: 77px;
 }
+.numPageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.numPageContainer span {margin: 0 5px}
+.selectedPage {
+    font-weight: bold;
+}
