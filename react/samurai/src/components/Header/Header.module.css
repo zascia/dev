@@ -10,4 +10,11 @@
     color: #fff;
     vertical-align: top;
 }
+.loginBlock {
+    float: right;
+    color: white;
+}
+.loginBlock a {
+    color: white;
+}
 
