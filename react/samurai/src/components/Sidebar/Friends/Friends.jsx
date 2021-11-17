@@ -5,7 +5,7 @@ import FriendItem from "./FriendItem/FriendItem";
 
 const Friends = (props) => {
     let friendsList = props.state
-        .map(el => <FriendItem id={el.id} name={el.name} age={el.age} />)
+        .map(el => <FriendItem id={el.id} name={el.name} age={el.age} key={el.id} />)
 
     return (
         <div className="FriendsSection">
