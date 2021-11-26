@@ -1,0 +1,20 @@
+.header {
+    grid-area: h;
+    background-color: green;
+}
+.header img {
+    width: 80px;
+}
+.header h2 {
+    display:inline;
+    color: #fff;
+    vertical-align: top;
+}
+.loginBlock {
+    float: right;
+    color: white;
+}
+.loginBlock a {
+    color: white;
+}
+
